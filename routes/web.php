@@ -24,6 +24,7 @@ use App\Http\Controllers\StakingController;
 
 // Admin
 require __DIR__ . '/admin/admin.php';
+require __DIR__ . '/account/account.php';
 
 // Index
 Route::get('/', [IndexController::class, 'index'])->name('index');
@@ -58,3 +59,4 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 // Pages
 Route::get('/rewards', [PageController::class, 'rewards'])->name('rewards');
 Route::get('/terms-conditions', [PageController::class, 'terms'])->name('termsCondition');
+
