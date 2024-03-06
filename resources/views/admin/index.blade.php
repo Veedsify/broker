@@ -2,27 +2,29 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8" />
         <title>Dashboard | Minia - Minimal Admin & Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
+
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap" rel="stylesheet">
+
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="/admins/images/favicon.ico">
 
         <!-- plugin css -->
-        <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <link href="/admins/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
 
         <!-- preloader css -->
-        <link rel="stylesheet" href="assets/css/preloader.min.css" type="text/css" />
+        <link rel="stylesheet" href="/admins/css/preloader.min.css" type="text/css" />
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="/admins/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="/admins/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="/admins/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -41,19 +43,19 @@
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="24">
+                                    <img src="/admins/images/logo-sm.svg" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
+                                    <img src="/admins/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="24">
+                                    <img src="/admins/images/logo-sm.svg" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
+                                    <img src="/admins/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
                                 </span>
                             </a>
                         </div>
@@ -96,32 +98,32 @@
                         <div class="dropdown d-none d-sm-inline-block">
                             <button type="button" class="btn header-item"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img id="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                                <img id="header-lang-img" src="/admins/images/flags/us.jpg" alt="Header Language" height="16">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
-                                    <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                                    <img src="/admins/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                                 </a>
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                                    <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                    <img src="/admins/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                                    <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                    <img src="/admins/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                    <img src="/admins/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                                    <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                    <img src="/admins/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                                 </a>
                             </div>
                         </div>
@@ -143,19 +145,19 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/github.png" alt="Github">
+                                                <img src="/admins/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="/admins/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="/admins/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -164,19 +166,19 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="/admins/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                                <img src="/admins/images/brands/mail_chimp.png" alt="mail_chimp">
                                                 <span>Mail Chimp</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/slack.png" alt="slack">
+                                                <img src="/admins/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
@@ -207,7 +209,7 @@
                                     <a href="#!" class="text-reset notification-item">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                <img src="/admins/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h6 class="mb-1">James Lemire</h6>
@@ -254,7 +256,7 @@
                                     <a href="#!" class="text-reset notification-item">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
-                                                <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                <img src="/admins/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h6 class="mb-1">Salena Layfield</h6>
@@ -283,7 +285,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-light-subtle border-start border-end" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="/admins/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium">Shawn L.</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -554,7 +556,7 @@
 
                         <div class="card sidebar-alert border-0 text-center mx-4 mb-0 mt-5">
                             <div class="card-body">
-                                <img src="assets/images/giftbox.png" alt="">
+                                <img src="/admins/images/giftbox.png" alt="">
                                 <div class="mt-4">
                                     <h5 class="alertcard-title font-size-16">Unlimited Access</h5>
                                     <p class="font-size-13">Upgrade your plan from a Free trial, to select ‘Business Plan’.</p>
@@ -2279,25 +2281,25 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="/admins/libs/jquery/jquery.min.js"></script>
+        <script src="/admins/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/admins/libs/metismenu/metisMenu.min.js"></script>
+        <script src="/admins/libs/simplebar/simplebar.min.js"></script>
+        <script src="/admins/libs/node-waves/waves.min.js"></script>
+        <script src="/admins/libs/feather-icons/feather.min.js"></script>
         <!-- pace js -->
-        <script src="assets/libs/pace-js/pace.min.js"></script>
+        <script src="/admins/libs/pace-js/pace.min.js"></script>
 
         <!-- apexcharts -->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="/admins/libs/apexcharts/apexcharts.min.js"></script>
 
         <!-- Plugins js-->
-        <script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="/admins/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="/admins/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
         <!-- dashboard init -->
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="/admins/js/pages/dashboard.init.js"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="/admins/js/app.js"></script>
 
     </body>
 
