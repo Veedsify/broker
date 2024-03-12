@@ -156,13 +156,13 @@
 
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow dark:text-gray-100 mb-2 md:mb-0">Withdrawal History</h4>
+
                         <nav class="flex" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
                                 <li class="inline-flex items-center">
                                     <a href="#"
                                         class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900 dark:text-zinc-100 dark:hover:text-white">
-                                        Withdraw
+                                        Orders
                                     </a>
                                 </li>
                                 <li>
@@ -170,7 +170,7 @@
                                         <i
                                             class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 dark:text-zinc-100"></i>
                                         <a href="#"
-                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 dark:text-gray-100 dark:hover:text-white">History</a>
+                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 dark:text-gray-100 dark:hover:text-white">Earning</a>
                                     </div>
                                 </li>
                             </ol>
@@ -178,12 +178,13 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6">
+                <div >
                     <div class=" dark:bg-zinc-800 card ">
                         <div class=" px-4 card-body pb-1 dark:border-zinc-600">
                             <div >
-                                <h6 class="text-gray-600 text-15 dark:text-gray-100 whitespace-nowrap ">Recent Withdrawal</h6>
-                        <p class="text-gray-400 py-2">Transaction History shows information about cash withdrawals for your account.</p>
+                                <h6 class="text-gray-600 text-15 dark:text-gray-100 whitespace-nowrap ">Transactions History
+                                </h6>
+                        <p class="text-gray-400 py-2">Transaction History shows information about cash deposits, cash withdrawals for your account.</p>
                             </div>
                         </div>
                         <div >
@@ -192,9 +193,10 @@
                                     <table class="min-w-full truncate divide-gray-200 border rounded-md">
                                         <thead class="bg-gray-50">
                                             <tr>
-                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                    Details</th>
+                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">	Type</th>
+                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">	Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
@@ -203,11 +205,7 @@
                                                 <td class="px-6 py-4 whitespace-nowrap">Amount</td>
                                                 <td class="px-6 py-4 whitespace-nowrap">Status</td>
                                             </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-                                                <td class="px-6 py-4 whitespace-nowrap">25</td>
-                                                <td class="px-6 py-4 whitespace-nowrap">Los Angeles</td>
-                                            </tr>
+
                                             <!-- Add more rows as needed -->
                                         </tbody>
                                     </table>
