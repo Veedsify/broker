@@ -8,4 +8,8 @@ use Illuminate\Http\Request;
 class WithdrawController extends Controller
 {
     //
+    public function history()
+    {
+        return view('account.withdraw-history');
+    }
 }
