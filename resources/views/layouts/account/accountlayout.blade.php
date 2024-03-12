@@ -12,7 +12,10 @@
     <link rel="shortcut icon" href="/admins/images/favicon.ico">
 
     {{-- FONTS --}}
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 
     <!-- Layout config Js -->
     <!-- Icons CSS -->
@@ -21,7 +24,7 @@
 
     <link rel="stylesheet" href="/admins/css/swiper-bundle.css">
     <link rel="stylesheet" href="/admins/css/output.css">
-    {{-- <link rel="stylesheet" href="/admins/css/tailwind2.css"> --}}
+    <link rel="stylesheet" href="/admins/css/tailwind2.css">
 </head>
 
 <body data-mode="light" data-sidebar-size="lg" class="group">

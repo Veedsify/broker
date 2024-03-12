@@ -5,7 +5,7 @@
   function initMetisMenu() {
     // MetisMenu js
     if (document.getElementById("side-menu")) {
-      console.log("+++ loaded");
+      // console.log("+++ loaded");
       new MetisMenu("#side-menu");
     }
   }
