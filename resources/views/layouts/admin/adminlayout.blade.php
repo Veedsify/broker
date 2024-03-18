@@ -14,8 +14,7 @@
     {{-- FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 
     <!-- Layout config Js -->
@@ -24,38 +23,61 @@
     <!-- Tailwind CSS -->
 
     <link rel="stylesheet" href="/admins/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/admins/css/output.css">
     <link rel="stylesheet" href="/admins/css/tailwind2.css">
 </head>
 
 <body data-mode="light" data-sidebar-size="lg" class="group">
-    @yield('content')
+@yield('content')
 
-    {{-- /SCRIPTS --}}
-    <script src="/admins/libs/%40popperjs/core/umd/popper.min.js"></script>
-    <script src="/admins/libs/feather-icons/feather.min.js"></script>
-    <script src="/admins/libs/metismenujs/metismenujs.min.js"></script>
-    <script src="/admins/libs/simplebar/simplebar.min.js"></script>
+{{-- /SCRIPTS --}}
+<script src="/admins/libs/%40popperjs/core/umd/popper.min.js"></script>
+<script src="/admins/libs/feather-icons/feather.min.js"></script>
+<script src="/admins/libs/metismenujs/metismenujs.min.js"></script>
+<script src="/admins/libs/simplebar/simplebar.min.js"></script>
 
 
-    <script src="/admins/js/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+<script src="/admins/js/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
-    <!-- apexcharts -->
-    <script src="/admins/libs/apexcharts/apexcharts.min.js"></script>
-    <!-- Plugins js-->
-    <script src="/admins/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="/admins/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+<!-- apexcharts -->
+<script src="/admins/libs/apexcharts/apexcharts.min.js"></script>
+<!-- Plugins js-->
+<script src="/admins/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/admins/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 
-    <script src="/admins/libs/swiper/swiper-bundle.min.js"></script>
+<script src="/admins/libs/swiper/swiper-bundle.min.js"></script>
 
-    <!-- dashboard init -->
-    <script src="/admins/js/pages/dashboard.init.js"></script>
+<!-- dashboard init -->
+<script src="/admins/js/pages/dashboard.init.js"></script>
 
-    <script src="/admins/js/pages/nav%26tabs.js"></script>
+<script src="/admins/js/pages/nav%26tabs.js"></script>
 
-    <script src="/admins/js/pages/login.init.js"></script>
+<script src="/admins/js/pages/login.init.js"></script>
 
-    <script src="/admins/js/app.js"></script>
+<script src="/admins/js/app.js"></script>
 
-</body>
+{{-- NEW SCRIPTS --}}
+
+
+<!-- Required datatable js -->
+<script src="/admins/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/admins/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="/admins/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/admins/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="/admins/libs/jszip/jszip.min.js"></script>
+<script src="/admins/libs/pdfmake/build/pdfmake.min.js"></script>
+<script src="/admins/libs/pdfmake/build/vfs_fonts.js"></script>
+<script src="/admins/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="/admins/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="/admins/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="/admins/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/admins/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="/admins/js/pages/datatables.init.js"></script>
+F</body>
 
 </html>

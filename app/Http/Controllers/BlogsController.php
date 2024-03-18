@@ -7,10 +7,19 @@ use Illuminate\Http\Request;
 class BlogsController extends Controller
 {
     //
-    public function blogs(){
-        return view('blgoresource');
+    public function blogs()
+    {
+        return view('blogresource');
     }
-    public function blogsDetail(){
+    public function blogsDetail()
+    {
         return view('blogdetails');
+    }
+
+    public function blogsCategory($categoryId)
+    {
+        return view('blogresource', [
+            'category' => $categoryId
+        ]);
     }
 }

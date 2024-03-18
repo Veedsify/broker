@@ -252,7 +252,7 @@
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
-                                        <span class="text-gray-700 dark:text-zinc-100">Profit Ration</span>
+                                        <span class="text-gray-700 dark:text-zinc-100">Profit</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21 dark:text-gray-100">
                                             <span class="counter-value" data-target="865.2">12.57%</span>
                                         </h4>
@@ -266,8 +266,8 @@
                                 <span
                                     class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium dark:bg-green-500/30">+
                                     2.95%</span>
-                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-700 text-13 dark:text-zinc-100">Since last
-                                    week</span>
+                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-700 text-13 dark:text-zinc-100">Since
+                                    yesterday</span>
                             </div>
                         </div>
                     </div>
@@ -493,22 +493,12 @@
                                 <div>
                                     <div class="flex flex-wrap items-center mb-6">
                                         <h5 class="mr-2 text-gray-800 text-15 dark:text-gray-100 ">Market Overview</h5>
-                                        <div class="flex gap-1 ltr:ml-auto rtl:mr-auto">
-                                            <button type="button"
-                                                class="px-2 py-1 border-transparent btn text-13 bg-violet-50/50 text-violet-500 hover:bg-violet-500 hover:text-white focus:bg-violet-500 focus:text-white dark:bg-violet-500/20 dark:text-violet-200 dark:hover:bg-violet-500 dark:hover:text-white">ALL</button>
-                                            <button type="button"
-                                                class="px-2 py-1 text-gray-500 border-transparent btn text-13 bg-gray-50/50 hover:bg-gray-500 dark:hover:bg-zinc-600/800 hover:text-white focus:bg-gray-500 focus:text-white dark:bg-gray-500/10 dark:text-gray-100 dark:hover:bg-gray-500 dark:hover:text-white">1M</button>
-                                            <button type="button"
-                                                class="px-2 py-1 text-gray-500 border-transparent btn text-13 bg-gray-50/50 hover:bg-gray-500 dark:hover:bg-zinc-600/800 hover:text-white focus:bg-gray-500 focus:text-white dark:bg-gray-500/10 dark:text-gray-100 dark:hover:bg-gray-500 dark:hover:text-white">6M</button>
-                                            <button type="button"
-                                                class="px-2 py-1 text-gray-500 border-transparent btn text-13 bg-gray-50/50 hover:bg-gray-500 dark:hover:bg-zinc-600/800 hover:text-white focus:bg-gray-500 focus:text-white dark:bg-gray-500/10 dark:text-gray-100 dark:hover:bg-gray-500 dark:hover:text-white">1Y</button>
-                                        </div>
                                     </div>
                                 </div>
                                 <div>
-                                    {{-- <iframe width="100%" height="600"
+                                    <iframe width="100%" height="600"
                                         src="https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en#%7B%22symbol%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22frameElementId%22%3A%22tradingview_60a84%22%2C%22interval%22%3A%22D%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22Light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22withdateranges%22%3A%221%22%2C%22show_popup_button%22%3A%221%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22crypo.netlify.app%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22page-uri%22%3A%22crypo.netlify.app%2Fexchange-light%22%7D"
-                                        frameborder="0"></iframe> --}}
+                                        frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>

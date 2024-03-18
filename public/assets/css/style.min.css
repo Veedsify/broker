@@ -3466,7 +3466,7 @@ input[type=radio] {
     transition: .5s linear
 }
 
-.how_join__item::before {
+/* .how_join__item::before {
     content: "";
     position: absolute;
     width: 10px;
@@ -3486,11 +3486,12 @@ input[type=radio] {
     height: 100%;
     width: 100%;
     border-radius: 0%
-}
+} */
 
 .how_join__item:hover h4,
 .how_join__item:hover p {
-    color: rgb(var(--p9))
+    /* color: rgb(var(--p9)), */
+    color: rgb(215, 255, 152),
 }
 
 .how_join__item:hover .how_join__item-thumb {
@@ -5412,6 +5413,11 @@ input[type=radio] {
     background-image: url("../images/counterbg.png");
     background-size: cover;
     background-repeat: no-repeat
+}
+
+.w-md-75 {
+    max-width: 75%;
+    margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.min.css.map */

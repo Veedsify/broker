@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IdoController;
 use App\Http\Controllers\ApexController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SwapController;
 use App\Http\Controllers\BlogsController;
@@ -47,11 +48,12 @@ Route::get('/apex', [ApexController::class, 'apex'])->name('apex');
 
 // Buy Crypto
 Route::get('/buycrypto', [CryptoController::class, 'buyCrypto'])->name('buycrypto');
-Route::get('/pricing', [CryptoController::class, 'price'])->name('princingplan');
+Route::get('/pricing', [CryptoController::class, 'price'])->name('pricingplan');
 
 // Blog
 Route::get('/blog', [BlogsController::class, 'blogs'])->name('blog');
-Route::get('/blog/{blogId}', [BlogsController::class, 'blogsDetail'])->name('blog.details');
+Route::get('/news/{blogId}', [BlogsController::class, 'blogsDetail'])->name('blog.details');
+Route::get('/blog/{categoryId}', [BlogsController::class, 'blogsCategory'])->name('blog.category');
 
 // Contact
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
@@ -60,3 +62,7 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 Route::get('/rewards', [PageController::class, 'rewards'])->name('rewards');
 Route::get('/terms-conditions', [PageController::class, 'terms'])->name('termsCondition');
 
+
+//Authentication
+Route::get("/login", [AuthController::class, 'showLoginPage'])->name("login");
+Route::get("/register", [AuthController::class, 'showRegisterPage'])->name("register");

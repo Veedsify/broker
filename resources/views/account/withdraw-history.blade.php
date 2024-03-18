@@ -1,11 +1,11 @@
 @extends('../layouts/admin/adminlayout')
 @section('content')
     <!-- ========== Left Sidebar Start ========== -->
-    <x-admin.sidebar />
+    <x-account.sidebar />
     <!-- Left Sidebar End -->
 
     {{-- Header start --}}
-    <x-admin.header />
+    <x-account.header />
     {{-- Header end --}}
     <div class="hidden">
         <div class="fixed inset-0 z-40 transition-opacity bg-black/40"></div>
