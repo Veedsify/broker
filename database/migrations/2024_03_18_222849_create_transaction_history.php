@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('amount');
             $table->string('status')->default('pending');
+            $table->string('type')->default('deposit'); // deposit or withdrawal;
             $table->string('payment_method');
             $table->string('payment_details');
             $table->string('note')->nullable();

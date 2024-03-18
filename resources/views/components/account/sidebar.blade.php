@@ -1,4 +1,3 @@
-
 <div
     class="fixed bottom-0 z-10 h-screen ltr:border-r rtl:border-l vertical-menu rtl:right-0 ltr:left-0 top-[70px] bg-slate-50 border-gray-50 print:hidden dark:bg-zinc-800 dark:border-neutral-700">
 
@@ -39,6 +38,13 @@
                         class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
                         <i data-feather="dollar-sign" fill="#545a6d33"></i>
                         <span data-key="t-dashboard">Make Deposit</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/deposit"
+                        class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
+                        <i data-feather="briefcase" fill="#545a6d33"></i>
+                        <span data-key="t-dashboard">Wallets</span>
                     </a>
                 </li>
                 <li>

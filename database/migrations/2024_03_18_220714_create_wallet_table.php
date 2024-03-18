@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('status')->default('active');
             $table->string('tier')->default("basic");
             $table->string('currency')->default("USD");
+            $table->integer('amount')->default(0);
             $table->string('deposit_currency')->default("BTC");
             $table->string('withdraw_currency')->default("BTC");
             $table->string('deposit_address');
