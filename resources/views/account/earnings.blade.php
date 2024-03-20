@@ -31,7 +31,7 @@
                                         <i
                                             class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 dark:text-zinc-100"></i>
                                         <a href="#"
-                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 dark:text-gray-100 dark:hover:text-white">History</a>
+                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 dark:text-gray-100 dark:hover:text-white">Earnings</a>
                                     </div>
                                 </li>
                             </ol>
@@ -54,17 +54,15 @@
                                         <thead class="bg-gray-50">
                                             <tr>
                                                 <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Date/Time</th>
-                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plan</th>
+                                                    Details</th>
+                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
                                                 <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">	Amount</th>
-                                                <th scope="col" class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
                                             <tr>
                                                 <td class="px-6 py-4 whitespace-nowrap">Date</td>
                                                 <td class="px-6 py-4 whitespace-nowrap">Amount</td>
-                                                <td class="px-6 py-4 whitespace-nowrap">Status</td>
                                                 <td class="px-6 py-4 whitespace-nowrap">Status</td>
                                             </tr>
 

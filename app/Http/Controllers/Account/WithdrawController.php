@@ -12,4 +12,8 @@ class WithdrawController extends Controller
     {
         return view('account.withdraw-history');
     }
+    public function withdrawal()
+    {
+        return view('account.make-withdrawal');
+    }
 }
