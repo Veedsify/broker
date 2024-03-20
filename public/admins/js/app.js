@@ -396,27 +396,3 @@ if (isChangeMode) {
     swiperDir();
   });
 }
-
-
-$("#proof_of_payment").on("change", function () {
-  var file = $(this).get(0).files[0];
-  if (file) {
-    var reader = new FileReader();
-    reader.onload = function () {
-      preview = document.querySelector("#payment_preview")
-      var preview;
-      preview.src = reader.result;
-    };
-    reader.readAsDataURL(file);
-  }
-  return false
-})
-
-
-document.querySelector("#openconfirmModal").on("click", function () {
-  document.querySelector("#confirmModal").css({
-    opacity: 1,
-    visibility: "visible",
-    pointerEvents: "auto"
-  })
-})

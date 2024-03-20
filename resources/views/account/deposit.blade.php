@@ -9,7 +9,7 @@
     {{-- Header end --}}
 
     <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
-        <div class="page-content dark:bg-zinc-700">
+        <div class="page-content ">
 
             <div class="container-fluid px-[0.625rem]">
 
@@ -21,16 +21,16 @@
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
                                 <li class="inline-flex items-center">
                                     <a href="#"
-                                        class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900 dark:text-zinc-100 dark:hover:text-white">
+                                        class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900  ">
                                         Menu
                                     </a>
                                 </li>
                                 <li>
                                     <div class="flex items-center rtl:mr-2">
                                         <i
-                                            class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 dark:text-zinc-100"></i>
+                                            class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 "></i>
                                         <a href="#"
-                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2  dark:hover:text-white">Deposit</a>
+                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2  ">Deposit</a>
                                     </div>
                                 </li>
                             </ol>
@@ -39,8 +39,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-6">
-                    <div class="card dark:bg-zinc-800 dark:border-zinc-600 nav-tabs border-b-tabs">
-                        <div class=" pb-0 md:py-0 border-b card-body border-gray-50 dark:border-zinc-600">
+                    <div class="card   nav-tabs border-b-tabs">
+                        <div class=" pb-0 md:py-0 border-b card-body border-gray-50 ">
                             <div class="md:flex items-center justify-between py-3">
                                 <h6 class="text-gray-600 text-15  whitespace-nowrap">Start your creative
                                     project right plans</h6>
@@ -51,27 +51,27 @@
                                 <div class="tab-pane" id="underline-icon-home">
                                     <div class="grid grid-cols-12 md:gap-4">
                                         <div class="col-span-12 md:col-span-6 xl:col-span-3">
-                                            <div class="card dark:bg-zinc-800 dark:border-zinc-600">
+                                            <div class="card  ">
                                                 <div class="card-body">
                                                     <div class="p-2">
                                                         <h5 class="text-base text-gray-600 ">Amateur</h5>
                                                         <h1 class="mt-3 text-gray-600 ">10% <span
-                                                                class="text-base text-gray-500 dark:text-zinc-100/60 "></span>
+                                                                class="text-base text-gray-500 /60 "></span>
                                                         </h1>
-                                                        <p class="mt-3 text-gray-500 dark:text-zinc-100/60 text-15 ">For
+                                                        <p class="mt-3 text-gray-500 /60 text-15 ">For
                                                             small teams trying out Minia for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>After
                                                                 0 Days</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Minimum
                                                                 Amount: $1000</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Maximum
                                                                 Amount: $5,000</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Instant
                                                                 Withdraw
                                                             </p>
@@ -87,28 +87,28 @@
                                         </div>
 
                                         <div class="col-span-12 md:col-span-6 xl:col-span-3">
-                                            <div class="card dark:bg-zinc-800 dark:border-zinc-600">
+                                            <div class="card  ">
                                                 <div class="card-body">
                                                     <div class="p-2">
                                                         <h5 class="text-base text-gray-600 ">STARTER
                                                         </h5>
                                                         <h1 class="mt-3 text-gray-600 ">25% <span
-                                                                class="text-base text-gray-500 dark:text-zinc-100/60 "></span>
+                                                                class="text-base text-gray-500 /60 "></span>
                                                         </h1>
-                                                        <p class="mt-3 text-gray-500 dark:text-zinc-100/60 text-15 ">For
+                                                        <p class="mt-3 text-gray-500 /60 text-15 ">For
                                                             small teams trying out Minia for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>After
                                                                 4 Days</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Minimum
                                                                 Amount: $5,000</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Maximum
                                                                 Amount: $10,000</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Instant
                                                                 Withdraw
                                                             </p>
@@ -124,7 +124,7 @@
                                         </div>
 
                                         <div class="col-span-12 md:col-span-6 xl:col-span-3">
-                                            <div class="card dark:bg-zinc-800 dark:border-zinc-600">
+                                            <div class="card  ">
                                                 <div class="overflow-hidden rounded card-body bg-green-900">
                                                     <div class="relative p-2">
                                                         <div
@@ -138,23 +138,23 @@
                                                             Minia for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
-                                                            <p class="mb-4 text-white text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>After
                                                                 4 Days</p>
-                                                            <p class="mb-4 text-white text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Minimum
                                                                 Amount: $10,000</p>
-                                                            <p class="mb-4 text-white text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Maximum
                                                                 Amount: $50,000</p>
-                                                            <p class="mb-4 text-white text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Instant
                                                                 Withdraw
                                                             </p>
                                                         </div>
                                                         <div class="pt-2 mt-5 text-center">
                                                             <a href="{{ route('account.tiers', 'enterprise') }}"
-                                                                class="block transition-all duration-300 bg-white border-transparent shadow btn w-100 hover:bg-gray-50/50 shadow-white/30 dark:bg-zinc-700 dark:text-gray-50 dark:shadow-zinc-500">Choose
+                                                                class="block transition-all duration-300 bg-white border-transparent shadow btn w-100 hover:bg-gray-50/50 shadow-white/30   dark:shadow-zinc-500">Choose
                                                                 Plan</a>
                                                         </div>
                                                     </div>
@@ -163,28 +163,28 @@
                                         </div>
 
                                         <div class="col-span-12 md:col-span-6 xl:col-span-3">
-                                            <div class="card dark:bg-zinc-800 dark:border-zinc-600">
+                                            <div class="card  ">
                                                 <div class="card-body">
                                                     <div class="p-2">
                                                         <h5 class="text-base text-gray-600 ">GOLD
                                                         </h5>
                                                         <h1 class="mt-3 text-gray-600 ">85% <span
-                                                                class="text-base text-gray-500 dark:text-zinc-100/60 "></span>
+                                                                class="text-base text-gray-500 /60 "></span>
                                                         </h1>
-                                                        <p class="mt-3 text-gray-500 dark:text-zinc-100/60 text-15 ">For
+                                                        <p class="mt-3 text-gray-500 /60 text-15 ">For
                                                             small teams trying out Minia for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>After
                                                                 4 Days</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Minimum
                                                                 Amount: $50,000</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Maximum
                                                                 Amount: Unlimited</p>
-                                                            <p class="mb-4 text-gray-500 text-15 dark:text-zinc-100/60"><i
+                                                            <p class="mb-4 text-gray-500 text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Instant
                                                                 Withdraw
                                                             </p>
@@ -209,8 +209,8 @@
 
                 <!-- Footer Start -->
                 {{-- <footer
-                    class="absolute bottom-0 left-0 right-0 px-5 py-5 bg-white border-t footer border-gray-50 dark:bg-zinc-700 dark:border-zinc-600 dark:text-gray-200">
-                    <div class="grid grid-cols-2 text-gray-500 dark:text-zinc-100">
+                    class="absolute bottom-0 left-0 right-0 px-5 py-5 bg-white border-t footer border-gray-50   dark:text-gray-200">
+                    <div class="grid grid-cols-2 text-gray-500 ">
                         <div class="grow">
                             &copy;
                             <script>

@@ -55,6 +55,7 @@
 
     <script src="/admins/js/app.js"></script>
 
+    <script src="/admins/js/custom.js"></script>
 </body>
 
 </html>

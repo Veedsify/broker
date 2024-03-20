@@ -61589,3 +61589,15 @@ canvas {
         gap: 1.5rem !important;
     }
 }
+
+
+#confirmModal {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+#confirmModal.active {
+    opacity: 1;
+    pointer-events: all;
+}
