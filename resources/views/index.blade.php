@@ -29,12 +29,12 @@
                         <div
                             class="d-flex align-items-center justify-content-center flex-wrap gap-4 gap-md-6 mb-10 mb-md-13 wow fadeInUp">
                             <a class="hero_area__content-btnone cmn-btn px-6 px-md-8 py-3 d-center gap-3"
-                                href="{{route('register')}}">Get
+                                href="{{ route('register') }}">Get
                                 Started
                                 <i class="ti ti-chevron-right fs-five px-1 bg4-color p6-color rounded-3 fw-bolder"></i>
                             </a>
                             <a class="hero_area__content-btntwo cmn-btn third-alt px-6 px-md-8 py-3 d-center gap-3"
-                                href="{{route("pricingplan")}}">Explore
+                                href="{{ route('pricingplan') }}">Explore
                                 <i class="ti ti-chevron-right fs-five px-1 bg2-color rounded-3 fw-bolder"></i>
                             </a>
                         </div>
@@ -1209,10 +1209,10 @@
                 <div class="col-md-7 col-lg-6">
                     <h2 class="wow fadeInUp">Certified Trading Experts</h2>
                 </div>
-                <div class="col-md-4 col-xl-3 col-xxl-2 text-md-end">
+                {{-- <div class="col-md-4 col-xl-3 col-xxl-2 text-md-end">
                     <a href="pricing-plan.html" class="cmn-btn py-3 px-5 px-md-6">More<i
                             class="ti ti-chevron-right fs-five"></i></a>
-                </div>
+                </div> --}}
             </div>
             <div class="row gy-5 gy-md-6 justify-content-center">
                 <div class="col-md-6 col-xl-4">
@@ -1262,9 +1262,8 @@
             <div class="row justify-content-center pb-10 pb-sm-15 pb-md-20">
                 <div class="col-xl-6">
                     <div class="life_digital__title text-center">
-                        <span class="bg1-color rounded-20 py-2 px-5 mb-5 mb-md-6 wow fadeInUp">Blockchain
-                            Technology</span>
-                        <h2 class="wow fadeInUp">Life in the digital world</h2>
+                        <span class="bg1-color rounded-20 py-2 px-5 mb-5 mb-md-6 wow fadeInUp">Awesome Stats</span>
+                        <h2 class="wow fadeInUp">Let our awesome stats speak</h2>
                     </div>
                 </div>
             </div>
@@ -1275,10 +1274,10 @@
                         <div
                             class="hero_area__countdown mb-3 mb-md-5 counters d-flex align-items-center justify-content-center">
                             <span class="odometer hero_area__countdown-number display-three fw_500"
-                                data-odometer-final="8327"></span>
+                                data-odometer-final="6327"></span>
                         </div>
-                        <h4 class="text-center mb-5 mb-md-6">Market price</h4>
-                        <p class="text-center">Claritas est etiam processus dynamicus, sequitur consuetudium lectorum.
+                        <h4 class="text-center mb-5 mb-md-6">Investors</h4>
+                        <p class="text-center">Coinx has over 5000 inverstor on the platform
                         </p>
                     </div>
                     <span class="v-line lgx mb-20 pb-6 d-none d-lg-block"></span>
@@ -1286,11 +1285,12 @@
                         <div
                             class="hero_area__countdown mb-3 mb-md-5 counters d-flex align-items-center justify-content-center">
                             <span class="odometer hero_area__countdown-number display-three fw_500"
-                                data-odometer-final="16"></span>
-                            <span class="display-three fw_500">mb</span>
+                                data-odometer-final="1359">23.2</span>
+                            <span class="display-three fw_500">M</span>
                         </div>
-                        <h4 class="text-center mb-5 mb-md-6">Average block size</h4>
-                        <p class="text-center">Claritas est etiam processus dynamicus, sequitur consuetudium lectorum.
+                        <h4 class="text-center mb-5 mb-md-6">Referral Commissions</h4>
+                        <p class="text-center">Coinx has paid over 20M in referral commision to investors and users on the
+                            platform
                         </p>
                     </div>
                     <span class="v-line lgx mb-20 pb-6 d-none d-lg-block"></span>
@@ -1298,10 +1298,11 @@
                         <div
                             class="hero_area__countdown mb-3 mb-md-5 counters d-flex align-items-center justify-content-center">
                             <span class="odometer hero_area__countdown-number display-three fw_500"
-                                data-odometer-final="8327"></span>
+                                data-odometer-final="654.8"></span>
+                            <span class="display-three fw_500">M</span>
                         </div>
-                        <h4 class="text-center mb-5 mb-md-6">Clients worldwide</h4>
-                        <p class="text-center">Claritas est etiam processus dynamicus, sequitur consuetudium lectorum.
+                        <h4 class="text-center mb-5 mb-md-6">Paid worldwide</h4>
+                        <p class="text-center">Coinx has paid over 654.8M to investors and users on the platform
                         </p>
                     </div>
                 </div>
@@ -1316,29 +1317,14 @@
                 <div class="col-md-8 col-xl-7 col-xxl-6">
                     <div class="ready_exhange__content text-center">
                         <h2 class="mb-5 mb-md-6 wow fadeInUp">Ready to Exchange?</h2>
-                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your Coinx account now to trade crypto
+                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your Coinx account now to investing in crypto
                             seamlessly,
                             without any
                             fees for buying, selling, or exchanging. Get started today!</p>
                         <div
                             class="ready_exhange__changenow d-flex align-items-center justify-content-center gap-4 gap-sm-8 gap-lg-10">
-                            <a href="swap.html" class="cmn-btn py-3 px-5 px-6 wow fadeInUp">
-                                Exchange Now
-                            </a>
-                            <div class="ready_exhange__changenow-brand wow fadeInUp">
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-google-play p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-apple p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-pinterest p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-behance p1-color fs-three"></i>
-                                </a>
-                            </div>
+                            <a href="swap.html" class="cmn-btn py-3 px-6 wow fadeInUp">
+                                Join Now </a>
                         </div>
                     </div>
                 </div>
