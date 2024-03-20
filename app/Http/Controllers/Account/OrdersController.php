@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers\Account;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 
 class OrdersController extends Controller
 {
     //
-    public function allOrders()
+    public function orders()
     {
-        return view('account.all-orders');
+        return View::make("account.your-orders");
     }
     public function earnings()
     {
-        return view('account.earning-orders');
+        return View::make("account.earnings");
     }
+
 }

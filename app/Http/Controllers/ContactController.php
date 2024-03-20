@@ -10,4 +10,5 @@ class ContactController extends Controller
     public function contact(){
         return view('contact-us');
     }
+
 }

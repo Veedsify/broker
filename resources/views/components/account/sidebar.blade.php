@@ -9,7 +9,7 @@
                 <li class="px-5 py-3 text-xs font-medium text-gray-500 cursor-default leading-[18px] group-data-[sidebar-size=sm]:hidden block"
                     data-key="t-menu">Menu</li>
                 <li>
-                    <a href="{{ route('admin') }}"
+                    <a href="{{ route('account.index') }}"
                         class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
                         <i data-feather="home" fill="#545a6d33"></i>
                         <span data-key="t-dashboard"> Dashboard</span>
@@ -24,7 +24,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="login.html"
+                            <a href="{{route ('account.profile')}}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Settings</a>
                         </li>
                         <li>
@@ -34,7 +34,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/admin/deposit"
+                    <a href="{{route ('account.deposit')}}"
                         class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
                         <i data-feather="dollar-sign" fill="#545a6d33"></i>
                         <span data-key="t-dashboard">Make Deposit</span>
@@ -60,7 +60,7 @@
                                 Withdrawal</a>
                         </li>
                         <li>
-                            <a href="register.html"
+                            <a href="{{route ('account.history')}}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Withdrawal
                                 History</a>
                         </li>
@@ -74,12 +74,12 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="login.html"
+                            <a href="{{route ('account.orders')}}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Your
                                 Orders</a>
                         </li>
                         <li>
-                            <a href="register.html"
+                            <a href="{{route ('account.earnings')}}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Earnings</a>
                         </li>
                     </ul>

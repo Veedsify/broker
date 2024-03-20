@@ -24,7 +24,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('account.profile') }}"
+                            <a href="#"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">New
                                 Article</a>
                         </li>
@@ -48,7 +48,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('account.profile') }}"
+                            <a href="{{ route('admin.profile') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Settings</a>
                         </li>
                         <li>
@@ -72,11 +72,11 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="login.html"
+                            <a href="{{ route('admin.chat')}}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Chatbot</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.history') }}"
+                            <a href="{{ route('admin.request') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Contact
                                 Request</a>
                         </li>
@@ -90,27 +90,27 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('account.allOrders') }}"
+                            <a href="{{ route('admin.btc') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Bitcoin
                                 Addresses</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Etherium
                                 Addresses</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Solana
                                 Addresses</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">BNB
                                 Addresses</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Doge
                                 Addresses</a>
                         </li>
@@ -124,17 +124,17 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('account.allOrders') }}"
+                            <a href="{{ route('admin.btc') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Pricing
                                 Plan</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Update
                                 Page Data</a>
                         </li>
                         <li>
-                            <a href="{{ route('account.earnings') }}"
+                            <a href="{{ route('admin.eth') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white"></a>
                         </li>
                     </ul>
