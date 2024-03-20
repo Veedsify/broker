@@ -9,7 +9,7 @@
     {{-- Header end --}}
 
 
-    <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
+  <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
         <div class="page-content dark:bg-zinc-700">
             <div class="container-fluid px-[0.625rem]">
 
@@ -22,7 +22,7 @@
                                 <li class="inline-flex items-center">
                                     <a href="#"
                                         class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900 dark:text-zinc-100 dark:hover:text-white">
-                                        Contacts
+                                        Accounts
                                     </a>
                                 </li>
                                 <li>
@@ -38,57 +38,35 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-12 gap-6">
-                    <div class="col-span-12 lg:col-span-9">
+                    <div class="col-span-12 ">
                         <div class="card dark:bg-zinc-800 dark:border-zinc-600">
                             <div class="card-body ">
                                 <div class="grid grid-cols-12 ">
-                                    <div class="col-span-9">
-                                        <div class="flex flex-wrap items-center">
+                                      <div class="col-span-12  justify-between">
+                                        <div class="md:flex  items-center">
                                             <div class="w-20 h-20 ltr:mr-1 rtl:ml-1">
-                                                <img src="/admins/images/avatar-2.jpg" alt=""
-                                                    class="rounded-full">
+                                                <img src="{{ auth()->user()->avatar }}" alt="" class="rounded-full">
                                             </div>
-                                            <div class="md:ml-3 mt-3 md:mt-0">
-                                                <h5 class="text-gray-700 text-16 dark:text-gray-100">Phyllis Gatlin</h5>
-                                                <p class="mb-4 text-gray-500 dark:text-zinc-100 text-13">Full Stack
-                                                    Developer</p>
+                                            <div>
+                                                <div class="block">
 
-                                                <div class="flex flex-wrap items-start gap-2 text-13">
-                                                    <div class="text-gray-500 dark:text-zinc-100"><i
-                                                            class="text-green-500 align-middle mdi mdi-circle-medium me-1 ltr:mr-1 rtl:ml-1"></i>Development
-                                                    </div>
-                                                    <div class="text-gray-500 dark:text-zinc-100"><i
-                                                            class="text-green-500 align-middle mdi mdi-circle-medium me-1 ltr:mr-1 rtl:ml-1"></i>phyllisgatlin@minia.com
-                                                    </div>
+                                                    <h6>{{ auth()->user()->name }}</h6>
+                                                    <small class="text-gray-500">{{ auth()->user()->tier }}</small>
                                                 </div>
+                                                <div class=" flex  mt-3   gap-4">
+
+                                                    <button class="  flex items-start   gap-2  rounded ">
+                                                        Edit <i data-feather="edit" fill="#545a6d33" class="w-3"></i>
+                                                    </button>
+                                                    <button class="flex   gap-2  rounded ">
+                                                        Remove <i data-feather="trash" fill="#545a6d33" class="w-3"></i>
+                                                    </button>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-span-3">
-                                        <div class="flex flex-wrap items-center justify-end">
-                                            <button type="button"
-                                                class="border-transparent btn bg-gray-50/50 dark:bg-zinc-700 dark:text-gray-100"><i
-                                                    class="me-1"></i> Message</button>
-                                            <div class="relative ml-3 dropdown">
-                                                <button class="text-gray-600 border-0 btn dropdown-toggle" type="button"
-                                                    data-bs-toggle="dropdown" id="dropdownMenuButton1">
-                                                    <i class="align-middle text-16 bx bx-dots-horizontal-rounded"></i>
-                                                </button>
-                                                <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto dark:bg-zinc-700 dark:border-zinc-600 bg-clip-padding"
-                                                    aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="block w-full px-5 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50/50 dark:text-gray-100 dark:hover:bg-zinc-600/80"
-                                                            href="#">Action</a>
-                                                    </li>
-                                                    <li><a class="block w-full px-5 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50/50 dark:text-gray-100 dark:hover:bg-zinc-600/80"
-                                                            href="#">Another action</a>
-                                                    </li>
-                                                    <li><a class="block w-full px-5 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50/50 dark:text-gray-100 dark:hover:bg-zinc-600/80"
-                                                            href="#">Something else here</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="nav-tabs border-b-tabs">
 
@@ -97,97 +75,208 @@
                                         <li>
                                             <a href="javascript:void(0);" data-tw-toggle="tab"
                                                 data-tw-target="tab-full-u-home"
-                                                class="px-3 pt-5 pb-[1.4rem] font-medium active">Overview</a>
+                                                class="px-3 pt-5 pb-[1.4rem] font-medium active">Profile</a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void(0);" data-tw-toggle="tab"
-                                                data-tw-target="tab-full-u-Profile"
-                                                class="px-3 pt-5 pb-[1.4rem] font-medium ">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0);" data-tw-toggle="tab"
-                                                data-tw-target="tab-full-u-setting"
-                                                class="px-3 pt-5 pb-[1.4rem] font-medium ">Post</a>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="card dark:bg-zinc-800 dark:border-zinc-600">
                             <div class="border-b card-body border-gray-50 dark:border-zinc-600">
-                                <h5 class="text-gray-700 text-15 dark:text-gray-100">About</h5>
+                                <h5 class="text-gray-700 text-15 dark:text-gray-100">Personal Information</h5>
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <div class="pb-3">
-                                        <div class="grid grid-cols-12">
-                                            <div class="col-span-12 md:col-span-2">
-                                                <div>
-                                                    <h5 class="font-medium text-gray-700 text-15 dark:text-gray-100">Bio :
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-span-12 md:col-span-10">
-                                                <div class="text-gray-500 dark:text-zinc-100">
-                                                    <p class="mb-2">Hi I'm Phyllis Gatlin, Lorem Ipsum is simply dummy
-                                                        text of the printing and typesetting industry. Lorem Ipsum has been
-                                                        the industry's standard dummy text ever since the 1500s, when an
-                                                        unknown printer took a galley of type and scrambled it to make a
-                                                        type specimen book. It has survived not only five centuries, but
-                                                        also the leap into electronic typesetting, remaining essentially
-                                                        unchanged. It was popularised in the 1960s with the release of
-                                                        Letraset sheets containing Lorem Ipsum passages</p>
-                                                    <p class="mb-0">It is a long established fact that a reader will be
-                                                        distracted by the readable content of a page when looking at it has
-                                                        a more-or-less normal distribution of letters</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="py-3">
-                                        <div class="grid grid-cols-12">
-                                            <div class="col-span-12 md:col-span-2">
-                                                <div>
-                                                    <h5 class="font-medium text-gray-700 text-15 dark:text-gray-100">
-                                                        Experience :</h5>
+                                        <form action="">
+                                            <div class="grid  gap-4 mb-5">
+                                                <div class="mb-4">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Firstname
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Lastname
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
                                                 </div>
                                             </div>
-                                            <div class="col-span-12 md:col-span-10">
-                                                <div class="text-gray-500 dark:text-zinc-100">
-                                                    <p>If several languages coalesce, the grammar of the resulting language
-                                                        is more simple and regular than that of the individual languages.
-                                                        The new common language will be more simple and regular than the
-                                                        existing European languages. It will be as simple as Occidental; in
-                                                        fact, it will be Occidental. To an English person, it will seem like
-                                                        simplified English, as a skeptical Cambridge friend of mine told me
-                                                        what Occidental is. The European languages are members of the same
-                                                        family. Their separate existence is a myth. For science, music,
-                                                        sport, etc</p>
+                                            <div class="grid gap-4 mb-5">
+                                                <div class="mb-4">
+                                                    <label for="firstname" class="font-bold mb-2  block">
+                                                        Country/Phone number:
+                                                    </label>
+                                                    <div
+                                                        class="grid grid-cols-8 outline-1 lg:w-3/5  outline outline-gray-100 rounded-md">
+                                                        <select name="" class="col-span-1 bg-gray-100 border-none"
+                                                            id="">
+                                                            <option value="+1">+1</option>
+                                                            <option value="+44">+44</option>
+                                                            <option value="+91">+91</option>
+                                                            <option value="+81">+81</option>
+                                                            <option value="+234">+234</option>
+                                                            <option value="+61">+61</option>
+                                                            <option value="+86">+86</option>
+                                                            <option value="+33">+33</option>
+                                                            <option value="+49">+49</option>
+                                                            <option value="+52">+52</option>
+                                                            <option value="+7">+7</option>
+                                                            <option value="+27">+27</option>
+                                                            <option value="+82">+82</option>
+                                                            <option value="+46">+46</option>
+                                                            <option value="+41">+41</option>
+                                                            <option value="+971">+971</option>
+                                                            <option value="+598">+598</option>
+                                                            <option value="+58">+58</option>
+                                                            <option value="+355">+355</option>
+                                                            <option value="+213">+213</option>
+                                                            <option value="+376">+376</option>
+                                                            <option value="+244">+244</option>
+                                                            <option value="+54">+54</option>
+                                                            <option value="+61">+61</option>
+                                                            <option value="+43">+43</option>
+                                                            <option value="+994">+994</option>
+                                                            <option value="+973">+973</option>
+                                                            <option value="+880">+880</option>
+                                                            <option value="+375">+375</option>
+                                                            <option value="+32">+32</option>
+                                                            <option value="+501">+501</option>
+                                                            <option value="+229">+229</option>
+                                                            <option value="+975">+975</option>
+                                                            <option value="+591">+591</option>
+                                                            <option value="+387">+387</option>
+                                                            <option value="+267">+267</option>
+                                                            <option value="+55">+55</option>
+                                                            <option value="+673">+673</option>
+                                                            <option value="+359">+359</option>
+                                                            <option value="+226">+226</option>
+                                                            <option value="+257">+257</option>
+                                                            <option value="+855">+855</option>
+                                                            <option value="+237">+237</option>
+                                                            <option value="+1">+1</option>
+                                                            <option value="+238">+238</option>
+                                                            <option value="+236">+236</option>
+                                                            <option value="+235">+235</option>
+                                                            <option value="+56">+56</option>
+                                                            <option value="+57">+57</option>
+                                                            <option value="+269">+269</option>
+                                                            <option value="+242">+242</option>
+                                                            <option value="+243">+243</option>
+                                                            <option value="+506">+506</option>
+                                                            <option value="+385">+385</option>
+                                                            <option value="+53">+53</option>
+                                                            <option value="+357">+357</option>
+                                                            <option value="+420">+420</option>
+                                                            <option value="+45">+45</option>
+                                                            <option value="+253">+253</option>
+                                                            <option value="+1">+1</option>
+                                                            <option value="+593">+593</option>
+                                                            <option value="+20">+20</option>
+                                                            <option value="+503">+503</option>
+                                                            <option value="+240">+240</option>
+                                                            <option value="+372">+372</option>
+                                                            <option value="+251">+251</option>
+                                                            <option value="+500">+500</option>
+                                                            <option value="+298">+298</option>
+                                                            <option value="+679">+679</option>
+                                                            <option value="+358">+358</option>
+                                                            <option value="+594">+594</option>
+                                                            <option value="+689">+689</option>
+                                                            <option value="+241">+241</option>
+                                                            <option value="+220">+220</option>
+                                                            <option value="+995">+995</option>
+                                                            <option value="+233">+233</option>
+                                                            <option value="+350">+350</option>
+                                                            <option value="+30">+30</option>
+                                                            <option value="+299">+299</option>
+                                                            <option value="+502">+502</option>
+                                                            <option value="+224">+224</option>
+                                                            <option value="+245">+245</option>
+                                                            <option value="+592">+592</option>
+                                                            <option value="+509">+509</option>
+                                                            <option value="+504">+504</option>
+                                                            <option value="+36">+36</option>
+                                                            <option value="+354">+354</option>
+                                                            <option value="+62">+62</option>
+                                                            <option value="+98">+98</option>
+                                                            <option value="+964">+964</option>
+                                                            <option value="+353">+353</option>
+                                                            <option value="+972">+972</option>
+                                                            <option value="+39">+39</option>
+                                                            <option value="+225">+225</option>
+                                                            <option value="+81">+81</option>
+                                                            <option value="+962">+962</option>
+                                                            <option value="+7">+7</option>
+                                                            <option value="+254">+254</option>
+                                                            <option value="+686">+686</option>
+                                                            <option value="+965">+965</option>
+                                                            <option value="+996">+996</option>
+                                                        </select>
+                                                        <input type="text"
+                                                            class="block w-full border-none col-span-5 px-4 py-3">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Zip Code:
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Email:
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                </div>
 
-                                                    <ul class="mt-4 mb-0 text-gray-500 list-unstyled dark:text-zinc-100">
-                                                        <li class="py-1"><i
-                                                                class="text-green-500 align-middle mdi mdi-circle-medium ltr:mr-1 rtl:ml-1"></i>Donec
-                                                            vitae sapien ut libero venenatis faucibus</li>
-                                                        <li class="py-1"><i
-                                                                class="text-green-500 align-middle mdi mdi-circle-medium ltr:mr-1 rtl:ml-1"></i>Quisque
-                                                            rutrum aenean imperdiet</li>
-                                                        <li class="py-1"><i
-                                                                class="text-green-500 align-middle mdi mdi-circle-medium ltr:mr-1 rtl:ml-1"></i>Integer
-                                                            ante a consectetuer eget</li>
-                                                        <li class="py-1"><i
-                                                                class="text-green-500 align-middle mdi mdi-circle-medium ltr:mr-1 rtl:ml-1"></i>Phasellus
-                                                            nec sem in justo pellentesque</li>
-                                                    </ul>
+                                                <div class="mb-4 ">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Gender:
+                                                    </label>
+                                                    <select name="" id=""
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                        <option value="" selected disabled>(-- SELECT GENDER --)
+                                                        </option>
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                        <option value="">BiSexual</option>
+                                                    </select>
+                                                </div>
+                                                {{-- <div class="mb-4 col-span-2">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        Eth Address:
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                </div>
+                                                <div class="mb-4 col-span-3">
+                                                    <label for="firstname" class="font-bold mb-2 inline-block">
+                                                        External Wallet Addres:
+                                                    </label>
+                                                    <input type="text"
+                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                </div> --}}
+                                                <div class="mb-4">
+                                                    <button type="submit" value="Save"
+                                                        class="block text-white font-semibold border bg-blue-700 w-full px-4 py-3 rounded-md ">
+                                                        Save
+                                                    </button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-12 lg:col-span-3">
+                    {{-- <div class="col-span-12 lg:col-span-3">
                         <div class="card dark:bg-zinc-800 dark:border-zinc-600">
                             <div class="card-body">
                                 <h5 class="mb-3 text-gray-700 text-15 dark:text-gray-100">Skills</h5>
@@ -288,25 +377,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
-
-                <!-- Footer Start -->
-                <footer
-                    class="absolute bottom-0 left-0 right-0 px-5 py-5 bg-white border-t footer border-gray-50 dark:bg-zinc-700 dark:border-zinc-600 dark:text-gray-200">
-                    <div class="grid grid-cols-2 text-gray-500 dark:text-zinc-100">
-                        <div class="grow">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> Minia
-                        </div>
-                        <div class="hidden md:inline-block text-end">Design & Develop by <a href=""
-                                class="underline text-violet-500">Themesbrand</a></div>
-
-                    </div>
-                </footer>
-                <!-- end Footer -->
             </div>
         </div>
     </div>

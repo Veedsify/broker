@@ -144,11 +144,20 @@
                                </div>
                                <div class="header-section__modalstyle">
                                    <!-- Button trigger modal -->
-                                   <a href="{{ route('register') }}"
-                                       class="cmn-btn px-3 px-sm-5 px-md-6 py-2 py-sm-3 d-flex align-items-center gap-1">
-                                       <span class="p7-color fw-semibold d-none d-sm-block">Join </span>
-                                       Now
-                                   </a>
+                                   @auth
+                                       <a href="{{ route('account.index') }}"
+                                           class="cmn-btn px-3 px-sm-5 px-md-6 py-2 py-sm-3 d-flex align-items-center gap-1">
+                                           <span class="p7-color fw-semibold d-none d-sm-block">My </span>
+                                           Account
+                                       </a>
+                                   @endauth
+                                   @guest
+                                       <a href="{{ route('login') }}"
+                                           class="cmn-btn px-3 px-sm-5 px-md-6 py-2 py-sm-3 d-flex align-items-center gap-1">
+                                           <span class="p7-color fw-semibold d-none d-sm-block">Join </span>
+                                           Now
+                                       </a>
+                                   @endguest
                                </div>
 
                            </div>

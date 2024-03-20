@@ -227,8 +227,10 @@
                             id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">
                             <img class="border-[3px] border-gray-700 dark:border-zinc-400 rounded-full w-9 h-9 ltr:xl:mr-2 rtl:xl:ml-2"
-                                src="/admins/images/avatar-1.jpg" alt="Header Avatar">
-                            <span class="hidden font-medium xl:block">Shawn L.</span>
+                                src="{{ auth()->user()->avatar }}" alt="Header Avatar">
+                            <span class="hidden font-medium xl:block">{{ explode(' ', auth()->user()->name)[0] }}
+                                {{ explode(' ', auth()->user()->name)[1][0] }}.</span>
+                            </span>
                             <i class="hidden align-bottom mdi mdi-chevron-down xl:block"></i>
                         </button>
                         <div class="absolute top-0 z-50 hidden w-40 list-none bg-white dropdown-menu dropdown-animation rounded shadow  dark:bg-zinc-800"
@@ -249,10 +251,12 @@
                                 </div>
                                 <hr class="border-gray-50 dark:border-gray-700">
                                 <div class="dropdown-item dark:text-gray-100">
-                                    <a class="block p-3 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50"
-                                        href="logout.html">
-                                        <i class="mr-1 align-middle mdi mdi-logout text-16"></i> Logout
-                                    </a>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button class="block p-3 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50 w-full">
+                                            <i class="mr-1 align-middle mdi mdi-logout text-16"></i> Logout
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

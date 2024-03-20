@@ -41,18 +41,26 @@
                             <div class="card-body ">
                                 <div class="grid grid-cols-12 ">
                                     <div class="col-span-12  justify-between">
-                                        <div class="flex flex-wrap items-center">
+                                        <div class="md:flex  items-center">
                                             <div class="w-20 h-20 ltr:mr-1 rtl:ml-1">
-                                                <img src="/admins/images/avatar-2.jpg" alt=""
-                                                    class="rounded-full">
+                                                <img src="{{ auth()->user()->avatar }}" alt="" class="rounded-full">
                                             </div>
-                                            <div class="md:ml-3 mt-3  md:mt-0 flex items-center gap-3">
-                                                <button  class="p-1  bg-blue-600 text-white flex  items-center gap-2  rounded px-3">
-                                                    Edit  <i data-feather="edit" fill="#545a6d33" class="w-3"></i>
-                                               </button>
-                                                <button  class="p-1 bg-red-600  flex  items-center gap-2 duration-300 border-red-600  text-white  rounded px-3">
-                                                    Remove <i data-feather="trash" fill="#545a6d33" class="w-3"></i>
-                                               </button>
+                                            <div>
+                                                <div class="block">
+
+                                                    <h6>{{ auth()->user()->name }}</h6>
+                                                    <small class="text-gray-500">{{ auth()->user()->tier }}</small>
+                                                </div>
+                                                <div class=" flex  mt-3   gap-4">
+
+                                                    <button class="  flex items-start   gap-2  rounded ">
+                                                        Edit <i data-feather="edit" fill="#545a6d33" class="w-3"></i>
+                                                    </button>
+                                                    <button class="flex   gap-2  rounded ">
+                                                        Remove <i data-feather="trash" fill="#545a6d33" class="w-3"></i>
+                                                    </button>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -81,18 +89,20 @@
                                     <div class="py-3">
                                         <form action="">
                                             <div class="grid  gap-4 mb-5">
-                                                <div class="mb-4">
+                                                <div class="mb-4 lg:w-3/5">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Firstname
                                                     </label>
-                                                    <input type="text"
+                                                    <input type="text" name="firstname"
+                                                        value="{{ old('firstname') ? old('firstname') : explode(' ', auth()->user()->name)[0] }}"
                                                         class="block border-gray-100 w-full px-4 py-3 rounded-md ">
                                                 </div>
-                                                <div class="mb-4">
+                                                <div class="mb-4 lg:w-3/5">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Lastname
                                                     </label>
-                                                    <input type="text"
+                                                    <input type="text" name="lastname"
+                                                        value="{{ old('lastname') ? old('lastname') : explode(' ', auth()->user()->name)[1] }}"
                                                         class="block border-gray-100 w-full px-4 py-3 rounded-md ">
                                                 </div>
                                             </div>
@@ -103,130 +113,33 @@
                                                     </label>
                                                     <div
                                                         class="grid grid-cols-8 outline-1 lg:w-3/5  outline outline-gray-100 rounded-md">
-                                                        <select name="" class="col-span-1 bg-gray-100 border-none"
+                                                        <select name=""
+                                                            class="col-span-2 lg:col-span-1 bg-gray-100 border-none"
                                                             id="">
-                                                            <option value="+1">+1</option>
-                                                            <option value="+44">+44</option>
-                                                            <option value="+91">+91</option>
-                                                            <option value="+81">+81</option>
-                                                            <option value="+234">+234</option>
-                                                            <option value="+61">+61</option>
-                                                            <option value="+86">+86</option>
-                                                            <option value="+33">+33</option>
-                                                            <option value="+49">+49</option>
-                                                            <option value="+52">+52</option>
-                                                            <option value="+7">+7</option>
-                                                            <option value="+27">+27</option>
-                                                            <option value="+82">+82</option>
-                                                            <option value="+46">+46</option>
-                                                            <option value="+41">+41</option>
-                                                            <option value="+971">+971</option>
-                                                            <option value="+598">+598</option>
-                                                            <option value="+58">+58</option>
-                                                            <option value="+355">+355</option>
-                                                            <option value="+213">+213</option>
-                                                            <option value="+376">+376</option>
-                                                            <option value="+244">+244</option>
-                                                            <option value="+54">+54</option>
-                                                            <option value="+61">+61</option>
-                                                            <option value="+43">+43</option>
-                                                            <option value="+994">+994</option>
-                                                            <option value="+973">+973</option>
-                                                            <option value="+880">+880</option>
-                                                            <option value="+375">+375</option>
-                                                            <option value="+32">+32</option>
-                                                            <option value="+501">+501</option>
-                                                            <option value="+229">+229</option>
-                                                            <option value="+975">+975</option>
-                                                            <option value="+591">+591</option>
-                                                            <option value="+387">+387</option>
-                                                            <option value="+267">+267</option>
-                                                            <option value="+55">+55</option>
-                                                            <option value="+673">+673</option>
-                                                            <option value="+359">+359</option>
-                                                            <option value="+226">+226</option>
-                                                            <option value="+257">+257</option>
-                                                            <option value="+855">+855</option>
-                                                            <option value="+237">+237</option>
-                                                            <option value="+1">+1</option>
-                                                            <option value="+238">+238</option>
-                                                            <option value="+236">+236</option>
-                                                            <option value="+235">+235</option>
-                                                            <option value="+56">+56</option>
-                                                            <option value="+57">+57</option>
-                                                            <option value="+269">+269</option>
-                                                            <option value="+242">+242</option>
-                                                            <option value="+243">+243</option>
-                                                            <option value="+506">+506</option>
-                                                            <option value="+385">+385</option>
-                                                            <option value="+53">+53</option>
-                                                            <option value="+357">+357</option>
-                                                            <option value="+420">+420</option>
-                                                            <option value="+45">+45</option>
-                                                            <option value="+253">+253</option>
-                                                            <option value="+1">+1</option>
-                                                            <option value="+593">+593</option>
-                                                            <option value="+20">+20</option>
-                                                            <option value="+503">+503</option>
-                                                            <option value="+240">+240</option>
-                                                            <option value="+372">+372</option>
-                                                            <option value="+251">+251</option>
-                                                            <option value="+500">+500</option>
-                                                            <option value="+298">+298</option>
-                                                            <option value="+679">+679</option>
-                                                            <option value="+358">+358</option>
-                                                            <option value="+594">+594</option>
-                                                            <option value="+689">+689</option>
-                                                            <option value="+241">+241</option>
-                                                            <option value="+220">+220</option>
-                                                            <option value="+995">+995</option>
-                                                            <option value="+233">+233</option>
-                                                            <option value="+350">+350</option>
-                                                            <option value="+30">+30</option>
-                                                            <option value="+299">+299</option>
-                                                            <option value="+502">+502</option>
-                                                            <option value="+224">+224</option>
-                                                            <option value="+245">+245</option>
-                                                            <option value="+592">+592</option>
-                                                            <option value="+509">+509</option>
-                                                            <option value="+504">+504</option>
-                                                            <option value="+36">+36</option>
-                                                            <option value="+354">+354</option>
-                                                            <option value="+62">+62</option>
-                                                            <option value="+98">+98</option>
-                                                            <option value="+964">+964</option>
-                                                            <option value="+353">+353</option>
-                                                            <option value="+972">+972</option>
-                                                            <option value="+39">+39</option>
-                                                            <option value="+225">+225</option>
-                                                            <option value="+81">+81</option>
-                                                            <option value="+962">+962</option>
-                                                            <option value="+7">+7</option>
-                                                            <option value="+254">+254</option>
-                                                            <option value="+686">+686</option>
-                                                            <option value="+965">+965</option>
-                                                            <option value="+996">+996</option>
+                                                            <option value="" selected disabled>(-- SELECT CODE --)
+                                                            </option>
+
+                                                            @foreach ($phoneCodes as $code => $value)
+                                                                <option value="{{ $value }}">
+                                                                    {{ $code }} (+{{ $value }})
+                                                                </option>
+                                                            @endforeach
                                                         </select>
-                                                        <input type="text"
+                                                        <input type="text" name="phone"
+                                                            value="{{ old('phone') ? old('phone') : auth()->user()->phone }}"
                                                             class="block w-full border-none col-span-5 px-4 py-3">
                                                     </div>
                                                 </div>
-                                                <div class="mb-4">
-                                                    <label for="firstname" class="font-bold mb-2 inline-block">
-                                                        Zip Code:
-                                                    </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                </div>
-                                                <div class="mb-4">
+                                                <div class="mb-4 lg:w-3/5">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Email:
                                                     </label>
-                                                    <input type="text"
+                                                    <input type="text" disabled
+                                                        value="{{ old('email') ? old('fullname') : auth()->user()->email }}"
                                                         class="block border-gray-100 w-full px-4 py-3 rounded-md ">
                                                 </div>
 
-                                                <div class="mb-4 ">
+                                                <div class="mb-4 lg:w-3/5">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Gender:
                                                     </label>
@@ -253,7 +166,7 @@
                                                     <input type="text"
                                                         class="block border-gray-100 w-full px-4 py-3 rounded-md ">
                                                 </div> --}}
-                                                <div class="mb-4">
+                                                <div class="mb-4 lg:w-3/5">
                                                     <button type="submit" value="Save"
                                                         class="block text-white font-semibold border bg-blue-700 w-full px-4 py-3 rounded-md ">
                                                         Save
@@ -372,6 +285,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection

@@ -29,7 +29,7 @@
             if (window.innerWidth >= 992) {
               if (currentSIdebarSize == null) {
                 document.body.getAttribute("data-sidebar-size") == null ||
-                document.body.getAttribute("data-sidebar-size") == "lg"
+                  document.body.getAttribute("data-sidebar-size") == "lg"
                   ? document.body.setAttribute("data-sidebar-size", "sm")
                   : document.body.setAttribute("data-sidebar-size", "lg");
               } else if (currentSIdebarSize == "md") {
@@ -101,11 +101,11 @@
             setTimeout(function () {
               offset == 330
                 ? (verticalMenu.querySelector(
-                    ".simplebar-content-wrapper"
-                  ).scrollTop = offset + 85)
+                  ".simplebar-content-wrapper"
+                ).scrollTop = offset + 85)
                 : (verticalMenu.querySelector(
-                    ".simplebar-content-wrapper"
-                  ).scrollTop = offset);
+                  ".simplebar-content-wrapper"
+                ).scrollTop = offset);
             }, 0);
           }
         }
@@ -396,3 +396,27 @@ if (isChangeMode) {
     swiperDir();
   });
 }
+
+
+$("#proof_of_payment").on("change", function () {
+  var file = $(this).get(0).files[0];
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      preview = document.querySelector("#payment_preview")
+      var preview;
+      preview.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+  return false
+})
+
+
+document.querySelector("#openconfirmModal").on("click", function () {
+  document.querySelector("#confirmModal").css({
+    opacity: 1,
+    visibility: "visible",
+    pointerEvents: "auto"
+  })
+})

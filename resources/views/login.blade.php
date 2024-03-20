@@ -9,12 +9,6 @@
         <i class="ti ti-chevron-up fs-four p6-color"></i>
     </button>
     <!-- Scroll To Top End -->
-    <!-- start preloader -->
-    <div id="preloader" class="pre-item d-center">
-        <div class="loaderall"></div>
-    </div>
-    <!-- end preloader -->
-
     {{-- HEADER --}}
     <x-header />
     {{-- HEADER ENDS --}}
@@ -36,6 +30,16 @@
                             </div>
                             <div class="apex_section__aside-tabs mt-4">
                                 <div class="singletab mb-5 mb-md-6">
+                                    @if (session('error'))
+                                        <div class="alert alert-danger" role="alert">
+                                            {{ session('error') }}
+                                        </div>
+                                    @endif
+                                    @if (session('success'))
+                                        <div class="alert alert-success" role="alert">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
                                     <ul class="tablinks d-flex align-items-center gap-5 gap-md-6 mb-5 mb-md-6">
                                         <li class="nav-links position-relative">
                                             <button class="tablink fw-bold">Email</button>
@@ -47,9 +51,24 @@
                                     <div class="tabcontents">
                                         <div class="tabitem active">
                                             <div class="apex_section__forms">
-                                                <form>
-                                                    <input class="br2 mb-3 mb-md-4" type="email" placeholder="Email">
-                                                    <input class="br2 mb-3 mb-md-4" type="password" placeholder="Password">
+                                                <form method="post" action="{{ route('login.user') }}">
+                                                    @csrf
+                                                    <div>
+                                                        <input class="br2 mb-3 mb-md-4" name="email" type="email"
+                                                            placeholder="Email">
+                                                        @if ($errors->has('email'))
+                                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                        @endif
+                                                    </div>
+                                                    <div>
+                                                        <input class="br2 mb-3 mb-md-4" type="password" name="password"
+                                                            placeholder="Password">
+                                                        @if ($errors->has('password'))
+                                                            <span
+                                                                class="text-danger">{{ $errors->first('password') }}</span>
+                                                        @endif
+                                                    </div>
+
                                                     <a class="d-block text-end p1-color" href="javascript:void(0)">Forgot
                                                         password</a>
                                                     <button class="cmn-btn px-6 py-3 w-100 mt-5 mt-md-6">Login</button>
@@ -58,9 +77,23 @@
                                         </div>
                                         <div class="tabitem">
                                             <div class="apex_section__forms">
-                                                <form>
-                                                    <input class="br2 mb-3 mb-md-4" type="tel" placeholder="Phone">
-                                                    <input class="br2 mb-3 mb-md-4" type="password" placeholder="Password">
+                                                <form method="post" action="{{ route('login.user') }}">
+                                                    @csrf
+                                                    <div>
+                                                        <input class="br2 mb-3 mb-md-4" type="tel" name="phone"
+                                                            placeholder="Phone">
+                                                        @if ($errors->has('phone'))
+                                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                                        @endif
+                                                    </div>
+                                                    <div>
+                                                        <input class="br2 mb-3 mb-md-4" type="password" name="password"
+                                                            placeholder="Password">
+                                                        @if ($errors->has('password'))
+                                                            <span
+                                                                class="text-danger">{{ $errors->first('password') }}</span>
+                                                        @endif
+                                                    </div>
                                                     <a class="d-block " href="javascript:void(0)">Forgot
                                                         password</a>
                                                     <button class="cmn-btn px-6 py-3 w-100 mt-5 mt-md-6">Login</button>
@@ -69,19 +102,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mb-3 mb-md-4">
+                                {{-- <div class="d-flex align-items-center mb-3 mb-md-4">
                                     <hr class="w-100 br2">
                                     <span class="w-100">or log in with</span>
                                     <hr class="w-100 br2">
-                                </div>
-                                <div class="d-flex align-items-center gap-5 gap-md-6 mb-3">
+                                </div> --}}
+                                {{-- <div class="d-flex align-items-center gap-5 gap-md-6 mb-3">
                                     <a class="cmn-btn w-100 py-3 px-5 px-md-6 d-center gap-2 fourth-alt"
                                         href="javascript:void(0)">
                                         <img src="/assets/images/icon/google-icon.png" alt="icons">Google</a>
                                     <a class="cmn-btn w-100 py-3 px-5 px-md-6 d-center gap-2 fourth-alt"
                                         href="javascript:void(0)">
                                         <img src="/assets/images/icon/apple-icon.png" alt="icons">Apple</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

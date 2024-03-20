@@ -1,11 +1,11 @@
-@extends('../layouts/account/accountlayout')
+@extends('../layouts/admin/adminlayout')
 @section('content')
     <!-- ========== Left Sidebar Start ========== -->
-    <x-account.sidebar />
+    <x-admin.sidebar />
     <!-- Left Sidebar End -->
 
     {{-- Header start --}}
-    <x-account.header />
+    <x-admin.header />
     {{-- Header end --}}
 
 
@@ -46,9 +46,6 @@
 </div>
 
     </div>
-
-
-    
 
 
 @endsection

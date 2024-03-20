@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_pagedata', function (Blueprint $table) {
+        Schema::create('pagedata', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('title');
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string("hero_description");
             $table->string("why_choose_us_title");
             $table->string("why_choose_us_description");
-            $table->timestamps("about_us_title");
+            $table->string("about_us_title");
             $table->string("about_us_description");
             $table->string("about_us_text");
             $table->string("reasons_to_choose_us_title_1");
@@ -43,6 +43,7 @@ return new class extends Migration
             $table->string("reasons_to_choose_us_title_3");
             $table->string("reasons_to_choose_us_description_3");
             $table->string("explore_tiers_title");
+            $table->timestamps();
         });
     }
 

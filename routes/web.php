@@ -11,6 +11,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StakingController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,11 @@ Route::get('/terms-conditions', [PageController::class, 'terms'])->name('termsCo
 //Authentication
 Route::get("/login", [AuthController::class, 'showLoginPage'])->name("login");
 Route::get("/register", [AuthController::class, 'showRegisterPage'])->name("register");
+Route::put("/register", [AuthController::class, 'registerNewUser'])->name("register.new");
+Route::post("/login", [AuthController::class, 'loginUser'])->name("login.user");
+
+//Logout
+Route::post("/logout", function () {
+    Auth::logout();
+    return redirect()->route("index");
+})->name("logout");

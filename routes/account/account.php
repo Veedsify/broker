@@ -7,12 +7,9 @@ use App\Http\Controllers\Account\WithdrawController;
 use App\Http\Controllers\Account\AffiliateController;
 use App\Http\Controllers\Account\DashboardController;
 use App\Http\Controllers\Account\UpdateAccountController;
+use App\Http\Controllers\TierController;
 
-Route::prefix('account')->name('account.')->group(function () {
-    // Route::get('/', function () {
-    //     return view('admin.index');
-    // })->name('account');
-
+Route::prefix('account')->middleware(["auth"])->name('account.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
     Route::get('/deposit', [DepositController::class, 'deposit'])->name('deposit');
@@ -22,9 +19,6 @@ Route::prefix('account')->name('account.')->group(function () {
     Route::get('/earnings', [OrdersController::class, 'earnings'])->name('earnings');
     Route::get('/affiliate', [AffiliateController::class, 'affiliate'])->name('affiliate');
     Route::get('/security', [UpdateAccountController::class, 'security'])->name('security');
-    Route::get('/change-password', [UpdateAccountController::class, 'changePassword'])->name('change.password');
-
-
+    Route::get('/security/change-password', [UpdateAccountController::class, 'changePassword'])->name('change.password');
+    Route::get("/tiers/{id}", [TierController::class, 'tiers'])->name('tiers');
 });
-
-

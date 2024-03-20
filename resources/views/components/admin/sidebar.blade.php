@@ -52,7 +52,7 @@
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Settings</a>
                         </li>
                         <li>
-                            <a href="register.html"
+                            <a href="{{ route('admin.security') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Security</a>
                         </li>
                     </ul>
@@ -72,7 +72,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('admin.chat')}}"
+                            <a href="{{ route('admin.chat') }}"
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">Chatbot</a>
                         </li>
                         <li>
@@ -116,7 +116,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" aria-expanded="false"
                         class="block :rtl:pr-10 py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear nav-menu hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
                         <i data-feather="tool" fill="#545a6d33"></i>
@@ -138,15 +138,15 @@
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white"></a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);"
                         class="block :rtl:pr-10 py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
                         <i data-feather="share-2" fill="#545a6d33"></i>
                         <span data-key="t-auth">Affiliate Program</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="javascript: void(0);"
                         class="block :rtl:pr-10 py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-violet-500 dark:text-gray-300 dark:active:text-white dark:hover:text-white">
