@@ -44,14 +44,30 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-600 text-15 whitespace-nowrap ">Your Order</h6>
+                                @if (session('success'))
+                                    <div class="px-4 py-2 rounded-md border border-green-500 bg-green-50 w-full">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                                @if (session('error'))
+                                    <div class="px-4 py-6 mb-6 rounded-md border border-red-500 bg-red-50 w-full">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
+                            </div>
+                            <div>
+                                <h6
+                                    class="text-gray-600
+                                        text-15 whitespace-nowrap ">
+                                    Your Order</h6>
                                 <p class="text-gray-400 py-2">Your Order History displays details of cash deposits made to
                                     your account..</p>
                             </div>
                         </div>
                         <div>
 
-                            <div class=" mx-auto bg-white  overflow-x-auto p-3  ">
+                            <div class="
+                                        mx-auto bg-white overflow-x-auto p-3 ">
                                 <table class="min-w-full truncate divide-gray-200 border rounded-md">
                                     <thead class="bg-gray-50">
                                         <tr>

@@ -12,16 +12,77 @@ $("#proof_of_payment").on("change", function () {
     return false
 })
 
-document.querySelector("#openconfirmModal").addEventListener("click", function () {
+
+$("#openconfirmModal").on("click", function () {
     document.querySelector("#confirmModal").classList.add("active")
 })
-const child = document.querySelector("#inner_content").addEventListener("click", (e) => {
+const child = document.querySelector("#inner_content")?.addEventListener("click", (e) => {
     e.stopPropagation()
 })
-document.querySelector("#confirmModal").addEventListener("click", function (e) {
+$("#confirmModal").on("click", function (e) {
     document.querySelector("#confirmModal").classList.remove("active")
 })
 
-document.querySelector("#generate_address").addEventListener("click", (e) => {
+$("#generate_address").on("click", (e) => {
+    const selectcoin = document.querySelector("#selectcoin").value
+    const deposit_amount = document.querySelector("#deposit_amount").value
+    const minprice = parseInt(document.querySelector("#pay_form").getAttribute("data-start"))
+    const maxprice = parseInt(document.querySelector("#pay_form").getAttribute("data-end"))
+
+    if (!deposit_amount || deposit_amount == "") {
+        swal({
+            title: "Error",
+            text: "Please enter the amount, you wish to deposit",
+            icon: "error"
+        })
+        return
+    }
+
+    if (deposit_amount < minprice || deposit_amount > maxprice) {
+        swal({
+            title: "Error",
+            text: "Please enter the amount within the range of $" + minprice.toLocaleString() + " and $" + maxprice.toLocaleString(),
+            icon: "error"
+        })
+        return
+    }
+
+    if (!selectcoin || selectcoin == "") {
+        swal({
+            title: "Error",
+            text: "Please select a payment method to deposit with",
+            icon: "error"
+        })
+        return
+    }
+
     $("#loader_address").html("<img src='/custom/images/loader.gif' alt='loader' width='30px'>")
+
+    setTimeout(() => {
+        $("#paidamount").val(deposit_amount)
+        $("#loader_address").html("")
+        $("#showaddress").removeClass("hidden")
+    }, 1200);
 })
+
+$("#copybtcaddress").on("click", (e) => {
+    const btcaddress = document.querySelector("#btc_address").value
+    navigator.clipboard.writeText(btcaddress)
+    swal({
+        title: "Success",
+        text: "Your unique wallet address has copied to clipboard",
+        icon: "success"
+    })
+})
+
+
+window.onload = async function () {
+    const getPrice = await fetch("https://api.coincap.io/v2/assets/bitcoin")
+    const btcprice = getPrice.ok ? await getPrice.json() : 0
+    const price = btcprice.data.priceUsd
+    const trbtcvalue = document.querySelectorAll(".trbtcvalue")
+    trbtcvalue.forEach((element) => {
+        const amount = parseInt(element.getAttribute("data-amount"))
+        element.innerHTML = (amount / price).toFixed(8) + " BTC"
+    })
+}

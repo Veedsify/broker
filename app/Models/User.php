@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+Use App\Models\TransactionHistory;
+Use App\Models\Activity;
 
 class User extends Authenticatable
 {
@@ -25,6 +27,16 @@ class User extends Authenticatable
         'avatar',
         'referral_code',
     ];
+
+    public function transactionHistory()
+    {
+        return $this->hasMany(TransactionHistory::class);
+    }
+
+    public function activity()
+    {
+        return $this->hasMany(Activity::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

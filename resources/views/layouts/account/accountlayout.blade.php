@@ -30,6 +30,7 @@
     @yield('content')
 
     {{-- /SCRIPTS --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
     <script src="/admins/libs/%40popperjs/core/umd/popper.min.js"></script>
     <script src="/admins/libs/feather-icons/feather.min.js"></script>
     <script src="/admins/libs/metismenujs/metismenujs.min.js"></script>

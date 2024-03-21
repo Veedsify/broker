@@ -7,13 +7,18 @@
                      <h2 class="text-2xl text-gray-600 mb-10 ">
                          Confirm Payment</h2>
                      <div class="grid grid-cols-12 gap-4">
-                         <form class="col-span-12">
+                         <form class="col-span-12" action="{{ route('account.deposit.confirm') }}" method="post"
+                             enctype="multipart/form-data">
+                             @csrf
+                             <input type="hidden" id="paidamount" name="paidamount" value="">
+                             <input type="hidden" id="currency" name="currency" value="btc">
+                             <input type="hidden" id="tier" name="tier" value="{{ $id }}">
                              <div class="grid grid-cols-12 gap-4">
                                  <div class="col-span-12">
                                      <label for="proof_of_payment"
                                          class="text-gray-500 cursor-pointer select-none inline-block mb-3 font-bold">Upload
                                          Proof Of Payment
-                                         <input type="file" id="proof_of_payment"
+                                         <input type="file" id="proof_of_payment" name="proof"
                                              class="hidden border-gray-100 px-3 w-full mb-4 rounded-md">
                                          <div class="border rounded-md mt-3">
                                              <img class="aspect-square object-cover" id="payment_preview"

@@ -18,8 +18,6 @@
                     <div class="md:flex items-center justify-between px-[2px]">
                         <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">
                             Affiliate Program Statistics</h4>
-
-
                     </div>
                 </div>
 
@@ -27,7 +25,7 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-600 text-15 whitespace-pre-wrap ">Want to make money
+                                <h6 class="text-gray-600 text-15 ">Want to make money
                                     with Swift Tradings with your friends?</h6>
                                 <p class="text-gray-400 py-2">Get 20% of the profit on each order of your friends or
                                     partners. Copy the link or your referral ID and send it to your friends.</p>
