@@ -3,27 +3,29 @@
 namespace App\Http\Controllers\Account;
 
 use App\Http\Controllers\Controller;
+use App\Models\Activity;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\View;
 use App\Models\TransactionHistory;
-
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
         $transactions = TransactionHistory::where(
             'user_id',
             '=',
             auth()->user()->id,
-
         )->where('status', '!=', 'pending')->orderBy('created_at', 'desc')->get();
-
+        $activities = Auth::user()->activity()->orderBy('created_at', 'desc')->get();
         return View::make('account.index', [
-            'transactions' => $transactions
+            'date' => $request->query('date'),
+            'transactions' => $transactions,
+            'activities' => $activities
         ]);
     }
 

@@ -742,94 +742,71 @@
                                 <div class="flex flex-wrap items-center">
                                     <h5 class="mr-2 text-gray-800 text-15">Recent Activity</h5>
                                     <div class="ltr:ml-auto rtl:mr-auto">
-                                        <select
-                                            class="form-select form-select-md rounded py-0.5 ltr:pl-3 rtl:pr-3 border-gray-50 bg-gray-50/20 ">
-                                            <option value="Today" selected="">Today</option>
-                                            <option value="Yesterday">Yesterday</option>
-                                            <option value="Last Week">Last Week</option>
-                                            <option value="Last Month">Last Month</option>
-                                        </select>
+                                        <div class="flex gap-3 rounded py-0.5 ltr:pl-3 rtl:pr-">
+                                            <a class="px-2 py-1 rounded-md text-xs {{ $date == 'today' ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-black' }}"
+                                                href="?date=today">Today</a>
+                                            <a class="px-2 py-1 rounded-md text-xs {{ $date == 'yesterday' ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-black' }}"
+                                                href="?date=yesterday">Yesterday</a>
+                                            <a class="px-2 py-1 rounded-md text-xs {{ $date == 'lastweek' ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-black' }}"
+                                                href="?date=lastweek">Lastweek</a>
+                                            <a class="px-2 py-1 rounded-md text-xs {{ $date == 'lastmonth' ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-black' }}"
+                                                href="?date=lastmonth">Lastmonth</a>
+                                            </d>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="px-3 card-body" data-simplebar="" style="max-height: 370px;">
-                                <div class="table w-full">
-                                    <ul>
-                                        {{-- ACTIVITIES --}}
-                                        <li class="relative flex">
-                                            <div class="relative pb-7 pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-yellow-50  ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed text-yellow-500 bx bx-bitcoin"></i>
+                                <div class="px-3 card-body" data-simplebar="" style="max-height: 370px;">
+                                    <div class="table w-full">
+                                        <ul>
+                                            {{-- ACTIVITIES --}}
+                                            @foreach ($activities as $activity)
+                                                <li class="relative flex">
+                                                    <div class="relative pb-7 pl-14 grow">
+                                                        <div>
+                                                            <div class="absolute top-0 z-40 left-2">
+                                                                <div
+                                                                    class="w-10 h-10 text-center rounded-full bg-yellow-50  ">
+                                                                    <i
+                                                                        class="text-2xl leading-relaxed text-yellow-500 bx bxs-network-chart"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
+                                                                    <h5 class="mb-1 text-sm font-medium text-gray-700">
+                                                                        {{ $activity->created_at->format('d M Y') }}</h5>
+                                                                    <p
+                                                                        class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
+                                                                        {{ $activity->description }}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
+                                                        </div>
+
                                                     </div>
-                                                </div>
 
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            1NidEPo6hjncKFCqHfFGoB8eXyx6n6grGc
-                                                        </p>
+
+                                                    <div class="shrink-0">
+                                                        <div class="w-20 mr-1 shrink-0 text-end">
+                                                            <h6 class="mb-1 font-medium text-gray-700">
+                                                                {{ $activity->name }}</h6>
+                                                            <div class="text-13">{{ $activity->status }}</div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
 
-                                                <div
-                                                    class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">+0.5
-                                                        BTC</h6>
-                                                    <div class="text-13">$178.53</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                    </ul>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+
                 </div>
-
             </div>
-        </div>
 
-    </div>
-@endsection
+        </div>
+    @endsection
