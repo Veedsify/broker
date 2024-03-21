@@ -150,7 +150,7 @@
                                 <div class="grid grid-cols-12 2xl:gap-6 justify-items-stretch">
                                     <div class="items-center col-span-12 mr-2 md:col-span-6 justify-self-center 2xl:mr-0">
                                         <div id="wallet-balance" data-colors='["#3ADF9D", "#2AB57D", "#65FFC1"]'
-                                            class="apex-charts"></div>
+                                            class="apex-charts "></div>
                                     </div>
                                     <div class="col-span-12 md:col-span-6">
                                         <div class="text-center mt-sm-0 md:text-left">

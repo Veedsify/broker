@@ -40,7 +40,7 @@
                                 <input type="text" id="navigatorInfo1" class="border-0 w-full" readonly
                                     value="https://swiftradings.com/register/emmanueliwok">
                                 {{-- <p  id="navigatorInfo1">Text to be copied to clipboard</p> --}}
-                                <button class=" p-4 text-white font-semibold bg-blue-600 " id="copyButton1">Copy </button>
+                                <button class=" p-4 text-white font-semibold bg-green-500 " id="copyButton1">Copy </button>
                             </div>
 
 
@@ -53,7 +53,7 @@
                                 <input type="text" id="navigatorInfo2" class="border-0 w-full" readonly
                                     value="emmanueliwok">
                                 {{-- <p   id="navigatorInfo2">Text to be copied to clipboard</p> --}}
-                                <button class=" p-4 text-white font-semibold bg-blue-600 " id="copyButton2">Copy </button>
+                                <button class=" p-4 text-white font-semibold bg-green-500 " id="copyButton2">Copy </button>
                             </div>
 
 

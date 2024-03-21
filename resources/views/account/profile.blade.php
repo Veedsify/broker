@@ -168,7 +168,7 @@
                                                 </div> --}}
                                                 <div class="mb-4 lg:w-3/5">
                                                     <button type="submit" value="Save"
-                                                        class="block text-white font-semibold border bg-blue-700 w-full px-4 py-3 rounded-md ">
+                                                        class="block text-white font-semibold border bg-green-500 w-full px-4 py-3 rounded-md ">
                                                         Save
                                                     </button>
                                                 </div>

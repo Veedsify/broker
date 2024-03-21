@@ -9,7 +9,7 @@
     {{-- Header end --}}
 
     <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
-        <div class="page-content 
+        <div class="page-content
         ">
             <div class="container-fluid px-[0.625rem]">
 
