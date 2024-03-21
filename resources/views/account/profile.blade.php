@@ -49,7 +49,7 @@
                                                 <div class="block">
 
                                                     <h6>{{ auth()->user()->name }}</h6>
-                                                    <small class="text-gray-500">{{ auth()->user()->tier }}</small>
+                                                    <small class="text-gray-500">{{ ucwords(auth()->user()->tier) }}</small>
                                                 </div>
                                                 <div class=" flex  mt-3   gap-4">
 

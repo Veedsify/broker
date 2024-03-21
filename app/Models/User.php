@@ -26,6 +26,16 @@ class User extends Authenticatable
         'referral_code',
     ];
 
+    public function transactionHistory()
+    {
+        return $this->hasMany(TransactionHistory::class);
+    }
+
+    public function activity()
+    {
+        return $this->hasMany(Activity::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

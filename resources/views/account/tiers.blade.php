@@ -51,16 +51,18 @@
                                                         <h5 class="text-base text-gray-600 mb-3 w-[300px]">
                                                             {{ ucwords($id) }}</h5>
                                                         <div>
-                                                            <form action="" data-start="{{ $min }}"
+                                                            <form action="" id="pay_form"
+                                                                data-start="{{ $min }}"
                                                                 data-end="{{ $max }}">
                                                                 <label for="amount"
                                                                     class="mb-2 text-gray-400 inline-block">
                                                                     Amount
                                                                 </label>
                                                                 <input name="amount"
-                                                                    placeholder="${{ $min }} to {{ $max > 999999 ? 'Unlimited' : "$" . $max }}"
+                                                                    placeholder="${{ number_format($min) }} to {{ $max > 999999 ? 'Unlimited' : "$" . number_format($max) }}"
+                                                                    id="deposit_amount"
                                                                     class="border border-gray-100 px-3 block w-full mb-4 rounded-md">
-                                                                <select name="" id=""
+                                                                <select name="" id="selectcoin"
                                                                     class="border border-gray-100 px-3 block w-full mb-4 rounded-md">
                                                                     <option value="" disabled selected>(-- Select
                                                                         Crypto --)</option>
@@ -74,11 +76,12 @@
                                                                 Generate Address
                                                             </button>
                                                         </div>
-                                                        <div id="loader_address">
+                                                        <div class="flex items-center justify-center p-2"
+                                                            id="loader_address">
 
                                                         </div>
                                                         {{-- ADD COPY BTC ADDRESS --}}
-                                                        <div class="hidden">
+                                                        <div class="hidden" id="showaddress">
                                                             <x-account.address />
                                                         </div>
                                                     </div>
@@ -96,5 +99,5 @@
     </div>
 
     {{-- CONFIRM MODAL --}}
-    <x-account.confirm />
+    <x-account.confirm id="{{ $id }}" />
 @endsection

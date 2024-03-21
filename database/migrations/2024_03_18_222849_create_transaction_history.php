@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transaction_history', function (Blueprint $table) {
+        Schema::create('transaction_histories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('amount');
+            $table->string("transaction_id")->nullable();
             $table->string('status')->default('pending');
             $table->string('type')->default('deposit'); // deposit or withdrawal;
             $table->string('payment_method');

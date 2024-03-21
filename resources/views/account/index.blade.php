@@ -93,7 +93,7 @@
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
                                             $<span class="counter-value" data-target="865.2">4.32</span>M
                                         </h4>
-                                </div>
+                                    </div>
                                     <div class="col-span-6">
                                         <div id="mini-chart3" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
                                     </div>
@@ -113,11 +113,8 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Trade</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            <span class="counter-value" data-target="865.2">12.57%</span>
+                                            <span class="counter-value" data-target="865.2">2</span>
                                         </h4>
-                                    </div>
-                                    <div class="col-span-6">
-                                        <div id="mini-chart4" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -159,8 +156,7 @@
                                         <div class="text-center mt-sm-0 md:text-left">
                                             <div>
                                                 <p class="mb-2">
-                                                    <i
-                                                        class="mr-2 text-green-500 align-middle mdi mdi-circle text-10 "></i>
+                                                    <i class="mr-2 text-green-500 align-middle mdi mdi-circle text-10 "></i>
                                                     Bitcoin
                                                 </p>
                                                 <h6 class="text-gray-800">0.4412 BTC =
@@ -355,9 +351,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <iframe width="100%" height="600"
+                                    {{-- <iframe width="100%" height="600"
                                         src="https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en#%7B%22symbol%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22frameElementId%22%3A%22tradingview_60a84%22%2C%22interval%22%3A%22D%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22Light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22withdateranges%22%3A%221%22%2C%22show_popup_button%22%3A%221%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22crypo.netlify.app%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22page-uri%22%3A%22crypo.netlify.app%2Fexchange-light%22%7D"
-                                        frameborder="0"></iframe>
+                                        frameborder="0"></iframe> --}}
                                 </div>
                             </div>
                         </div>
@@ -534,11 +530,11 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="inline-block px-4 pb-3 font-medium" href="javascript:void(0);"
-                                                data-tw-toggle="tab" data-tw-target="buy-tab1" role="tab">Sell</a>
+                                                data-tw-toggle="tab" data-tw-target="buy-tab1" role="tab">Buy</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="inline-block px-4 pb-3 font-medium" href="javascript:void(0);"
-                                                data-tw-toggle="tab" data-tw-target="sell-tab1" role="tab">Buy</a>
+                                                data-tw-toggle="tab" data-tw-target="sell-tab1" role="tab">Sell</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -549,250 +545,57 @@
                                         <div class="px-3" data-simplebar="" style="max-height: 352px;">
                                             <table class="table w-full">
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="p-3" style="width: 50px;">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
+                                                    @if ($transactions->count() == 0)
+                                                        <tr>
+                                                            <td class="p-3 text-center" colspan="4">
+                                                                <h5 class="text-gray-500">No recent transactions found</h5>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                    @foreach ($transactions as $transaction)
+                                                        <tr>
+                                                            <td class="p-3" style="width: 50px;">
+                                                                <div
+                                                                    class="text-{{ $transaction->type == 'deposit' ? 'green' : 'red' }}-500 text-22">
+                                                                    <i
+                                                                        class="bx bx-{{ $transaction->type == 'deposit' ? 'up' : 'down' }}-arrow-circle d-block"></i>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div>
+                                                                    <h5 class="mb-1 text-sm font-medium text-gray-700 ">
+                                                                        {{ $transaction->type === 'deposit' ? 'Buy' : 'Sell' }}
+                                                                        BTC</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        {{ $transaction->created_at->format('d M, Y') }}
+                                                                    </p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap trbtcvalue"
+                                                                        data-amount="{{ $transaction->amount }}">
+                                                                    </h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Coin Value</p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    16 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    1.88 LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $94.22</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    17 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.42 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $84.32</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    18 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.018 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $145.80</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-500 ">
+                                                                        ${{ number_format($transaction->amount) }}</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Amount</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -802,250 +605,62 @@
                                         <div class="px-3" data-simplebar="" style="max-height: 352px;">
                                             <table class="table w-full">
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="p-3" style="width: 50px;">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
+                                                    @if ($transactions->count() == 0)
+                                                        <tr>
+                                                            <td class="p-3 text-center" colspan="4">
+                                                                <h5 class="text-gray-500">No recent deposit transactions
+                                                                    found</h5>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                    @foreach ($transactions as $transaction)
+                                                        @php
+                                                            if ($transaction->type !== 'deposit') {
+                                                                continue;
+                                                            }
+                                                        @endphp
+                                                        <tr>
+                                                            <td class="p-3" style="width: 50px;">
+                                                                <div
+                                                                    class="text-{{ $transaction->type == 'deposit' ? 'green' : 'red' }}-500 text-22">
+                                                                    <i
+                                                                        class="bx bx-{{ $transaction->type == 'deposit' ? 'up' : 'down' }}-arrow-circle d-block"></i>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div>
+                                                                    <h5 class="mb-1 text-sm font-medium text-gray-700 ">
+                                                                        {{ $transaction->type === 'deposit' ? 'Buy' : 'Sell' }}
+                                                                        BTC</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        {{ $transaction->created_at->format('d M, Y') }}
+                                                                    </p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap trbtcvalue"
+                                                                        data-amount="{{ $transaction->amount }}"></h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Coin Value</p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    18 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.018 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $145.80</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    16 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    1.88 LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $94.22</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    17 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.42 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $84.32</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-green-500 text-22">
-                                                                <i class="bx bx-down-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Buy BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-500 ">
+                                                                        ${{ number_format($transaction->amount) }}</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Amount</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -1055,250 +670,62 @@
                                         <div class="px-3" data-simplebar="" style="max-height: 352px;">
                                             <table class="table w-full">
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="p-3" style="width: 50px;">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
+                                                    @if ($transactions->count() == 0)
+                                                        <tr>
+                                                            <td class="p-3 text-center" colspan="4">
+                                                                <h5 class="text-gray-500">No recent withdrawal transactions
+                                                                    found</h5>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                    @foreach ($transactions as $transaction)
+                                                        @php
+                                                            if ($transaction->type == 'deposit') {
+                                                                continue;
+                                                            }
+                                                        @endphp
+                                                        <tr>
+                                                            <td class="p-3" style="width: 50px;">
+                                                                <div
+                                                                    class="text-{{ $transaction->type == 'deposit' ? 'green' : 'red' }}-500 text-22">
+                                                                    <i
+                                                                        class="bx bx-{{ $transaction->type == 'deposit' ? 'up' : 'down' }}-arrow-circle d-block"></i>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div>
+                                                                    <h5 class="mb-1 text-sm font-medium text-gray-700 ">
+                                                                        {{ $transaction->type === 'deposit' ? 'Buy' : 'Sell' }}
+                                                                        BTC</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        {{ $transaction->created_at->format('d M, Y') }}
+                                                                    </p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap trbtcvalue"
+                                                                        data-amount="{{ $transaction->amount }}"></h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Coin Value</p>
+                                                                </div>
+                                                            </td>
 
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    18 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    16 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.018 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $145.80</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.56 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $112.34</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    17 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    1.88 LTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $94.22</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    15 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.42 ETH</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $84.32</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="p-3">
-                                                            <div class="text-red-500 text-22">
-                                                                <i class="bx bx-up-arrow-circle d-block"></i>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div>
-                                                                <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                                    Sell BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    14 Mar, 2021</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-700 whitespace-nowrap">
-                                                                    0.016 BTC</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Coin Value</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="p-3">
-                                                            <div class="text-end">
-                                                                <h5 class="mb-0 text-sm text-gray-500">
-                                                                    $125.20</h5>
-                                                                <p class="mb-0 text-xs text-gray-600 whitespace-nowrap">
-                                                                    Amount</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
+                                                            <td class="p-3">
+                                                                <div class="text-end">
+                                                                    <h5 class="mb-0 text-sm text-gray-500 ">
+                                                                        ${{ number_format($transaction->amount) }}</h5>
+                                                                    <p
+                                                                        class="mb-0 text-xs text-gray-600  whitespace-nowrap">
+                                                                        Amount</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -1328,6 +755,7 @@
                             <div class="px-3 card-body" data-simplebar="" style="max-height: 370px;">
                                 <div class="table w-full">
                                     <ul>
+                                        {{-- ACTIVITIES --}}
                                         <li class="relative flex">
                                             <div class="relative pb-7 pl-14 grow">
                                                 <div class="absolute top-0 z-40 left-2">
@@ -1343,7 +771,7 @@
                                                             24/05/2021, 18:24:56</h5>
                                                         <p
                                                             class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
+                                                            1NidEPo6hjncKFCqHfFGoB8eXyx6n6grGc
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1360,318 +788,6 @@
                                                     <h6 class="mb-1 font-medium text-gray-700">+0.5
                                                         BTC</h6>
                                                     <div class="text-13">$178.53</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="relative flex">
-                                            <div class="relative pb-7 pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed mdi mdi-ethereum text-violet-500"></i>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">-20.5
-                                                        ETH</h6>
-                                                    <div class="text-13">$3541.45</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="relative flex">
-                                            <div class="relative pb-7 pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-yellow-50  ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed text-yellow-500 bx bx-bitcoin"></i>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">+0.5
-                                                        BTC</h6>
-                                                    <div class="text-13">$5791.45</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="relative flex">
-                                            <div class="relative pb-7 pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-violet-500"></i>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">-1.5
-                                                        LTC</h6>
-                                                    <div class="text-13">$5791.45</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="relative flex">
-                                            <div class="relative pb-7 pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-yellow-50   ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed text-yellow-500 bx bx-bitcoin"></i>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div
-                                                    class="after:contant-[] after:absolute after:top-0 after:h-20 after:border-l-2 after:border-dashed after:border-gray-100 after:left-7 after:z-0 ">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">+0.5
-                                                        BTC</h6>
-                                                    <div class="text-13">$5791.45</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="shrink-0">
-                                                <div class="relative dropdown">
-                                                    <a href="#!"
-                                                        class="btn py-2.5 dropdown-toggle border-0 text-xl text-gray-700"
-                                                        type="button" data-bs-toggle="dropdown"
-                                                        id="dropdownMenuButton1">
-                                                        <i class="mdi mdi-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="absolute top-auto z-50 hidden w-40 py-1.5 text-left list-none bg-white border border-gray-50/50 rounded shadow-lg dropdown-menu ltr:!right-0 ltr:!left-auto rtl:!left-0 rtl:!right-auto  bg-clip-padding"
-                                                        aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Another action</a>
-                                                        </li>
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Something else here</a>
-                                                        </li>
-                                                        <hr class="border-gray-50 my-1.5 ">
-                                                        <li><a class="block w-full px-4 py-1.5 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-50 "
-                                                                href="#">Separated link</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="relative flex">
-                                            <div class="relative pl-14 grow">
-                                                <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
-                                                        <i
-                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-violet-500"></i>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <div class="ml-2 mr-4 overflow-hidden grow lg:w-60">
-                                                        <h5 class="mb-1 text-sm font-medium text-gray-700">
-                                                            24/05/2021, 18:24:56</h5>
-                                                        <p
-                                                            class="overflow-hidden text-gray-500 text-13 text-ellipsis whitespace-nowrap">
-                                                            0xb77ad0099e21d4fca87fa4ca92dda1a40af9e05d205e53f38bf026196fa2e431
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="shrink-0">
-                                                <div class="w-20 mr-1 shrink-0 text-end">
-                                                    <h6 class="mb-1 font-medium text-gray-700">+.55
-                                                        LTC</h6>
-                                                    <div class="text-13">$91.45</div>
                                                 </div>
                                             </div>
 

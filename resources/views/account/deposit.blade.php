@@ -42,8 +42,8 @@
                     <div class="card   nav-tabs border-b-tabs">
                         <div class=" pb-0 md:py-0 border-b card-body border-gray-50 ">
                             <div class="md:flex items-center justify-between py-3">
-                                <h6 class="text-gray-600 text-15  whitespace-nowrap">Start your creative
-                                    project right plans</h6>
+                                <h6 class="text-gray-600 text-15  whitespace-nowrap">Start your 
+                                    trade with the right plans</h6>
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-4 card-body">
