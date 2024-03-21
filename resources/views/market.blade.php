@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'swap - Cryptotraderspro',
+    'title' => 'Market - Cryptotraderspro',
 ])
 
 @section('content')

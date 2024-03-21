@@ -9,7 +9,7 @@ class SwapController extends Controller
     //
     public function swap()
     {
-        return view('swap');
+        return view('market');
     }
     public function swapDetails($swapId)
     {

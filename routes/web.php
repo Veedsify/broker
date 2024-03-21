@@ -41,7 +41,7 @@ Route::get('/ido', [IdoController::class, 'ido'])->name('ido');
 Route::get('/ido/{idoId}', [IdoController::class, 'idoDetails'])->name('ido.details');
 
 // swap
-Route::get('/swap', [SwapController::class, 'swap'])->name('swap');
+Route::get('/market', [SwapController::class, 'swap'])->name('swap');
 Route::get('/swap/{swapId}', [SwapController::class, 'swapDetails'])->name('swap.checkout');
 
 // Apex
