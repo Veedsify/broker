@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="nav-tabs border-b-tabs">
 
-                                    <ul class="flex flex-wrap w-full text-sm font-medium text-center text-violet-500 nav  border-t border-gray-50 pt-5  mt-6 "
+                                    <ul class="flex flex-wrap w-full text-sm font-medium text-center text-green-500 nav  border-t border-gray-50 pt-5  mt-6 "
                                         id="pills-tab" role="tablist">
                                         <li>
                                             <a href="javascript:void(0);" data-tw-toggle="tab"
@@ -265,7 +265,7 @@
                                                 </div> --}}
                                                 <div class="mb-4">
                                                     <button type="submit" value="Save"
-                                                        class="block text-white font-semibold border bg-blue-700 w-full px-4 py-3 rounded-md ">
+                                                        class="block text-white font-semibold border bg-green-500 w-full px-4 py-3 rounded-md ">
                                                         Save
                                                     </button>
                                                 </div>

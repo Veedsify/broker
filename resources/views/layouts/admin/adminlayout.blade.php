@@ -4,12 +4,13 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Dashboard | Minia - Admin & Dashboard Template</title>
+    <title>Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Tailwind Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="/admins/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/fav.png" type="image/x-icon">
+
 
     {{-- FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

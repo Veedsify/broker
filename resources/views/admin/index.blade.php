@@ -49,7 +49,7 @@
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
-                                        <div id="mini-chart1" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
+                                        <div id="mini-chart1" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
-                                        <div id="mini-chart2" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
+                                        <div id="mini-chart2" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
-                                        <div id="mini-chart3" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
+                                        <div id="mini-chart3" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
-                                        <div id="mini-chart4" data-colors='["#5156be"]' class="mb-2 apex-charts"></div>
+                                        <div id="mini-chart4" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                         <button type="button"
                                             class="px-2 py-1 font-medium text-gray-500 border-transparent btn text-[12.25px] bg-gray-50/50 hover:bg-gray-50/50 0 hover:text-white focus:bg-gray-500 focus:text-white   hover:bg-gray-500  ">ALL</button>
                                         <button type="button"
-                                            class="px-2 py-1 font-medium border-transparent btn text-[12.25px] bg-violet-50/50 text-violet-500 hover:bg-violet-500 hover:text-white focus:bg-violet-500 focus:text-white   ">1M</button>
+                                            class="px-2 py-1 font-medium border-transparent btn text-[12.25px] bg-green-50/50 text-green-500 hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white   ">1M</button>
                                         <button type="button"
                                             class="px-2 py-1 font-medium text-gray-500 border-transparent btn text-[12.25px] bg-gray-50/50 hover:bg-gray-50/50 0 hover:text-white focus:bg-gray-500 focus:text-white   hover:bg-gray-500  ">6M</button>
                                         <button type="button"
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="grid grid-cols-12 2xl:gap-6 justify-items-stretch">
                                     <div class="items-center col-span-12 mr-2 md:col-span-6 justify-self-center 2xl:mr-0">
-                                        <div id="wallet-balance" data-colors='["#777aca", "#5156be", "#a8aada"]'
+                                        <div id="wallet-balance" data-colors='["#2ACB8A", "#2AB57D", "#2EE199"]'
                                             class="apex-charts"></div>
                                     </div>
                                     <div class="col-span-12 md:col-span-6">
@@ -171,7 +171,7 @@
                                             <div class="pt-2 mt-6">
                                                 <p class="mb-2 ">
                                                     <i
-                                                        class="mr-2 align-middle mdi mdi-circle text-10 text-violet-500 "></i>
+                                                        class="mr-2 align-middle mdi mdi-circle text-10 text-green-500 "></i>
                                                     Ethereum
                                                 </p>
                                                 <h6 class="text-gray-800 ">4.5701 ETH =
@@ -217,7 +217,7 @@
                                         </div>
                                         <div class="grid grid-cols-12 2xl:gap-6">
                                             <div class="col-span-12 mr-3 md:col-span-6 2xl:mr-0 justify-self-center">
-                                                <div id="invested-overview" data-colors='["#5156be", "#34c38f"]'
+                                                <div id="invested-overview" data-colors='["#2AC888", "#2AB57D"]'
                                                     class="apex-charts"></div>
                                             </div>
                                             <div class="col-span-12 md:col-span-6">
@@ -251,7 +251,7 @@
                                                     </div>
                                                     <div class="mt-3">
                                                         <a href="#"
-                                                            class="btn py-1.5 px-2.5 text-xs bg-violet-500 text-white shadow-md shadow-violet-100 border-transparent hover:bg-violet-700 focus:bg-violet-700 focus:ring focus:ring-violet-50/50 ">View
+                                                            class="btn py-1.5 px-2.5 text-xs bg-green-500 text-white shadow-md shadow-green-100 border-transparent hover:bg-green-700 focus:bg-green-700 focus:ring focus:ring-green-50/50 ">View
                                                             more
                                                             <i class="mdi mdi-arrow-right ms-1"></i>
                                                         </a>
@@ -265,7 +265,7 @@
 
                             <div class="col-span-12 2xl:col-span-4">
                                 <div
-                                    class="relative overflow-hidden border-transparent shadow card card-h-100 bg-violet-500 shadow-violet-100 ">
+                                    class="relative overflow-hidden border-transparent shadow card card-h-100 bg-green-500 shadow-green-100 ">
                                     <div class="relative text-center card-body">
                                         <div class="absolute -top-2 -right-2">
                                             <i class="mdi mdi-bitcoin widget-box-1-icon text-7xl text-white/10"></i>
@@ -388,7 +388,7 @@
                                     <div class="block tab-pane" id="buy-tab" role="tabpanel">
                                         <div class="ltr:float-right rtl:float-left ms-2">
                                             <h5 class="text-sm text-gray-700 "><i
-                                                    class="mr-1 align-middle bx bx-wallet text-violet-500 text-16"></i>
+                                                    class="mr-1 align-middle bx bx-wallet text-green-500 text-16"></i>
                                                 <a href="#!"
                                                     class="underline text-reset underline-offset-2">$4335.23</a>
                                             </h5>
@@ -399,7 +399,7 @@
                                                 <label class="block mb-2 font-medium text-gray-700 ">Payment
                                                     method :</label>
                                                 <select
-                                                    class="w-full border-gray-100 rounded rtl:pr-3 selection:text-10 py-1.5 focus:border-violet-100 focus:ring focus:ring-violet-50/50    ">
+                                                    class="w-full border-gray-100 rounded rtl:pr-3 selection:text-10 py-1.5 focus:border-green-100 focus:ring focus:ring-green-50/50    ">
                                                     <option>Direct Bank Payment</option>
                                                     <option>Credit / Debit Card</option>
                                                     <option>Paypal</option>
@@ -415,14 +415,14 @@
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-r rtl:border-l  ">Amount</label>
                                                     <select
-                                                        class="border-0 ltr:pl-1.5 rtl:pr-1.5 overflow-hidden focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class="border-0 ltr:pl-1.5 rtl:pr-1.5 overflow-hidden focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         style="max-width: 90px;">
                                                         <option value="BT" selected="">BTC</option>
                                                         <option value="ET">ETH</option>
                                                         <option value="LT">LTC</option>
                                                     </select>
                                                     <input type="text"
-                                                        class=" border-0 w-full py-1.5 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40   "
+                                                        class=" border-0 w-full py-1.5 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40   "
                                                         placeholder="0.00121255">
                                                 </div>
 
@@ -430,7 +430,7 @@
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-r rtl:border-l  ">Price</label>
                                                     <input type="text"
-                                                        class="w-full  py-1.5 border-0 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class="w-full  py-1.5 border-0 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         placeholder="$58,245">
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-l rtl:border-r  ">$</label>
@@ -440,7 +440,7 @@
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-r rtl:border-l  ">Total</label>
                                                     <input type="text"
-                                                        class="w-full  py-1.5 border-0 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class="w-full  py-1.5 border-0 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         placeholder="$36,854.25">
                                                 </div>
                                             </div>
@@ -456,7 +456,7 @@
                                     <div class="hidden tab-pane" id="sell-tab" role="tabpanel">
                                         <div class="ltr:float-right rtl:float-left ltr:ml-2 rtl:mr-2">
                                             <h5 class="text-sm text-gray-700 "><i
-                                                    class="mr-1 align-middle bx bx-wallet text-violet-500 text-16"></i>
+                                                    class="mr-1 align-middle bx bx-wallet text-green-500 text-16"></i>
                                                 <a href="#!"
                                                     class="underline text-reset underline-offset-2">$4335.23</a>
                                             </h5>
@@ -468,7 +468,7 @@
                                                 <label class="block mb-2 font-medium text-gray-700 ">Wallet
                                                     ID :</label>
                                                 <input type="email"
-                                                    class="w-full placeholder:text-sm py-1.5 border-gray-100 rounded     focus:ring focus:ring-violet-50/60  focus:ring-offset-0"
+                                                    class="w-full placeholder:text-sm py-1.5 border-gray-100 rounded     focus:ring focus:ring-green-50/60  focus:ring-offset-0"
                                                     placeholder="1cvb254ugxvfcd280ki">
                                             </div>
 
@@ -479,14 +479,14 @@
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-r rtl:border-l  ">Amount</label>
                                                     <select
-                                                        class=" border-0  ltr:pl-1.5 rtl:pr-1.5 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class=" border-0  ltr:pl-1.5 rtl:pr-1.5 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         style="max-width: 90px;">
                                                         <option value="BT" selected="">BTC</option>
                                                         <option value="ET">ETH</option>
                                                         <option value="LT">LTC</option>
                                                     </select>
                                                     <input type="text"
-                                                        class=" border-0 w-full py-1.5 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40   "
+                                                        class=" border-0 w-full py-1.5 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40   "
                                                         placeholder="0.00121255">
                                                 </div>
 
@@ -494,7 +494,7 @@
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-r rtl:border-l  ">Price</label>
                                                     <input type="text"
-                                                        class="w-full  py-1.5 border-0 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class="w-full  py-1.5 border-0 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         placeholder="$58,245">
                                                     <label
                                                         class="px-3 py-2 border-gray-100 ltr:border-l rtl:border-r  ">$</label>
@@ -503,7 +503,7 @@
                                                 <div class="flex mb-3 border border-gray-100 rounded   ">
                                                     <label class="px-3 py-2 border-r border-gray-100  ">Total</label>
                                                     <input type="text"
-                                                        class="w-full  py-1.5 border-0 focus:border-violet-100 focus:ring focus:ring-violet-50/60 focus:z-40    "
+                                                        class="w-full  py-1.5 border-0 focus:border-green-100 focus:ring focus:ring-green-50/60 focus:z-40    "
                                                         placeholder="$36,854.25">
                                                 </div>
                                             </div>
@@ -1187,9 +1187,9 @@
                                         <li class="relative flex">
                                             <div class="relative pb-7 pl-14 grow">
                                                 <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
+                                                    <div class="w-10 h-10 text-center rounded-full bg-green-50 ">
                                                         <i
-                                                            class="text-2xl leading-relaxed mdi mdi-ethereum text-violet-500"></i>
+                                                            class="text-2xl leading-relaxed mdi mdi-ethereum text-green-500"></i>
                                                     </div>
                                                 </div>
 
@@ -1313,9 +1313,9 @@
                                         <li class="relative flex">
                                             <div class="relative pb-7 pl-14 grow">
                                                 <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
+                                                    <div class="w-10 h-10 text-center rounded-full bg-green-50 ">
                                                         <i
-                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-violet-500"></i>
+                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-green-500"></i>
                                                     </div>
                                                 </div>
 
@@ -1439,9 +1439,9 @@
                                         <li class="relative flex">
                                             <div class="relative pl-14 grow">
                                                 <div class="absolute top-0 z-40 left-2">
-                                                    <div class="w-10 h-10 text-center rounded-full bg-violet-50 ">
+                                                    <div class="w-10 h-10 text-center rounded-full bg-green-50 ">
                                                         <i
-                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-violet-500"></i>
+                                                            class="text-2xl leading-relaxed mdi mdi-litecoin text-green-500"></i>
                                                     </div>
                                                 </div>
 

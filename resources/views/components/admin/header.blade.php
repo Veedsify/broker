@@ -6,9 +6,8 @@
                 class="hidden lg:flex navbar-brand items-center justify-between shrink px-6 h-[70px]  ltr:border-r rtl:border-l bg-[#fbfaff] border-gray-50   shadow-none">
                 <a href="#"
                     class="flex items-center text-lg flex-shrink-0 font-bold dark:text-white leading-[69px]">
-                    <img src="/admins/images/logo3.png" alt=""
-                        class="inline-block w-6 h-6 align-middle ltr:xl:mr-2 rtl:xl:ml-2">
-                    <span class="hidden font-bold text-gray-700 align-middle xl:block leading-[69px]">Minia</span>
+                    <img src="/assets/images/logo2.png" alt=""
+                    width="150px">
                 </a>
             </div>
             <button type="button"
@@ -26,7 +25,7 @@
                             class="pl-4 pr-[40px] border-0 rounded bg-[#f8f9fa] dark:bg-[#363a38] focus:ring-0 text-13 placeholder:text-13 dark:placeholder:text-gray-200  max-w-[223px]"
                             placeholder="Search...">
                         <button
-                            class="py-1.5 px-2.5 w-9 h-[34px] text-white bg-violet-500 inline-block absolute ltr:right-1 top-1 rounded shadow shadow-violet-100 dark:shadow-gray-900 rtl:left-1 rtl:right-auto"
+                            class="py-1.5 px-2.5 w-9 h-[34px] text-white bg-green-500 inline-block absolute ltr:right-1 top-1 rounded shadow shadow-violet-100 dark:shadow-gray-900 rtl:left-1 rtl:right-auto"
                             type="button"><i class="align-middle bx bx-search-alt"></i></button>
                     </div>
                 </form>

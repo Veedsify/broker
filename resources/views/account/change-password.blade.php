@@ -8,7 +8,7 @@
     <x-account.header />
     {{-- Header end --}}
 
-
+\
     <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
         <div class="page-content ">
 
@@ -18,7 +18,7 @@
                     <div class=" px-[2px]">
                         <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">Change
                             Password</h4>
-                        <h6 class="text-gray-400 py-2 text-15 whitespace-pre-wrap ">If you notice any
+                        <h6 class="text-gray-400 py-2 text-15">If you notice any
                             suspicious activity, we recommend changing your password.</h6>
 
 

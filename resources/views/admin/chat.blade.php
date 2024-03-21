@@ -71,7 +71,7 @@
                                                     aria-labelledby="dropdownMenuButton10">
                                                     <li class="px-4 py-2">
                                                         <input type="text"
-                                                            class="text-base text-gray-500 border rounded border-gray-50/50 bg-gray-50/30 placeholder:text-base  dark:text-gray-300 placeholder:dark:text-gray-300 focus:ring focus:ring-violet-50/50 w-full"
+                                                            class="text-base text-gray-500 border rounded border-gray-50/50 bg-gray-50/30 placeholder:text-base  dark:text-gray-300 placeholder:dark:text-gray-300 focus:ring focus:ring-green-50/50 w-full"
                                                             placeholder="Search..">
                                                     </li>
                                                 </ul>
@@ -111,13 +111,13 @@
                                 </li>
 
                                 <li class="flex mb-5 ml-5">
-                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-violet-500">
+                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-green-500">
                                         <h5 class="text-13"><a href="#" class="text-white/50">Jennie Sherlock</a>
                                             <span class="text-xs text-white/50">10:00</span>
                                         </h5>
                                         <p class="mb-0 font-normal text-white mt-0.5">Good morning !</p>
                                         <span
-                                            class="absolute border-[9px] border-transparent border-t-violet-500 border-r-violet-500 top-0 -left-3"></span>
+                                            class="absolute border-[9px] border-transparent border-t-green-500 border-r-green-500 top-0 -left-3"></span>
                                     </div>
                                     <div>
                                         <div class="relative dropdown">
@@ -180,12 +180,12 @@
                                 </li>
 
                                 <li class="flex mb-3 ml-5">
-                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-violet-500">
+                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-green-500">
                                         <h5 class="text-13"><a href="#" class="mr-2 text-white/50">Jennie
                                                 Sherlock</a> <span class="text-xs text-white/50">10:04</span></h5>
                                         <p class="mb-0 font-normal text-white mt-0.5">Hello!</p>
                                         <span
-                                            class="absolute border-[9px] border-transparent border-t-violet-500 border-r-violet-500 top-0 -left-3"></span>
+                                            class="absolute border-[9px] border-transparent border-t-green-500 border-r-green-500 top-0 -left-3"></span>
                                     </div>
                                     <div>
                                         <div class="relative dropdown">
@@ -214,12 +214,12 @@
                                 </li>
 
                                 <li class="flex mb-5 ml-5">
-                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-violet-500">
+                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-green-500">
                                         <h5 class="text-13"><a href="#" class="mr-2 text-white/50">Jennie
                                                 Sherlock</a> <span class="text-xs text-white/50">10:00</span></h5>
                                         <p class="mb-0 font-normal text-white mt-0.5">What about our next meeting?</p>
                                         <span
-                                            class="absolute border-[9px] border-transparent border-t-violet-500 border-r-violet-500 top-0 -left-3"></span>
+                                            class="absolute border-[9px] border-transparent border-t-green-500 border-r-green-500 top-0 -left-3"></span>
                                     </div>
                                     <div>
                                         <div class="relative dropdown">
@@ -251,12 +251,12 @@
                                 </li>
 
                                 <li class="flex mb-5 ml-5">
-                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-violet-500">
+                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-green-500">
                                         <h5 class="text-13"><a href="#" class="mr-2 text-white/50">Jennie
                                                 Sherlock</a> <span class="text-xs text-white/50">10:00</span></h5>
                                         <p class="mb-0 font-normal text-white mt-0.5">Next meeting tomorrow 10.00AM</p>
                                         <span
-                                            class="absolute border-[9px] border-transparent border-t-violet-500 border-r-violet-500 top-0 -left-3"></span>
+                                            class="absolute border-[9px] border-transparent border-t-green-500 border-r-green-500 top-0 -left-3"></span>
                                     </div>
                                     <div>
                                         <div class="relative dropdown">
@@ -321,13 +321,13 @@
                                 </li>
 
                                 <li class="flex mb-5 ml-5">
-                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-violet-500">
+                                    <div class="relative inline-block px-5 py-3 rounded-lg bg-green-500">
                                         <h5 class="text-13"><a href="#" class="mr-2 text-white/50">Jennie
                                                 Sherlock</a> <span class="text-xs text-white/50">10:09</span></h5>
                                         <p class="mb-0 font-normal text-white mt-0.5">img-1.jpg & img-2.jpg images for a
                                             New Projects</p>
                                         <span
-                                            class="absolute border-[9px] border-transparent border-t-violet-500 border-r-violet-500 top-0 -left-3"></span>
+                                            class="absolute border-[9px] border-transparent border-t-green-500 border-r-green-500 top-0 -left-3"></span>
 
                                         <ul class="flex gap-4 mt-3">
                                             <li>
@@ -373,13 +373,13 @@
                                     <div class="col-span-10 xl:col-span-11 ltr:pr-5 rtl:pl-5">
                                         <div class="position-relative">
                                             <input type="text"
-                                                class="py-1.5 rounded border-gray-50 w-full bg-gray-50/30 placeholder:text-sm placeholder:text-gray-400 /50  focus:ring focus:ring-violet-200/10"
+                                                class="py-1.5 rounded border-gray-50 w-full bg-gray-50/30 placeholder:text-sm placeholder:text-gray-400 /50  focus:ring focus:ring-green-200/10"
                                                 placeholder="Enter Message...">
                                         </div>
                                     </div>
                                     <div class="col-span-2 xl:col-span-1">
                                         <button type="submit"
-                                            class="w-full text-white border-transparent shadow-md btn bg-violet-500 shadow-violet-200 focus:ring focus:ring-violet-200 "><span
+                                            class="w-full text-white border-transparent shadow-md btn bg-green-500 shadow-green-200 focus:ring focus:ring-green-200 "><span
                                                 class="mr-2 hidden sm:inline-block">Send</span> <i
                                                 class="ml-2 mdi mdi-send float-end"></i></button>
                                     </div>

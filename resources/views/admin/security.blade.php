@@ -27,7 +27,7 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-400 py-2 text-15 whitespace-pre-wrap ">If you notice
+                                <h6 class="text-gray-400 py-2 text-15">If you notice
                                     any suspicious activity, we recommend changing your password.</h6>
                                 <ul class="py-2">
                                     <li><a href="{{ route('admin.security.password') }}"
