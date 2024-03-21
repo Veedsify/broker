@@ -38,7 +38,7 @@ class DepositController extends Controller
 
         Activity::create([
             'name' => 'Deposit',
-            'description' => 'Deposit of ' . $request->paidamount . ' ' . $request->currency,
+            'description' => 'Deposit of ' . number_format($request->paidamount) . ' ' .' USD',
             'user_id' => auth()->user()->id,
             'status' => 'active',
             'data' => json_encode([

@@ -44,8 +44,7 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Balance</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            $<span class="counter-value" data-target="865.2">865.2</span>
-                                            k
+                                            $<span class="counter-value" data-target="865.2">0
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -55,8 +54,7 @@
                             </div>
                             <div class="flex items-center mt-1">
                                 <span
-                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">+
-                                    $20.9k</span>
+                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">0</span>
                                 <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-700 text-13">Since last
                                     week</span>
                             </div>
@@ -69,7 +67,7 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Deposit</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            <span class="counter-value" data-target="865.2">6258</span>
+                                            <span class="counter-value" data-target="865.2">$0</span>
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -91,7 +89,7 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Withdrawn</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            $<span class="counter-value" data-target="865.2">4.32</span>M
+                                            $<span class="counter-value" data-target="865.2">0</span>
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -113,7 +111,7 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Trade</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            <span class="counter-value" data-target="865.2">2</span>
+                                            <span class="counter-value" data-target="865.2">0</span>
                                         </h4>
                                     </div>
                                 </div>

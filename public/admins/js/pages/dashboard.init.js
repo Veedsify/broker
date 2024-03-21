@@ -33,7 +33,7 @@ if (document.querySelector("#mini-chart1")) {
 var options = {
     series: [
         {
-            data: [50, 100, 18, 22, 36, 15, 47, 75, 65, 19, 14, 2, 47, 42, 15],
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         },
     ],
     chart: {
@@ -79,7 +79,7 @@ if (document.querySelector("#mini-chart2")) {
 var options = {
     series: [
         {
-            data: [15, 42, 47, 2, 14, 19, 65, 75, 47, 15, 42, 47, 2, 14, 12],
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         },
     ],
     chart: {
@@ -126,7 +126,7 @@ if (document.querySelector("#mini-chart3")) {
 var options = {
     series: [
         {
-            data: [47, 15, 2, 67, 22, 20, 36, 60, 60, 30, 50, 11, 12, 3, 8],
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         },
     ],
     chart: {

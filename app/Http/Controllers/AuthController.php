@@ -96,6 +96,9 @@ class AuthController extends Controller
 
     public function resendVerification()
     {
+        if (auth()->user()->email_verified_at !== NULL) {
+            return redirect()->route("account.index");
+        }
         return View::make("resent");
     }
 }

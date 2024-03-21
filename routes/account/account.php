@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\View;
 
 Route::prefix('account')->middleware(["auth", "verified"])->name('account.')->group(function () {
     View::composer('*', function ($view) {
-        $activity = Activity::where('user_id', auth()->id())->get();
+        $activity = Activity::where('user_id', auth()->id())->orderBy('id', 'desc')->limit(5)->get();
         $view->with('activities', $activity);
     });
     Route::get('/', [DashboardController::class, 'index'])->name('index');
