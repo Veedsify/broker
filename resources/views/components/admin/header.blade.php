@@ -6,7 +6,7 @@
                 class="hidden lg:flex navbar-brand items-center justify-between shrink px-6 h-[70px]  ltr:border-r rtl:border-l bg-[#fbfaff] border-gray-50   shadow-none">
                 <a href="#"
                     class="flex items-center text-lg flex-shrink-0 font-bold dark:text-white leading-[69px]">
-                    <img src="/admins/images/logo-sm.svg" alt=""
+                    <img src="/admins/images/logo3.png" alt=""
                         class="inline-block w-6 h-6 align-middle ltr:xl:mr-2 rtl:xl:ml-2">
                     <span class="hidden font-bold text-gray-700 align-middle xl:block leading-[69px]">Minia</span>
                 </a>
