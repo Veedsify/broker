@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'swap - CoinX',
+    'title' => 'swap - Cryptotraderspro',
 ])
 
 @section('content')
@@ -12,7 +12,7 @@
   {{-- HEADER --}}
     <x-header />
     {{-- HEADER ENDS --}}
-    <div class="modal_areastyle">
+    {{-- <div class="modal_areastyle">
         <!-- Modal -->
         <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- header-section end -->
 
     <!--Common hero Section Starts -->
@@ -47,7 +47,7 @@
             <div class="row justify-content-center mt-5 mt-md-8 mt-lg-0">
                 <div class="col-xxl-6">
                     <div class="cmn_heros__title text-center pt-15 pt-lg-6">
-                        <h1 class="display-three mb-5 mb-md-7 wow fadeInUp">Swap</h1>
+                        <h1 class="display-three mb-5 mb-md-7 wow fadeInUp">Market/Swap</h1>
                         <p class="roboto wow fadeInUp">Earn passive income easily with just one click!</p>
                     </div>
                 </div>
@@ -61,9 +61,9 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-xxl-5">
                     <div class="countdwon_event__title">
-                        <h3 class="p4-color mb-5 mb-md-6 wow fadeInUp">Coinx Web3 USDC Odyssey - Swap & Hold</h3>
+                        <h3 class="p4-color mb-5 mb-md-6 wow fadeInUp">CTP Web3 USDC Odyssey - Swap & Hold</h3>
                         <a class="cmn-btn fifth-alt fw-bold py-3 px-5 px-md-6 d-inline-flex align-items-center gap-2 wow fadeInUp"
-                            href="javascript:void(0)">Check Out <i class="ti ti-arrow-right fs-five"></i></a>
+                            href="/account">Check Out <i class="ti ti-arrow-right fs-five"></i></a>
                     </div>
                 </div>
                 <div class="col-xxl-5">
@@ -341,9 +341,8 @@
                                     <span>Min. Amount Received</span>
                                     <span>---</span>
                                 </div>
-                                <a class="cmn-btn py-3 px-6 w-100" data-bs-toggle="modal" href="#exampleModalToggle"
-                                    role="button">Log In</a>
-                                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                                <a class="cmn-btn py-3 px-6 w-100" onclick="location.href = '/account'">Log In</a>
+                                {{-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
                                     aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content bg7-color rounded-20">
@@ -539,7 +538,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="col-lg-6 col-xxl-12">
@@ -656,7 +655,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8 p1-color"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -691,7 +690,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -726,7 +725,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -761,7 +760,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -796,7 +795,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -831,7 +830,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -866,7 +865,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -901,7 +900,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -936,7 +935,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -971,7 +970,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -1070,7 +1069,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8 p1-color"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1105,7 +1104,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1140,7 +1139,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1175,7 +1174,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1210,7 +1209,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1245,7 +1244,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1280,7 +1279,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1315,7 +1314,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1350,7 +1349,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1385,7 +1384,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                     </table>
@@ -1485,7 +1484,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8 p1-color"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1521,7 +1520,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1557,7 +1556,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1593,7 +1592,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1629,7 +1628,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1666,7 +1665,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1702,7 +1701,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1738,7 +1737,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1774,7 +1773,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1810,7 +1809,7 @@
                                             </td>
                                             <td>
                                                 <a class="cmn-btn py-2 px-6 px-md-8"
-                                                    href="javascript:void(0)">Stack</a>
+                                                    href="/account">Stack</a>
                                             </td>
                                         </tr>
                                     </table>

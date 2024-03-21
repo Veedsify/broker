@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- #keywords -->
-    <meta name="keywords" content="boot, Bootstrap, Coinx HTML Template">
+    <meta name="keywords" content="boot, Bootstrap, CTP HTML Template">
     <!-- #description -->
-    <meta name="description" content="Coinx HTML Template">
+    <meta name="description" content="CTP HTML Template">
     <!-- #title -->
     <title>{{ $title }} - Web3 crypto website</title>
     <!-- #favicon -->
@@ -22,7 +22,7 @@
     <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- preloader css -->
     <link rel="stylesheet" href="/assets/css/preloader.min.css" type="text/css" />
-    {{-- 
+    {{--
 
     <!-- Bootstrap Css -->
     <link href="/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" /> --}}

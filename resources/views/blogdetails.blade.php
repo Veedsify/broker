@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Blog Details - CoinX',
+    'title' => 'Blog Details - Cryptotraderspro',
 ])
 
 @section('content')
@@ -154,10 +154,10 @@
                                 All terms and conditions interpretation is at the discretion of CoinX
                             </li>
                             <li>
-                                The definitive interpretation of terms belongs to CoinX's authority.
+                                The definitive interpretation of terms belongs to Cryptotraderspro's authority.
                             </li>
                             <li>
-                                CoinX has the final say in interpreting terms and conditions.
+                                CTP has the final say in interpreting terms and conditions.
                             </li>
                         </ol>
                         <hr class="bg2-color mb-7 mb-sm-10 mb-lg-15">

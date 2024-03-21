@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Rewards - CoinX',
+    'title' => 'Rewards - Cryptotraderspro',
 ])
 
 @section('content')
@@ -127,7 +127,7 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">Trade USDC on CoinX to Share a 20K
+                                                        <h4 class="mb-5 mb-md-6">Trade USDC on CTP to Share a 20K
                                                             USDC
                                                             Prize Pool</h4>
                                                         <ul class="d-flex flex-column gap-1">
@@ -177,9 +177,9 @@
                                                         <h4 class="mb-5 mb-md-6">Mantle x Bybit Web3 MNT Event</h4>
                                                         <ul class="d-flex flex-column gap-1">
                                                             <li>Visit the Mantle Journey page and connect with your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>Mint a Mantle Journey Soulbound Token (MJSBT) using your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>The rewards airdrop is scheduled for 2024-09-14 10:00
                                                                 UTC and 2024-09-21 10:00 UTC.</li>
                                                         </ul>
@@ -198,13 +198,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Deposit Bash</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Deposit Bash</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -222,13 +222,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Web3 IDO Exclusive Rewards</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Web3 IDO Exclusive Rewards</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -246,13 +246,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Deposit Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Deposit Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -270,13 +270,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Exclusive Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Exclusive Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -302,7 +302,7 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">Trade USDC on CoinX to Share a 20K
+                                                        <h4 class="mb-5 mb-md-6">Trade USDC on CTP to Share a 20K
                                                             USDC
                                                             Prize Pool</h4>
                                                         <ul class="d-flex flex-column gap-1">
@@ -352,9 +352,9 @@
                                                         <h4 class="mb-5 mb-md-6">Mantle x Bybit Web3 MNT Event</h4>
                                                         <ul class="d-flex flex-column gap-1">
                                                             <li>Visit the Mantle Journey page and connect with your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>Mint a Mantle Journey Soulbound Token (MJSBT) using your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>The rewards airdrop is scheduled for 2024-09-14 10:00
                                                                 UTC and 2024-09-21 10:00 UTC.</li>
                                                         </ul>
@@ -373,13 +373,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Deposit Bash</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Deposit Bash</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -397,13 +397,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Web3 IDO Exclusive Rewards</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Web3 IDO Exclusive Rewards</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -421,13 +421,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Deposit Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Deposit Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -445,13 +445,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Exclusive Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Exclusive Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -479,9 +479,9 @@
                                                         <h4 class="mb-5 mb-md-6">Mantle x Bybit Web3 MNT Event</h4>
                                                         <ul class="d-flex flex-column gap-1">
                                                             <li>Visit the Mantle Journey page and connect with your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>Mint a Mantle Journey Soulbound Token (MJSBT) using your
-                                                                CoinX Wallet.</li>
+                                                                CTP Wallet.</li>
                                                             <li>The rewards airdrop is scheduled for 2024-09-14 10:00
                                                                 UTC and 2024-09-21 10:00 UTC.</li>
                                                         </ul>
@@ -500,13 +500,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Deposit Bash</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Deposit Bash</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -524,13 +524,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Web3 IDO Exclusive Rewards</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Web3 IDO Exclusive Rewards</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -548,13 +548,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Deposit Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Deposit Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -572,13 +572,13 @@
                                                             alt="Icons">
                                                     </div>
                                                     <div class="rewards_section__card-decs me-xl-10 me-xxl-20">
-                                                        <h4 class="mb-5 mb-md-6">CoinX Pro Exclusive Bonus</h4>
+                                                        <h4 class="mb-5 mb-md-6">CTP Pro Exclusive Bonus</h4>
                                                         <ul class="d-flex flex-column gap-1">
-                                                            <li>Deposit on CoinX via your CoinX Wallet or CoinX Funding
+                                                            <li>Deposit on CTP via your CTP Wallet or CTP Funding
                                                                 Account to win up to 500 $ARB.</li>
                                                             <li>Campaign Period: 2024-07-17 12:00 PM UTC - 2024-08-14
                                                                 12:00 PM UTC.</li>
-                                                            <li>Click the Claim button in the CoinX activity page to
+                                                            <li>Click the Claim button in the CTP activity page to
                                                                 confirm claim from 2024-08-14 12:00 PM UTC to 2024-08-24
                                                                 12:00 PM UTC.</li>
                                                         </ul>
@@ -615,7 +615,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -631,7 +631,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What is the Coinx Exchange?
+                                        What is the CTP Exchange?
                                     </button>
 
                                 </h5>
@@ -647,7 +647,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -663,7 +663,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -679,7 +679,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What is the Coinx Exchange?
+                                        What is the CTP Exchange?
                                     </button>
 
                                 </h5>
@@ -695,7 +695,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>

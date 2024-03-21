@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Contact Us - CoinX',
+    'title' => 'Login - Cryptotraderspro',
 ])
 
 @section('content')
@@ -19,12 +19,12 @@
                 <div class="col-md-8 col-lg-6 col-xl-5">
                     <div class="modal-content bg7-color rounded-20 p-3 p-sm-4 p-md-6">
                         <div class="modal-header">
-                            <h5 class="modal-title fs-5" id="exampleModalToggleLabel">Welcome to CoinX
+                            <h5 class="modal-title fs-5" id="exampleModalToggleLabel">Welcome to Cryptotraderspro
                             </h5>
                         </div>
                         <div class="modal-body">
                             <div class="apex_section__aside-logintop d-flex align-items-center gap-3">
-                                <span>New to CoinX?</span> <i class="ti ti-arrows-exchange-2 fs-four p1-color"></i>
+                                <span>New to Cryptotraderspro?</span> <i class="ti ti-arrows-exchange-2 fs-four p1-color"></i>
                                 <a href="{{ route('register') }}" class="d-flex align-items-center gap-3 p1-color">Sign up
                                 </a>
                             </div>

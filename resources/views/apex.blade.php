@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Apex - CoinX',
+    'title' => 'Apex - Cryptotraderspro',
 ])
 
 @section('content')
@@ -904,17 +904,17 @@
                     <div class="apex_section__aside rounded-20 bg1-color h-100">
                         <div class="apex_section__aside-login pt-120 pb-120 px-7 px-md-13 text-center">
                             <img src="/assets/images/icon/chartlogin.png" class="mb-4 mb-md-5" alt="Icons">
-                            <p class="roboto mb-4 mb-md-5">Connect your CoinX Web3 Wallet and enter the gateways to
+                            <p class="roboto mb-4 mb-md-5">Connect your CTP Web3 Wallet and enter the gateways to
                                 Web3
                                 derivatives trading.</p>
                             <a class="cmn-btn px-10 px-md-15 py-3" data-bs-toggle="modal" href="#exampleModalToggle"
-                                role="button">CoinX Login</a>
+                                role="button">CTP Login</a>
                             <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
                                 aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content bg7-color rounded-20">
                                         <div class="modal-header">
-                                            <h5 class="modal-title fs-5" id="exampleModalToggleLabel">Welcome to CoinX
+                                            <h5 class="modal-title fs-5" id="exampleModalToggleLabel">Welcome to Cryptotraderspro
                                             </h5>
                                             <button type="button" class="p6-color" data-bs-dismiss="modal"
                                                 aria-label="Close"><i class="ti ti-x fs-four"></i></button>

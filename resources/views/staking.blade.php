@@ -1490,7 +1490,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -1506,7 +1506,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What is the Coinx Exchange?
+                                        What is the CTP Exchange?
                                     </button>
 
                                 </h5>
@@ -1522,7 +1522,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -1538,7 +1538,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>
@@ -1554,7 +1554,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What is the Coinx Exchange?
+                                        What is the CTP Exchange?
                                     </button>
 
                                 </h5>
@@ -1570,7 +1570,7 @@
                                     <button
                                         class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
                                         type="button">
-                                        What currencies does the Coinx Exchange support?
+                                        What currencies does the CTP Exchange support?
                                     </button>
 
                                 </h5>

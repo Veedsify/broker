@@ -56,7 +56,7 @@
                    <div class="col-12">
                        <nav class="navbar navbar-expand-lg position-relative py-md-3 py-lg-6 workready">
                            <a href="{{ route('index') }}" class="navbar-brand d-flex align-items-center gap-2">
-                               <img src="/assets/images/logo.png" class="logo" alt="logo">
+                               <img src="/assets/images/logo3.png" class="logo " width="150px" alt="logo">
                            </a>
                            <div class="collapse navbar-collapse justify-content-between" id="navbar-content">
                                <ul
@@ -66,20 +66,20 @@
                                    </li>
                                    <li class="dropdown show-dropdown">
                                        <a href="{{ route('pricingplan') }}" aria-label="Navbar Dropdown Button"
-                                           class="dropdown-nav d-flex align-items-center fs-ten">Plans
+                                           class="dropdown-nav d-flex align-items-center fs-ten">Plans</a>
                                    </li>
                                    <li class="dropdown show-dropdown">
-                                       <button type="button" aria-label="Navbar Dropdown Button"
-                                           class="dropdown-toggle dropdown-nav d-flex align-items-center fs-ten">Markets<i
-                                               class="ti ti-chevron-down"></i></button>
+                                    <button type="button" aria-label="Navbar Dropdown Button"
+                                    class="dropdown-toggle dropdown-nav d-flex align-items-center fs-ten">Markets<i
+                                        class="ti ti-chevron-down"></i></button>
                                        <ul class="dropdown-menu">
-                                           <li><a class="dropdown-item fs-ten" href="{{ route('ido') }}">Markets</a>
+                                           <li><a class="dropdown-item fs-ten" href="{{ route('swap') }}">Markets</a>
                                            </li>
                                            <li><a class="dropdown-item fs-ten"
                                                    href="{{ route('ido.details', 'btc') }}">Live Chart</a>
                                            </li>
                                            <li><a class="dropdown-item fs-ten"
-                                                   href="{{ route('ido.details', 'btc') }}">Conversion</a>
+                                                   href="{{ route('contact') }}">Conversion</a>
                                            </li>
                                        </ul>
                                    </li>
@@ -106,28 +106,22 @@
                                        </ul>
                                    </li>
                                    <li class="dropdown show-dropdown">
-                                       <a href="/about" aria-label="Navbar Dropdown Button"
+                                       <a href="{{route('about')}}" aria-label="Navbar Dropdown Button"
                                            class="dropdown-nav d-flex align-items-center fs-ten">About Us
                                    </li>
                                    <li class="dropdown show-dropdown">
-                                       <button type="button" aria-label="Navbar Dropdown Button"
-                                           class="dropdown-toggle dropdown-nav d-flex align-items-center fs-ten">More<i
-                                               class="ti ti-chevron-down"></i></button>
-                                       <ul class="dropdown-menu">
-                                           <li><a class="dropdown-item fs-ten" href="{{ route('ido') }}">Support</a>
-                                           </li>
-                                           <li><a class="dropdown-item fs-ten"
-                                                   href="{{ route('ido.details', 'btc') }}">Contact</a>
-                                           </li>
+                                       <a href="{{ route('contact') }}" aria-label="Navbar Dropdown Button"
+                                           class="dropdown-nav d-flex align-items-center fs-ten">Contact
                                    </li>
+
                                </ul>
                                </li>
                                </ul>
                            </div>
 
                            <div
-                               class="right-area custom-pos position-relative d-flex gap-0 gap-lg-2 align-items-center">
-                               <div class="single-item cart-area search-area">
+                               class="right-area  hidden custom-pos position-relative d-flex gap-0 gap-lg-2 align-items-center">
+                               {{-- <div class="single-item cart-area d-hidden search-area">
                                    <div class="cmn-head">
                                        <button type="button" aria-label="Shopping Button"
                                            class="common_toggles2 icon-area p-0 me-3 me-lg-0 box-second d-center position-relative">
@@ -141,7 +135,7 @@
                                            </form>
                                        </div>
                                    </div>
-                               </div>
+                               </div> --}}
                                <div class="header-section__modalstyle">
                                    <!-- Button trigger modal -->
                                    @auth

@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Blog Resources - CoinX',
+    'title' => 'Blog Resources - Cryptotraderspro',
 ])
 
 @section('content')

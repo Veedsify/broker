@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Contact Us - CoinX',
+    'title' => 'Contact Us - Cryptotraderspro',
 ])
 
 @section('content')
@@ -172,7 +172,7 @@
                 <div class="col-md-8 col-xl-7 col-xxl-6">
                     <div class="ready_exhange__content text-center">
                         <h2 class="mb-5 mb-md-6 wow fadeInUp">Ready to Exchange?</h2>
-                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your Coinx account now to trade crypto seamlessly,
+                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your CTP account now to trade crypto seamlessly,
                             without any
                             fees for buying, selling, or exchanging. Get started today!</p>
                         <div
@@ -180,20 +180,7 @@
                             <a href="javascript:void(0)" class="cmn-btn py-3 px-5 px-6">
                                 Exchange Now
                             </a>
-                            <div class="ready_exhange__changenow-brand">
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-google-play p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-apple p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-pinterest p1-color fs-three"></i>
-                                </a>
-                                <a href="javascript:void(0)">
-                                    <i class="ti ti-brand-behance p1-color fs-three"></i>
-                                </a>
-                            </div>
+                        
                         </div>
                     </div>
                 </div>

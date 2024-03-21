@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => '404 Error - CoinX',
+    'title' => '404 Error - Cryptotraderspro',
 ])
 
 @section('content')

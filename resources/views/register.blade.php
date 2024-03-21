@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Create an Account - CoinX',
+    'title' => 'Create an Account - Cryptotraderspro',
 ])
 
 @section('content')

@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Swap Checkout - CoinX',
+    'title' => 'Swap Checkout - Cryptotraderspro',
 ])
 
 @section('content')
@@ -60,7 +60,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-xxl-5">
                     <div class="countdwon_event__title">
-                        <h3 class="p4-color mb-5 mb-md-6 wow fadeInUp">Coinx Web3 USDC Odyssey - Swap & Hold</h3>
+                        <h3 class="p4-color mb-5 mb-md-6 wow fadeInUp">CTP Web3 USDC Odyssey - Swap & Hold</h3>
                         <a class="cmn-btn fifth-alt fw-bold py-3 px-5 px-md-6 d-inline-flex align-items-center gap-2 "
                             href="javascript:void(0)">Check Out <i class="ti ti-arrow-right fs-five"></i></a>
                     </div>
@@ -214,9 +214,9 @@
                         <h4 class="mb-8 mb-md-10">Event Rules</h4>
                         <div class="event_rules__card-content d-flex flex-column gap-5 gap-md-6 mb-8 mb-md-10">
                             <p class="roboto">Event Period: 2024-11-02 10:00:00 - 2024-11-15 10:00:00 UTC</p>
-                            <p>How to participate: Register or log in to CoinX <a href="sign-up.html"
-                                    class="p1-color">link to sign-up,</a> and create your CoinX Wallet <a
-                                    href="javascript:void(0)" class="p1-color">link to CoinX Wallet</a> if you don’t
+                            <p>How to participate: Register or log in to CTP <a href="sign-up.html"
+                                    class="p1-color">link to sign-up,</a> and create your CTP Wallet <a
+                                    href="javascript:void(0)" class="p1-color">link to CTP Wallet</a> if you don’t
                                 have one.</p>
                             <div class="d-flex flex-wrap flex-xxl-nowrap gap-3 gap-sm-5 gap-md-6">
                                 <h5 class="fw-normal">Task 1:</h5>
@@ -246,14 +246,14 @@
     <!-- Swap for USDC Starts -->
     <!-- <section class="bg7-color pb-10 pb-md-15">
         <div class="container">
-            
+
         </div>
     </section> -->
     <!-- Swap for USDC Ends -->
     <!-- Event Rules Section Starts -->
     <!-- <section class="event_rules bg7-color pb-120">
         <div class="container">
-            
+
         </div>
     </section> -->
     <!-- Event Rules Section Ends -->

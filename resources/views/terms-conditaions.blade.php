@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'Terms and Conditions - CoinX',
+    'title' => 'Terms and Conditions - Cryptotraderspro',
 ])
 
 @section('content')
@@ -90,7 +90,7 @@
                                 </li>
                             </ol>
                             <hr class="bg2-color my-8 my-md-10">
-                            <h3 class="mb-8 mb-md-10 wow fadeInUp">Users have to create and participate with a CoinX Wallet
+                            <h3 class="mb-8 mb-md-10 wow fadeInUp">Users have to create and participate with a CTP Wallet
                                 in order to
                                 receive any rewards.</h3>
                             <p class="mb-5 mb-md-6 wow fadeInUp">Id ipsum mi tempor eget. Pretium consectetur scelerisque
@@ -101,20 +101,20 @@
                                 Pharetra ipsum mauris integer sit feugiat.</p>
                             <ol class="d-flex flex-column gap-1 wow fadeInUp">
                                 <li>
-                                    Reward eligibility requires CoinX Wallet creation and active participation.
+                                    Reward eligibility requires CTP Wallet creation and active participation.
                                 </li>
                                 <li>
-                                    Participation and rewards necessitate a CoinX Wallet account's creation.
+                                    Participation and rewards necessitate a CTP Wallet account's creation.
                                 </li>
                                 <li>
-                                    To receive rewards, users must engage through a CoinX Wallet.
+                                    To receive rewards, users must engage through a CTP Wallet.
                                 </li>
                                 <li>
-                                    CoinX Wallet creation is mandatory for users to claim rewards.
+                                    CTP Wallet creation is mandatory for users to claim rewards.
                                 </li>
                             </ol>
                             <hr class="bg2-color my-8 my-md-10">
-                            <h3 class="mb-8 mb-md-10 wow fadeInUp">CoinX reserves the right of final interpretation of all
+                            <h3 class="mb-8 mb-md-10 wow fadeInUp">CTP reserves the right of final interpretation of all
                                 terms and
                                 conditions.</h3>
                             <p class="mb-5 mb-md-6 wow fadeInUp">Id ipsum mi tempor eget. Pretium consectetur scelerisque
@@ -131,10 +131,10 @@
                                     All terms and conditions interpretation is at the discretion of CoinX
                                 </li>
                                 <li>
-                                    The definitive interpretation of terms belongs to CoinX's authority.
+                                    The definitive interpretation of terms belongs to Cryptotraderspro's authority.
                                 </li>
                                 <li>
-                                    CoinX has the final say in interpreting terms and conditions.
+                                    CTP has the final say in interpreting terms and conditions.
                                 </li>
                             </ol>
                         </div>

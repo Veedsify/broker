@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'pricinig Plan - Cryptotraderspro',
+    'title' => 'About - Cryptotraderspro',
 ])
 
 @section('content')
@@ -8,18 +8,17 @@
         <i class="ti ti-chevron-up fs-four p6-color"></i>
     </button>
     <!-- Scroll To Top End -->
-  {{-- HEADER --}}
+
+    {{-- HEADER --}}
     <x-header />
     {{-- HEADER ENDS --}}
-    <!-- header-section end -->
-
-    <!--Common hero Section Starts -->
+    <!-- Hero Section Starts -->
     <section class="cmn_heros pb-120 pt-120">
         <div class="container">
             <div class="row justify-content-center mt-5 mt-md-8 mt-lg-0">
                 <div class="col-xxl-6">
                     <div class="cmn_heros__title text-center pt-15 pt-lg-6">
-                        <h1 class="display-three mb-5 mb-md-7 wow fadeInUp">Our Pricing Plan</h1>
+                        <h1 class="display-three mb-5 mb-md-7 wow fadeInUp">ABOUT US</h1>
                         <p class="wow fadeInUp"> Discover our unbeatable pricing plan, offering the perfect
                             balance of value
                             and features, tailored to meet your unique needs in Coiner Website.</p>
@@ -28,18 +27,156 @@
             </div>
         </div>
     </section>
-    <!--Common hero Section Ends -->
-    <!-- Pricing Plan Section Starts Starts -->
-    <section class="pricing_plan pt-120 pb-120 bg5-color">
+    <!-- Hero Section Ends -->
+    <!-- Brand Slider Starts -->
+
+    <!-- Brand Slider Ends -->
+    {{-- Why Choose Us  --}}
+    <section class="web3_product how_join bg9-color pt-120 pb-120">
         <div class="container">
-            <div class="row gy-6">
-                <div class="pricing_plan__title mb-md-4">
-                    <h2 class="mb-4 wow fadeInUp">Pricing Plan</h2>
-                    <p class="roboto wow fadeInUp">Explainability features and deep model. Specialized consectetur
-                        adipiscing sed do
-                        eiusmod.Explainability features and deep model.</p>
+            <div class="row gy-5 gy-md-6">
+                <div class="how_join__title text-center mb-10 mb-md-15">
+                    <h2 class="wow fadeInUp mb-5">Why Choose Us</h2>
+                    <p class="w-md-75"> Crypto Traders Pro is a United States Based Registered Investment platform for regular
+                        Investors. Our experienced team of dedicated developers, traders and analysts who involved in crypto
+                        & Forex trading. You can make profit on a daily basis or after the end of investment period.</p>
                 </div>
-               <div class="col-12 col-md-6 col-xl-4">
+                <div class="col-sm-6 col-lg-4 col-xxl-3">
+                    <div
+                        class="web3_product__item how_join__item py-7 py-md-10 px-6 px-md-8 rounded-3 br2 position-relative wow fadeInUp">
+                        <div
+                            class="how_join__item-thumb mb-4 mb-md-5 text-center p-6 bg1-color rounded-item d-inline-block">
+                            <img src="/assets/images/icon/subscription.png" alt="Icons">
+                        </div>
+                        <h4 class="mb-4 mb-md-5">Profitable</h4>
+                        <p class="mb-6 mb-md-8">Our investment plans are best to generate maximum profits with minimum
+                            investment.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xxl-3">
+                    <div
+                        class="web3_product__item how_join__item py-7 py-md-10 px-6 px-md-8 rounded-3 br2 position-relative wow fadeInUp">
+                        <div
+                            class="how_join__item-thumb mb-4 mb-md-5 text-center p-6 bg1-color rounded-item d-inline-block">
+                            <img src="/assets/images/icon/snapshot.png" alt="Icons">
+                        </div>
+                        <h4 class="mb-4 mb-md-5">Fast Withdrawal</h4>
+                        <p class="mb-6 mb-md-8">Our all payment type is Instant at any time.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xxl-3">
+                    <div
+                        class="web3_product__item how_join__item py-7 py-md-10 px-6 px-md-8 rounded-3 br2 position-relative wow fadeInUp">
+                        <div
+                            class="how_join__item-thumb mb-4 mb-md-5 text-center p-6 bg1-color rounded-item d-inline-block">
+                            <img src="/assets/images/icon/lottery.png" alt="Icons">
+                        </div>
+                        <h4 class="mb-4 mb-md-5">Advanced Security</h4>
+                        <p class="mb-6 mb-md-8">We have secured by SiteLock and anti DDoS protection by Cloudflare. so our
+                            online service will be available 24/7.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xxl-3">
+                    <div
+                        class="web3_product__item how_join__item py-7 py-md-10 px-6 px-md-8 rounded-3 br2 position-relative wow fadeInUp">
+                        <div
+                            class="how_join__item-thumb mb-4 mb-md-5 text-center p-6 bg1-color rounded-item d-inline-block">
+                            <img src="/assets/images/icon/redemption.png" alt="Icons">
+                        </div>
+                        <h4 class="mb-4 mb-md-5">Support Service</h4>
+                        <p class="mb-6 mb-md-8">Customer support service is available 24/7 and our support team always
+                            ready to help you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Why Choose Us --}}
+    <section class="bg5-color pt-120 pb-120">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 p-5">
+                    <img src="{{ asset('assets/images/crypto.jpg') }}" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="p-2 p-md-5 ">
+                        <h3 class="mb-5">IT'S AMAZING FINANCIAL PLACE FOR GROW UP YOUR INCOME</h3>
+                        <h5 class="mb-5 text-pretty p1-color">We are professionally engaged in finances and trading,
+                            and have a large experience of the investment Industry.</h5>
+                        <p class="mb-5 lh-lg fw-normal">Apxcrypfield is an investment business platform developed under the
+                            control of an
+                            experienced team of highly qualified financial experts and professional traders for private
+                            highly profitable online investments. We are very proud to state that our clientele base cuts
+                            across financial institutions, individuals, and several other corporate institutions. We are
+                            determined to provide the best service to our clients and deliver a very lucrative source of
+                            income to our investors.</p>
+                        <div class="row">
+                            <div class="col-md-6 d-flex gap-3">
+                                <a href="#" class="btn cmn-btn fourth-alt rounded-1 btn-lg">Read More</a>
+                                <a href="" class="btn cmn-btn rounded-1 btn-lg">Signup Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 py-4">
+                    <div class="py-8 py-md-10  px-5 px-md-6 bg1-color rounded-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{ asset('assets/custom/datereactor.gif') }}" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h4 class="mb-4">Registered Company</h4>
+                                <p class="text-left">
+                                    CTP Registered by United States Govt. Reg No: #89374372.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-4">
+                    <div class="py-8 py-md-10  px-5 px-md-6 bg1-color rounded-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{ asset('assets/custom/applause.gif') }}" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h4 class="mb-4">Easy To Use</h4>
+                                <p class="text-left">
+                                    Unlock your earning potential. Our user-friendly website makes profitable investing
+                                    simple.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-4">
+                    <div class="py-8 py-md-10  px-5 px-md-6 bg1-color rounded-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{ asset('assets/custom/chart.gif') }}" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h4 class="mb-4">High Profitability</h4>
+                                <p class="text-left">
+                                    We provide profit you with 10% - 80% interest of your investment capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Explore More -->
+    <section class="web3_product how_join bg9-color pt-120 pb-120">
+        <div class="container">
+            <div class="row gy-5 gy-md-6">
+                <div class="how_join__title text-center mb-10 mb-md-15">
+                    <h2 class="wow fadeInUp">Explore CTP Tiers</h2>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
                     <div class="p-6 p-md-8 rounded-20 br2 position-relative wow fadeInUp">
                         <div class="pricing_plan__cards-icon mb-3">
                             <img src="/assets/images/icon/pricing_plan3.png" alt="Icons">
@@ -240,7 +377,7 @@
 
                                                 </p>
                                             </li>
-                                          
+
                                         </ul>
                                     </div>
                                 </div>
@@ -249,25 +386,89 @@
                     </div>
                 </div>
             </div>
+                <div class="col-12">
+                    <div class="text-center mt-2 mt-md-4">
+                        <a href="{{ route('pricingplan') }}"
+                            class="cmn-btn py-2 px-5 px-md-6 d-inline-flex justify-content-center align-items-center roboto">VIEW
+                            MORE <i class="ti ti-chevron-right fs-four"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- Pricing Plan Section Starts Ends -->
+    <!-- Explore CTP Web3 Products Ends -->
+
+
+    <!-- Your one-step shop for crypto trading starts -->
+    <section class="one_stepshop bg4-color pt-120 pb-120">
+        <div class="container">
+            <div class="row gy-5 gy-md-6 align-items-end justify-content-between mb-10 mb-md-15">
+                <div class="col-md-7 col-lg-6">
+                    <h2 class="wow fadeInUp">Certified Trading Experts</h2>
+                </div>
+                {{-- <div class="col-md-4 col-xl-3 col-xxl-2 text-md-end">
+                    <a href="pricing-plan.html" class="cmn-btn py-3 px-5 px-md-6">More<i
+                            class="ti ti-chevron-right fs-five"></i></a>
+                </div> --}}
+            </div>
+            <div class="row gy-5 gy-md-6 justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div class="one_stepshop__item br2 rounded-4 py-8 py-md-10 px-6 px-md-8 text-center wow fadeInUp">
+                        <img class="mb-4 mb-md-5" src="/assets/images/icon/radeallassets.png" alt="Icon">
+                        <h4 class="mb-4 mb-md-5">Trade all the trending assets</h4>
+                        <p class="mb-6 mb-md-8">Discover over 400 cryptocurrencies including all the trending new
+                            listings.</p>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <span class="fs-four">400+</span>
+                            <span class="roboto">cryptocurrencies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="one_stepshop__item br2 rounded-4 py-8 py-md-10 px-6 px-md-7 text-center wow fadeInUp">
+                        <img class="mb-4 mb-md-5" src="/assets/images/icon/hedgepoloniex.png" alt="Icon">
+                        <h4 class="mb-4 mb-md-5">Hedge with Poloniex Futures</h4>
+                        <p class="mb-6 mb-md-8">Discover over 400 cryptocurrencies including all the trending new
+                            listings.</p>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <span class="fs-four">100x</span>
+                            <span class="roboto">Max leverage</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="one_stepshop__item br2 rounded-4 py-8 py-md-10 px-6 px-md-8 text-center wow fadeInUp">
+                        <img class="mb-4 mb-md-5" src="/assets/images/icon/crossmargin.png" alt="Icon">
+                        <h4 class="mb-4 mb-md-5">Cross Margin Trading</h4>
+                        <p class="mb-6 mb-md-8">Discover over 400 cryptocurrencies including all the trending new
+                            listings.</p>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <span class="roboto">cryptocurrencies</span>
+                            <span class="fs-four">1%</span>
+                            <span class="roboto">cryptocurrencies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Your one-step shop for crypto trading ends -->
+
     <!-- Ready to Exchange Starts -->
-    <section class="ready_exhange pt-120 pb-120 bg5-color">
+    <section class="ready_exhange pt-120 pb-120 bg4-color position-relative">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-xl-7 col-xxl-6">
                     <div class="ready_exhange__content text-center">
                         <h2 class="mb-5 mb-md-6 wow fadeInUp">Ready to Exchange?</h2>
-                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your CTP account now to trade crypto seamlessly,
+                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your  Crypto Traders Pro account now to investing in crypto
+                            seamlessly,
                             without any
                             fees for buying, selling, or exchanging. Get started today!</p>
                         <div
-                            class="ready_exhange__changenow d-flex align-items-center justify-content-center gap-4 gap-sm-8 gap-lg-10 wow fadeInUp">
-                            <a href="javascript:void(0)" class="cmn-btn py-3 px-5 px-6">
-                                Exchange Now
-                            </a>
-
+                            class="ready_exhange__changenow d-flex align-items-center justify-content-center gap-4 gap-sm-8 gap-lg-10">
+                            <a href="swap.html" class="cmn-btn py-3 px-6 wow fadeInUp">
+                                Join Now </a>
                         </div>
                     </div>
                 </div>
@@ -275,129 +476,5 @@
         </div>
     </section>
     <!-- Ready to Exchange Ends -->
-    <!-- Rewards FAQs Starts -->
-    <section class="rewards_faq pt-120 pb-120 position-relative">
-        <div class="container">
-            <div class="row align-items-center justify-content-center gy-8">
-                <div class="col-xl-7">
-                    <div class="rewards_faq__content">
-                        <h2 class="mb-5 mb-md-6 wow fadeInUp">FAQs</h2>
-                        <p class="roboto mb-8 mb-md-10 wow fadeInUp">Explore our FAQs for fast, informative answers to
-                            frequently
-                            asked questions and common concerns.</p>
-                        <div class="accordion-section">
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What currencies does the CTP Exchange support?
-                                    </button>
 
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What is the CTP Exchange?
-                                    </button>
-
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What currencies does the CTP Exchange support?
-                                    </button>
-
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What currencies does the CTP Exchange support?
-                                    </button>
-
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What is the CTP Exchange?
-                                    </button>
-
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single accsingle mb-5 mb-md-6 wow fadeInUp">
-                                <h5 class="header-area d-flex align-items-center justify-content-between">
-                                    <button
-                                        class="accordion-btn d-flex align-items-start position-relative w-100 fs-five fw-bolder text-start"
-                                        type="button">
-                                        What currencies does the CTP Exchange support?
-                                    </button>
-
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>These are traditional online platforms where users <br> create accounts and
-                                            trade </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center flex-wrap gap-2 wow fadeInUp">
-                            <span>Can't see your question listed above?</span>
-                            <a href="javascript:void(0)" class="d-flex align-items-center gap-1 p6-color astyle">Visit
-                                our Help Center <i class="ti ti-arrow-narrow-right fs-four mt-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="rewards_faq__thumb">
-                        <img src="/assets/images/faq-thumb.png" class="max-un leftright-animation" alt="Images">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <img class="rewards_faq__light position-absolute top-0 start-0" src="/assets/images/light-faq.png" alt="Icon"> -->
-    </section>
-    <!-- Rewards FAQs Ends -->
 @endsection

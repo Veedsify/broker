@@ -1,17 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IdoController;
 use App\Http\Controllers\ApexController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SwapController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StakingController;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +76,7 @@ Route::post("/logout", function () {
     Auth::logout();
     return redirect()->route("index");
 })->name("logout");
+
+//About
+Route::get("/about", [AboutController::class, 'aboutUS'])->name("about");
+
