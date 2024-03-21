@@ -72,7 +72,7 @@
                                                                 </select>
                                                             </form>
                                                             <button id="generate_address"
-                                                                class="px-6 py-2 rounded-md text-white bg-indigo-500 w-full">
+                                                                class="px-6 py-2 rounded-md text-white bg-green-500 w-full">
                                                                 Generate Address
                                                             </button>
                                                         </div>

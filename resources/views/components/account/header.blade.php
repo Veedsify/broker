@@ -6,8 +6,7 @@
                 class="hidden lg:flex navbar-brand items-center justify-between shrink px-6 h-[70px]  ltr:border-r rtl:border-l bg-[#fbfaff] border-gray-50   shadow-none">
                 <a href="#"
                     class="flex items-center text-lg flex-shrink-0 font-bold dark:text-white leading-[69px]">
-                    <img src="/assets/images/logo2.png" alt="" width="150px"
-                        >
+                    <img src="/assets/images/logo2.png" alt="" width="150px">
                 </a>
             </div>
             <button type="button"
@@ -102,7 +101,9 @@
                                 <i data-feather="bell" class="w-5 h-5"></i>
                             </button>
                             <span
-                                class="absolute text-xs px-1 bg-red-500 text-white font-medium rounded-full left-6 top-2.5">5</span>
+                                class="absolute text-xs px-1 bg-red-500 text-white font-medium rounded-full left-6 top-2.5">
+                                {{ $activities->count() }}
+                            </span>
                         </div>
                         <div class="absolute z-50 hidden list-none bg-white rounded shadow dropdown-menu w-80  "
                             id="notification">
@@ -112,95 +113,33 @@
                                     <div class="col-span-6">
                                         <h6 class="m-0 text-gray-700 "> Notifications </h6>
                                     </div>
-                                    <div class="col-span-6 justify-self-end">
+                                    {{-- <div class="col-span-6 justify-self-end">
                                         <a href="#!" class="text-xs underline dark:text-gray-400"> Unread (3)</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="max-h-56" data-simplebar="">
                                     <div>
-                                        <a href="#!" class="text-reset notification-item">
-                                            <div class="flex px-4 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50">
-                                                <div class=" ltr:mr-3 rtl:ml-3">
-                                                    <img src="/admins/images/avatar-3.jpg"
-                                                        class="w-8 h-8 rounded-full" alt="user-pic">
-                                                </div>
-                                                <div class="flex-grow">
-                                                    <h6 class="mb-1 text-gray-700 ">James Lemire
-                                                    </h6>
-                                                    <div class="text-gray-600 text-13">
-                                                        <p class="mb-1 dark:text-gray-400">It will seem like
-                                                            simplified English.</p>
-                                                        <p class="mb-0"><i
-                                                                class="mdi mdi-clock-outline dark:text-gray-400"></i>
-                                                            <span>1 hour ago</span>
-                                                        </p>
+                                        @foreach ($activities as $activity)
+                                            <a href="#!" class="text-reset notification-item">
+                                                <div
+                                                    class="flex px-4 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50">
+                                                    <div class="flex-grow">
+                                                        <h6 class="mb-1 text-gray-700 ">{{ $activity->name }}
+                                                        </h6>
+                                                        <div class="text-gray-600 text-13">
+                                                            <p class="mb-1 dark:text-gray-400">
+                                                                {{ $activity->description }}</p>
+                                                            <p class="mb-0"><i
+                                                                    class="mdi mdi-clock-outline dark:text-gray-400"></i>
+                                                                <span>
+                                                                    {{ $activity->created_at->diffForHumans() }}
+                                                                </span>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </a>
-                                        <a href="#!" class="text-reset notification-item">
-                                            <div class="flex px-4 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50">
-                                                <div class=" ltr:mr-3 rtl:ml-3">
-                                                    <div class="w-8 h-8 text-center rounded-full bg-green-500">
-                                                        <i class="text-xl leading-relaxed text-white bx bx-cart"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow">
-                                                    <h6 class="mb-1 text-gray-700 ">Your order is
-                                                        placed</h6>
-                                                    <div class="text-gray-600 text-13">
-                                                        <p class="mb-1 dark:text-gray-400">If several languages
-                                                            coalesce the grammar</p>
-                                                        <p class="mb-0"><i
-                                                                class="mdi mdi-clock-outline dark:text-gray-400"></i>
-                                                            <span>3 min ago</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#!" class="text-reset notification-item">
-                                            <div class="flex px-4 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50">
-                                                <div class=" ltr:mr-3 rtl:ml-3">
-                                                    <div class="w-8 h-8 text-center bg-green-500 rounded-full">
-                                                        <i
-                                                            class="text-xl leading-relaxed text-white bx bx-badge-check"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow">
-                                                    <h6 class="mb-1 text-gray-700 ">Your item is
-                                                        shipped</h6>
-                                                    <div class="text-gray-600 text-13">
-                                                        <p class="mb-1 dark:text-gray-400">If several languages
-                                                            coalesce the grammar</p>
-                                                        <p class="mb-0"><i
-                                                                class="mdi mdi-clock-outline dark:text-gray-400"></i>
-                                                            <span>3 min ago</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#!" class="text-reset notification-item">
-                                            <div class="flex px-4 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50">
-                                                <div class=" ltr:mr-3 rtl:ml-3">
-                                                    <img src="/admins/images/avatar-6.jpg"
-                                                        class="w-8 h-8 rounded-full" alt="user-pic">
-                                                </div>
-                                                <div class="flex-grow">
-                                                    <h6 class="mb-1 text-gray-700 ">Salena
-                                                        Layfield</h6>
-                                                    <div class="text-gray-600 text-13">
-                                                        <p class="mb-1 dark:text-gray-400">As a skeptical Cambridge
-                                                            friend of mine occidental.</p>
-                                                        <p class="mb-0"><i
-                                                                class="mdi mdi-clock-outline dark:text-gray-400"></i>
-                                                            <span>1 hour ago</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
+                                            </a>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="grid p-1 border-t border-gray-50  justify-items-center">
