@@ -54538,12 +54538,12 @@ body {
 
 .metismenu .mm-active .active {
     --tw-text-opacity: 1 !important;
-    color: rgb(81 86 190 / var(--tw-text-opacity)) !important;
+    color: rgb(42, 181, 125/ var(--tw-text-opacity)) !important;
 }
 
 .metismenu .mm-active>a {
     --tw-text-opacity: 1 !important;
-    color: rgb(81 86 190 / var(--tw-text-opacity)) !important;
+    color: rgb(42, 181, 125) !important;
 }
 
 [data-mode="dark"] .metismenu .mm-active .active {
@@ -54553,7 +54553,7 @@ body {
 
 .mm-active>a {
     --tw-text-opacity: 1;
-    color: rgb(81 86 190 / var(--tw-text-opacity));
+    color: rgb(42, 181, 125) !important;
 }
 
 #sidebar-menu ul li ul li ul li a {
@@ -54595,7 +54595,7 @@ body {
 
 .metismenu .mm-active a {
     --tw-text-opacity: 1;
-    color: rgb(81 86 190 / var(--tw-text-opacity));
+    color: rgb(42, 181, 125);
 }
 
 [dir="rtl"] [data-sidebar-size="sm"] .main-content {

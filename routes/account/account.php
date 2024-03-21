@@ -8,8 +8,14 @@ use App\Http\Controllers\Account\AffiliateController;
 use App\Http\Controllers\Account\DashboardController;
 use App\Http\Controllers\Account\UpdateAccountController;
 use App\Http\Controllers\TierController;
+use App\Models\Activity;
+use Illuminate\Support\Facades\View;
 
 Route::prefix('account')->middleware(["auth"])->name('account.')->group(function () {
+    View::composer('*', function ($view) {
+        $activity = Activity::where('user_id', auth()->id())->get();
+        $view->with('activities', $activity);
+    });
     Route::get('/', [DashboardController::class, 'index'])->name('index');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
     Route::get('/deposit', [DepositController::class, 'deposit'])->name('deposit');
