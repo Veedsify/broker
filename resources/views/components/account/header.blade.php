@@ -4,7 +4,7 @@
         <div class="flex items-center topbar-brand">
             <div
                 class="hidden lg:flex navbar-brand items-center justify-between shrink px-6 h-[70px]  ltr:border-r rtl:border-l bg-[#fbfaff] border-gray-50   shadow-none">
-                <a href="#"
+                <a href="/"
                     class="flex items-center text-lg flex-shrink-0 font-bold dark:text-white leading-[69px]">
                     <img src="/assets/images/logo2.png" alt="" width="150px"
                         >
@@ -234,17 +234,12 @@
                                         <i class="mr-1 align-middle mdi mdi-face-man text-16"></i> Profile
                                     </a>
                                 </div>
-                                <div class="dropdown-item ">
-                                    <a class="block px-3 py-2 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50"
-                                        href="lock-screen.html">
-                                        <i class="mr-1 align-middle mdi mdi-lock text-16"></i> Lock Screen
-                                    </a>
-                                </div>
+
                                 <hr class="border-gray-50 dark:border-gray-700">
                                 <div class="dropdown-item ">
                                     <form action="{{ route('logout') }}" method="POST">
                                         @csrf
-                                        <button class="block p-3 hover:bg-gray-50/50 dark:hover:bg-zinc-700/50 w-full">
+                                        <button class="block p-3 hover:bg-gray-50/50w-full">
                                             <i class="mr-1 align-middle mdi mdi-logout text-16"></i> Logout
                                         </button>
                                     </form>

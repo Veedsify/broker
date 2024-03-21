@@ -27,7 +27,7 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-600 text-15 whitespace-pre-wrap ">In order to
+                                <h6 class="text-gray-600 text-15">In order to
                                     withdraw funds, make a withdrawal request on this withdrawal page. Withdrawal requests
                                     are processed by blockchain schedules within hours.</h6>
                                 <ul class="p-6">

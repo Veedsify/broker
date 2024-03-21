@@ -31,7 +31,7 @@
 <body>
     {{-- <x-preloader /> --}}
     <div id="preloader" class="pre-item d-center">
-        <div class="loaderall"></div>
+        <img src="/assets/images/anima.gif" width="190px" alt="">
     </div>
     @yield('content')
     <x-footer />

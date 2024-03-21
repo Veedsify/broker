@@ -9,7 +9,7 @@
     {{-- Header end --}}
 
     <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
-        <div class="page-content 
+        <div class="page-content
         ">
             <div class="container-fluid px-[0.625rem]">
 
@@ -72,7 +72,7 @@
                                                                 </select>
                                                             </form>
                                                             <button id="generate_address"
-                                                                class="px-6 py-2 rounded-md text-white bg-indigo-500 w-full">
+                                                                class="px-6 py-2 rounded-md text-white bg-green-500 w-full">
                                                                 Generate Address
                                                             </button>
                                                         </div>

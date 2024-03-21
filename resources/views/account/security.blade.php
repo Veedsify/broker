@@ -30,7 +30,7 @@
                                 </h6>
                                 <ul class="py-2">
                                     <li><a href="{{ route('account.change.password') }}"
-                                            class="font-semibold text-blue-600">Update Details</a></li>
+                                            class="font-semibold text-green-500">Update Details</a></li>
                                 </ul>
                             </div>
                         </div>
