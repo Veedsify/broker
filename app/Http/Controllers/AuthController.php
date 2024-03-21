@@ -80,4 +80,22 @@ class AuthController extends Controller
             return redirect()->back()->with("error", "Invalid email or password");
         }
     }
+
+    public function verifyToken($token)
+    {
+        $user = User::where("email_verification_token", $token)->first();
+        if ($user) {
+            $user->email_verified_at = now();
+            $user->email_verification_token = NULL;
+            $user->save();
+            return redirect()->route("account.index")->with("success", "Email verified successfully");
+        } else {
+            return redirect()->route("login")->with("error", "Invalid token");
+        }
+    }
+
+    public function resendVerification()
+    {
+        return View::make("resent");
+    }
 }

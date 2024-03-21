@@ -13,6 +13,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StakingController;
+use App\Http\Controllers\Account\UpdateAccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,12 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 //Staking
 Route::get('/staking', [StakingController::class, 'staking'])->name('staking');
 Route::get('/staking/{stakingId}', [StakingController::class, 'stakingDetails'])->name('staking.details');
+
+
+//Resend Verification
+Route::get('/verify/email-resent', [AuthController::class, 'resendVerification'])->name('resend.email.verification');
+Route::get('/verify/{token}', [AuthController::class, 'verifyToken'])->name('resend.token');
+Route::post("/resend_verification", [UpdateAccountController::class, 'resendVerification'])->name('resend_verification');
 
 // Ido
 Route::get('/ido', [IdoController::class, 'ido'])->name('ido');

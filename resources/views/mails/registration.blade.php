@@ -185,7 +185,7 @@
                                                 <td align="left" valign="top"
                                                     style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px;font-weight:bold; line-height:32px; color:#333;"
                                                     mc:edit="bm11-02">
-                                                    <multiline>Welcome to our CryptoTraderPro</multiline>
+                                                    <multiline>Welcome to CryptoTradersPro</multiline>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -262,7 +262,7 @@
                                                                         <td height="30"
                                                                             style="line-height:30px; font-size:20px;">
                                                                             <a href="{{ $url }}"
-                                                                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">Confirm
+                                                                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">Verify
                                                                                 Email</a>
                                                                         </td>
                                                                     </tr>
