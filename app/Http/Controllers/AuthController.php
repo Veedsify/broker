@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
+use App\Mail\RegisterMailer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
+
 class AuthController extends Controller
 {
 
@@ -40,11 +44,13 @@ class AuthController extends Controller
                 "email" => $request->email,
                 "phone" => $request->phone,
                 "password" => Hash::make($request->password),
+                "email_verification_token" => Str::random(60),
                 "referral_code" => isset($request->referral_code) ? $request->referral_code : NULL,
                 "avatar" => asset("custom/images/placeholder.jpg")
             ]);;
 
             $user = User::where("email", $request->email)->first();
+            Mail::to($user->email)->send(new RegisterMailer($user));
             Auth::login($user, true);
             return redirect()->route("account.index");
         } catch (\Exception $e) {

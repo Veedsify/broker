@@ -25,6 +25,8 @@ class User extends Authenticatable
         'password',
         'phone',
         'avatar',
+        'email_verified_at',
+        'email_verification_token',
         'referral_code',
     ];
 
@@ -36,6 +38,11 @@ class User extends Authenticatable
     public function activity()
     {
         return $this->hasMany(Activity::class);
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
     }
 
     /**

@@ -22,6 +22,7 @@ class DashboardController extends Controller
             auth()->user()->id,
         )->where('status', '!=', 'pending')->orderBy('created_at', 'desc')->get();
         $activities = Auth::user()->activity()->orderBy('created_at', 'desc')->get();
+        
         return View::make('account.index', [
             'date' => $request->query('date'),
             'transactions' => $transactions,

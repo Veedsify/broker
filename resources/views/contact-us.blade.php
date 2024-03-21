@@ -63,7 +63,7 @@
                 <div class="col-xl-9">
                     <div class="contact_info__form br2 p-4 p-sm-6 p-md-8 rounded-20 mb-5 mb-md-6 wow fadeInUp">
                         <span class="fs-ten p1-color mb-4">CONTACT INFO</span>
-                        <h2 class="p6-color mb-6 mb-md-8">Get Meeting With us.</h2>
+                        <h2 class="p6-color mb-6 mb-md-8">Let's Assist You.</h2>
                         <form>
                             <div class="contact_info__inpuarea mb-6 mb-md-8 bg1-color br2 rounded-20 p-3 p-md-5">
                                 <div
@@ -82,12 +82,6 @@
                                 Now</button>
                         </form>
                     </div>
-                    <div class="contact_info__maps wow fadeInUp">
-                        <iframe class="rounded-20"
-                            src="/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42893.606430263266!2d23.312612050118954!3d42.6849794330592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2zVMO8cmtpeWU!5e0!3m2!1sen!2sbd!4v1702114385163!5m2!1sen!2sbd"
-                            width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
                 </div>
                 <div class="col-xl-3">
                     <div class="contact_info__partcard">
@@ -102,7 +96,8 @@
                                     <a href="javascript:void(0)">
                                         <h4 class="mb-3 mb-md-4">ADDRESS</h4>
                                     </a>
-                                    <p class="roboto">Clarkson Ave, Brooklyn,NewYark 11203</p>
+                                    <p class="roboto">2904 37th St
+                                        Two Rivers, Wisconsin(WI), 54241</p>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-4 col-xl-12">
@@ -113,12 +108,12 @@
                                         <i class="ti ti-mail-filled p4-color fs-two fw-normal"></i>
                                     </div>
                                     <h4 class="mb-3 mb-md-4">Email</h4>
-                                    <a href="/cdn-cgi/l/email-protection#4c3f393c3c233e380c38242921293e2d2229622229"><span
+                                    <a href="mailto:support@cryptotraderspro.net"><span
                                             class="__cf_email__"
-                                            data-cfemail="2d5e585d5d425f596d59454840485f4c434a48034348">[email&#160;protected]</span></a>
-                                    <a href="/cdn-cgi/l/email-protection#85f6f0f5f5eaf7f1f6f6c5f1ede0e8e0f7e4ebe0abebe0"><span
+                                            >support@cryptotraderspro.net</span></a>
+                                    <a href="mailto:crypto@cryptotraderspro.net"><span
                                             class="__cf_email__"
-                                            data-cfemail="8ce5e2eae3ccf8e4e9e1e9feede2ebe9a2e2e9f8">[email&#160;protected]</span></a>
+                                            >crypto@cryptotraderspro.net</span></a>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-4 col-xl-12">
@@ -133,31 +128,6 @@
                                     <a href="tel:+923136100313">+92(313)6100313</a>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-4 col-xl-12">
-                                <div
-                                    class="contact_info__card br2 px-4 px-sm-6 px-md-8 py-4 py-sm-6 py-md-10 rounded-20 text-center wow fadeInUp">
-                                    <div
-                                        class="contact_info__card-icon d-center bg2-color py-3 py-md-4 px-4 px-md-5 d-inline-block rounded-item mb-5 mb-md-6">
-                                        <i class="ti ti-social p4-color fs-two fw-normal"></i>
-                                    </div>
-                                    <h4 class="mb-4 mb-md-6">SOCIAL MEDIA</h4>
-                                    <div
-                                        class="contact_info__card-social d-flex align-items-center justify-content-center gap-2 gap-md-3">
-                                        <a href="javascript:void(0)">
-                                            <i class="ti ti-brand-facebook-filled p4-color fs-four fw-normal p-2"></i>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <i class="ti ti-brand-linkedin p4-color fs-four fw-normal p-2"></i>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <i class="ti ti-brand-instagram p4-color fs-four fw-normal p-2"></i>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <i class="ti ti-brand-twitter-filled p4-color fs-four fw-normal p-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,27 +135,4 @@
         </div>
     </section>
     <!-- Contact INFO Starts -->
-    <!-- Ready to Exchange Starts -->
-    <section class="ready_exhange pt-120 pb-120 bg5-color">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-xl-7 col-xxl-6">
-                    <div class="ready_exhange__content text-center">
-                        <h2 class="mb-5 mb-md-6 wow fadeInUp">Ready to Exchange?</h2>
-                        <p class="mb-8 mb-md-10 wow fadeInUp">Unlock your CTP account now to trade crypto seamlessly,
-                            without any
-                            fees for buying, selling, or exchanging. Get started today!</p>
-                        <div
-                            class="ready_exhange__changenow d-flex align-items-center justify-content-center gap-4 gap-sm-8 gap-lg-10 wow fadeInUp">
-                            <a href="javascript:void(0)" class="cmn-btn py-3 px-5 px-6">
-                                Exchange Now
-                            </a>
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Ready to Exchange Ends -->
 @endsection

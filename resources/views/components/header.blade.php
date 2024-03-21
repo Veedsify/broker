@@ -5,14 +5,16 @@
                    <div class="navbar_top__left d-flex align-items-center gap-2 gap-xl-6">
                        <div class="navbar_top__location d-flex align-items-center gap-1 gap-xl-3">
                            <i class="ti ti-map-pin-filled fs-four p7-color"></i>
-                           <span class="roboto p7-color">102/B New Market, Sandigo-USA</span>
+                           <span class="roboto p7-color">2904 37th St
+                               Two Rivers, Wisconsin(WI), 54241</span>
                        </div>
                        <span class="v-line mb-9"></span>
                        <a href="/cdn-cgi/l/email-protection#1c79647d716c70795c7b717d7570327f7371"
                            class="navbar_top__email roboto p7-color d-flex align-items-center gap-3">
                            <i class="ti ti-mail-opened-filled fs-four"></i>
-                           <span class="__cf_email__"
-                               data-cfemail="8aeff2ebe7fae6efcaede7ebe3e6a4e9e5e7">[email&#160;protected]</span></a>
+                           <span class="__cf_email__ text-black">
+                               support@cryptotraderspro.net
+                           </span></a>
                    </div>
                </div>
                <div class="col-lg-7 col-xxl-6">
@@ -23,7 +25,7 @@
                            </span>
                            <div>
                                <span class="p7-color fw-bolder d-block">Contact Us:</span>
-                               <a href="tel:+9802344567" class="d-block p7-color">+980 234 4567</a>
+                               <a href="tel:+9802344567" class="d-block p7-color">(207) 353-5060</a>
                            </div>
                        </div>
                        <span class="v-line mb-9"></span>
@@ -69,9 +71,9 @@
                                            class="dropdown-nav d-flex align-items-center fs-ten">Plans</a>
                                    </li>
                                    <li class="dropdown show-dropdown">
-                                    <button type="button" aria-label="Navbar Dropdown Button"
-                                    class="dropdown-toggle dropdown-nav d-flex align-items-center fs-ten">Markets<i
-                                        class="ti ti-chevron-down"></i></button>
+                                       <button type="button" aria-label="Navbar Dropdown Button"
+                                           class="dropdown-toggle dropdown-nav d-flex align-items-center fs-ten">Markets<i
+                                               class="ti ti-chevron-down"></i></button>
                                        <ul class="dropdown-menu">
                                            <li><a class="dropdown-item fs-ten" href="{{ route('swap') }}">Markets</a>
                                            </li>
@@ -106,7 +108,7 @@
                                        </ul>
                                    </li>
                                    <li class="dropdown show-dropdown">
-                                       <a href="{{route('about')}}" aria-label="Navbar Dropdown Button"
+                                       <a href="{{ route('about') }}" aria-label="Navbar Dropdown Button"
                                            class="dropdown-nav d-flex align-items-center fs-ten">About Us
                                    </li>
                                    <li class="dropdown show-dropdown">

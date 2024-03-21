@@ -11,7 +11,7 @@ use App\Http\Controllers\TierController;
 use App\Models\Activity;
 use Illuminate\Support\Facades\View;
 
-Route::prefix('account')->middleware(["auth"])->name('account.')->group(function () {
+Route::prefix('account')->middleware(["auth", "verified"])->name('account.')->group(function () {
     View::composer('*', function ($view) {
         $activity = Activity::where('user_id', auth()->id())->get();
         $view->with('activities', $activity);

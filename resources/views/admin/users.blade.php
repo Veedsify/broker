@@ -62,7 +62,10 @@
                                         @foreach ($allOtherUsers as $user)
                                             <tr>
                                                 <td class="p-4 pr-8 border border-t-0 rtl:border-l-0 border-gray-50 ">
-                                                    {{ $user->name }}</td>
+                                                    <a href="/admin/users/edit/1">
+                                                        {{ $user->name }}
+                                                    </a>
+                                                </td>
                                                 <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
                                                     {{ $user->tier }}</td>
                                                 <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
