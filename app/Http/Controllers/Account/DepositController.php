@@ -7,7 +7,10 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\TransactionHistory;
 use App\Http\Controllers\Controller;
+use App\Mail\AlertAdminDeposit;
+use App\Mail\AlertUserDeposit;
 use App\Models\Activity;
+use Illuminate\Support\Facades\Mail;
 
 class DepositController extends Controller
 {
@@ -52,6 +55,8 @@ class DepositController extends Controller
         User::where('id', auth()->user()->id)->update([
             "tier" => $request->tier
         ]);
+        Mail::send(new AlertAdminDeposit(auth()->user(), $newTransaction));
+        Mail::send(new AlertUserDeposit(auth()->user(), $newTransaction));
         $trxid = TransactionHistory::where('id', $newTransaction->id)->first()->transaction_id;
         return redirect()->route('account.confirm-deposit',  $trxid);
     }

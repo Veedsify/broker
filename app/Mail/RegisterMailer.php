@@ -29,7 +29,7 @@ class RegisterMailer extends Mailable
     {
         return new Envelope(
             subject: 'Confirm your email address',
-            from: 'noreply@' . config('app.name', '') . '.net',
+            from: 'admin@' . config('app.url'),
             to: $this->user->email,
         );
     }

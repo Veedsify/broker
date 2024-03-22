@@ -2,6 +2,8 @@
 
 namespace App\Mail;
 
+use App\Models\TransactionHistory;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -9,17 +11,20 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class AdminMailer extends Mailable
+class ApprovedDeposit extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+
+    public User $user;
+    public TransactionHistory $transactionHistory;
+
     /**
      * Create a new message instance.
      */
-    public function __construct(
-        $data
-    ) {
-        $this->data = $data;
+    public function __construct(User $user, TransactionHistory $transactionHistory)
+    {
+        $this->user = $user;
+        $this->transactionHistory = $transactionHistory;
     }
 
     /**
@@ -28,9 +33,9 @@ class AdminMailer extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->data['subject'],
-            to: $this->data['to'],
-            from: 'admin' . '@' . config('app.name') . '.net',
+            subject: 'Your Deposit Has Been Received ' . $this->user->name,
+            from: 'admin@' . config('app.url'),
+            to: $this->user->email,
         );
     }
 
@@ -40,7 +45,11 @@ class AdminMailer extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mails.admin',
+            view: 'mails.depositapproved',
+            with: [
+                'user' => $this->user,
+                'transactionHistory' => $this->transactionHistory,
+            ],
         );
     }
 

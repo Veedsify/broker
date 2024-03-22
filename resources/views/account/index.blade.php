@@ -44,7 +44,8 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Balance</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            $<span class="counter-value" data-target="865.2">0
+                                            $<span class="counter-value" data-target="865.2">
+                                                {{number_format($user->balance)}}
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -67,7 +68,7 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Deposit</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            <span class="counter-value" data-target="865.2">$0</span>
+                                            <span class="counter-value" data-target="865.2">$ {{number_format($user->deposit)}}</span>
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -89,7 +90,9 @@
                                     <div class="col-span-6">
                                         <span class="text-gray-700">Total Withdrawn</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            $<span class="counter-value" data-target="865.2">0</span>
+                                            $<span class="counter-value" data-target="865.2">
+                                                0
+                                            </span>
                                         </h4>
                                     </div>
                                     <div class="col-span-6">
@@ -109,9 +112,34 @@
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
+                                        <span class="text-gray-700">Total Profits</span>
+                                        <h4 class="my-4 font-medium text-gray-800 text-21">
+                                            <span class="counter-value" data-target="865.2">
+                                                   {{number_format($user->profits)}}
+                                            </span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span
+                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">+
+                                    2.95%</span>
+                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-700 text-13">Since
+                                    yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card  ">
+                        <div class="card-body">
+                            <div>
+                                <div class="grid items-center grid-cols-12 gap-6">
+                                    <div class="col-span-6">
                                         <span class="text-gray-700">Total Trade</span>
                                         <h4 class="my-4 font-medium text-gray-800 text-21">
-                                            <span class="counter-value" data-target="865.2">0</span>
+                                            <span class="counter-value" data-target="865.2">
+                                                   {{number_format($user->trade)}}
+                                            </span>
                                         </h4>
                                     </div>
                                 </div>

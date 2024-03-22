@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/admins/css/swiper-bundle.css">
     <link rel="stylesheet" href="/admins/css/output.css">
     <link rel="stylesheet" href="/admins/css/tailwind2.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
 </head>
 
 <body data-mode="light" data-sidebar-size="lg" class="group">

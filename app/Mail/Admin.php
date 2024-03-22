@@ -9,17 +9,16 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class AdminMailer extends Mailable
+class Admin extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+
     /**
      * Create a new message instance.
      */
-    public function __construct(
-        $data
-    ) {
-        $this->data = $data;
+    public function __construct()
+    {
+        //
     }
 
     /**
@@ -28,9 +27,7 @@ class AdminMailer extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->data['subject'],
-            to: $this->data['to'],
-            from: 'admin' . '@' . config('app.name') . '.net',
+            subject: 'Admin',
         );
     }
 
@@ -40,7 +37,7 @@ class AdminMailer extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mails.admin',
+            view: 'view.name',
         );
     }
 

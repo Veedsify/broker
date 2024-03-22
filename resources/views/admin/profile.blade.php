@@ -43,15 +43,16 @@
                             <div class="card-body ">
                                 <div class="grid grid-cols-12 ">
                                     <div class="col-span-12  justify-between">
-                                        <div class="md:flex  items-center">
+                                        <div class="md:flex  items-center gap-3">
                                             <div class="w-20 h-20 ltr:mr-1 rtl:ml-1">
-                                                <img src="{{ auth()->user()->avatar }}" alt="" class="rounded-full">
+                                                <img src="{{ auth()->user()->avatar }}" alt=""
+                                                    class="rounded-full object-cover aspect-square">
                                             </div>
                                             <div>
                                                 <div class="block">
 
                                                     <h6>{{ auth()->user()->name }}</h6>
-                                                    <small class="text-gray-500">{{ auth()->user()->tier }}</small>
+                                                    <small class="text-gray-500">{{ auth()->user()->role }}</small>
                                                 </div>
                                                 <div class=" flex  mt-3   gap-4">
 

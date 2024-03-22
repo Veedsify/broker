@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-Use App\Models\TransactionHistory;
-Use App\Models\Activity;
+use App\Models\TransactionHistory;
+use App\Models\Activity;
 
 class User extends Authenticatable
 {
@@ -24,7 +24,12 @@ class User extends Authenticatable
         'email',
         'password',
         'phone',
+        'balance',
+        'deposit',
+        'trade',
+        'profits',
         'avatar',
+        'status',
         'email_verified_at',
         'email_verification_token',
         'referral_code',

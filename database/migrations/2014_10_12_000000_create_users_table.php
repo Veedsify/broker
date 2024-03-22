@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
             $table->string('role')->default('user');
+            $table->bigInteger('balance')->default(0);
+            $table->bigInteger('deposit')->default(0);
+            $table->bigInteger('trade')->default(0);
+            $table->bigInteger('profits')->default(0);
             $table->string('status')->default('active');
             $table->string('tier')->default("none");
             $table->string('referral_code')->nullable();

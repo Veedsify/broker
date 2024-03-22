@@ -56237,10 +56237,6 @@ input[switch="dark"]:checked+label:before {
     background-color: rgb(42 44 51 / var(--tw-bg-opacity));
 }
 
-.ck.ck-editor__editable_inline[dir="ltr"] {
-    text-align: right !important;
-}
-
 .dropzone {
     min-height: 230px;
     border-radius: 0.5rem;

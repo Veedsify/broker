@@ -1,11 +1,11 @@
-@extends('../layouts/account/accountlayout')
+﻿@extends('../layouts/admin/adminlayout')
 @section('content')
     <!-- ========== Left Sidebar Start ========== -->
-    <x-account.sidebar />
+    <x-admin.sidebar />
     <!-- Left Sidebar End -->
 
     {{-- Header start --}}
-    <x-account.header />
+    <x-admin.header />
     {{-- Header end --}}
 
 
@@ -16,8 +16,8 @@
 
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">Your
-                            Order History</h4>
+                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">
+                            Order History For <span class="text-green-500"> {{ $user->name }}</span></h4>
 
                         <nav class="flex" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
@@ -45,12 +45,12 @@
                         <div class=" px-4 card-body pb-1 ">
                             <div>
                                 @if (session('success'))
-                                    <div class="px-4 py-2 rounded-md border border-green-500 bg-green-50 w-full">
+                                    <div class="px-4 py-2 rounded-md border border-green-500 bg-green-50 w-full mb-10">
                                         {{ session('success') }}
                                     </div>
                                 @endif
                                 @if (session('error'))
-                                    <div class="px-4 py-6 mb-6 rounded-md border border-red-500 bg-red-50 w-full">
+                                    <div class="px-4 py-6 rounded-md border border-red-500 bg-red-50 w-full mb-10">
                                         {{ session('error') }}
                                     </div>
                                 @endif
@@ -59,9 +59,9 @@
                                 <h6
                                     class="text-gray-600
                                         text-15 whitespace-nowrap ">
-                                    Your Order</h6>
-                                <p class="text-gray-400 py-2">Your Order History displays details of cash deposits made to
-                                    your account..</p>
+                                    Order</h6>
+                                <p class="text-gray-400 py-2">Order History displays details of cash deposits made by
+                                    {{$user->name}} account..</p>
                             </div>
                         </div>
                         <div>
@@ -85,13 +85,19 @@
                                                 Payment Method</th>
                                             <th scope="col"
                                                 class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Payment Proof</th>
+                                            <th scope="col"
+                                                class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                 Type</th>
+                                            <th scope="col"
+                                                class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
                                         @foreach ($transactions as $transaction)
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap">{{ $loop->index + 1}}</td>
+                                            <tr class="align-middle">
+                                                <td class="px-6 py-4 whitespace-nowrap">{{ $loop->index + 1 }}</td>
                                                 <td class="px-6 py-4 whitespace-nowrap">
                                                     ${{ number_format($transaction->amount) }}</td>
                                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -116,6 +122,12 @@
                                                     {{ $transaction->payment_method }}</td>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace-nowrap">
+                                                    <a href="{{ asset($transaction->payment_details) }}" target="_blank">
+                                                        <img src="{{ asset($transaction->payment_details) }}" width="60"
+                                                            alt="">
+                                                    </a>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
                                                     @if ($transaction->type == 'deposit')
                                                         <span
                                                             class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -126,6 +138,21 @@
                                                             class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
                                                             Sell
                                                         </span>
+                                                    @endif
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap flex gap-2 align-middle">
+                                                    @if ($transaction->status === 'pending')
+                                                        <form method="post" action="{{ route('admin.approve', $transaction->transaction_id) }}">
+                                                            @csrf
+                                                            <input type="submit"
+                                                                class="cursor-pointer text-green-500 px-3 py-1 text-xs rounded-sm bg-green-100  hover:text-green-700" value="Approve">
+                                                        </form>
+                                                    @endif
+                                                    @if ($transaction->status !== 'pending')
+                                                        <form action="{{ route('admin.edit.user', $user->id) }}">
+                                                            <input type="submit"
+                                                                class="text-red-500 px-3 py-1 text-xs rounded-sm bg-red-100  hover:text-red-700" value="Decline">
+                                                        </form>
                                                     @endif
                                                 </td>
                                             </tr>

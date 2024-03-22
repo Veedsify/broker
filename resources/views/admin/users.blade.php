@@ -55,29 +55,46 @@
                                             <th class="p-4 pr-8 border rtl:border-l-0  border-gray-50 ">
                                                 Balance</th>
                                             <th class="p-4 pr-8 border rtl:border-l-0  border-gray-50 ">
-                                                Edit</th>
+                                                Order</th>
+                                            <th class="p-4 pr-8 border rtl:border-l-0  border-gray-50 ">
+                                                Edit Balance</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($allOtherUsers as $user)
                                             <tr>
-                                                <td class="p-4 pr-8 border border-t-0 rtl:border-l-0 border-gray-50 ">
-                                                    <a href="/admin/users/edit/1">
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 rtl:border-l-0 border-gray-50 text-center">
+                                                    <a href="{{ route('admin.edit.user', $user->id) }}">
                                                         {{ $user->name }}
                                                     </a>
                                                 </td>
-                                                <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
-                                                    {{ $user->tier }}</td>
-                                                <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
-                                                    {{ $user->email }}</td>
-                                                <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
-                                                    {{ $user->phone }}</td>
-                                                <td class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 ">
-                                                    $24</td>
                                                 <td
-                                                    class="p-4 pr-8 border border-t-0 border-l-0 rtl:border-l border-gray-50 ">
-                                                    <a href="" class="text-blue-500 hover:text-blue-700">Edit</a>
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 text-center ">
+                                                    {{ $user->tier }}</td>
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 text-center ">
+                                                    {{ $user->email }}</td>
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 text-center ">
+                                                    {{ $user->phone }}</td>
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 text-center">
+                                                   ${{$user->balance === NULL ? 0 : number_format($user->balance)}}</td>
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 rtl:border-l border-gray-50 text-center ">
+                                                    <a class="text-blue-500 "
+                                                        href="{{ route('admin.edit.user', $user->id) }}">
+                                                        edit
+                                                    </a>
                                                 </td>
+                                                <td
+                                                    class="p-4 pr-8 border border-t-0 border-l-0 rtl:border-l border-gray-50 flex justify-center">
+                                                    <a href="{{ route('admin.edit.balance', $user->id) }}"
+                                                        class="text-cyan-600 px-3 py-1 text-xs rounded-sm bg-cyan-100  hover:text-cyan-700">Edit
+                                                        Balance</a>
+                                                </td>
+
                                             </tr>
                                         @endforeach
                                     </tbody>

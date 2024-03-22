@@ -41,9 +41,10 @@
                             <div class="card-body ">
                                 <div class="grid grid-cols-12 ">
                                     <div class="col-span-12  justify-between">
-                                        <div class="md:flex  items-center">
+                                        <div class="md:flex  items-center  gap-3">
                                             <div class="w-20 h-20 ltr:mr-1 rtl:ml-1">
-                                                <img src="{{ auth()->user()->avatar }}" alt="" class="rounded-full">
+                                                <img src="{{ auth()->user()->avatar }}" alt=""
+                                                    class="rounded-full aspect-square object-cover">
                                             </div>
                                             <div>
                                                 <div class="block">
@@ -152,20 +153,6 @@
                                                         <option value="">BiSexual</option>
                                                     </select>
                                                 </div>
-                                                {{-- <div class="mb-4 col-span-2">
-                                                    <label for="firstname" class="font-bold mb-2 inline-block">
-                                                        Eth Address:
-                                                    </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                </div>
-                                                <div class="mb-4 col-span-3">
-                                                    <label for="firstname" class="font-bold mb-2 inline-block">
-                                                        External Wallet Addres:
-                                                    </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                </div> --}}
                                                 <div class="mb-4 lg:w-3/5">
                                                     <button type="submit" value="Save"
                                                         class="block text-white font-semibold border bg-green-500 w-full px-4 py-3 rounded-md ">
@@ -179,108 +166,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-span-12 lg:col-span-3">
-                        <div class="card  ">
-                            <div class="card-body">
-                                <h5 class="mb-3 text-gray-700 text-15 ">Skills</h5>
-                                <div class="flex flex-wrap gap-2">
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">Photoshop</a>
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">illustrator</a>
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">HTML</a>
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">Javascript</a>
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">Php</a>
-                                    <a href="#"
-                                        class="text-xs px-2 py-0.5 rounded text-violet-500 bg-violet-50 font-semibold hover:bg-violet-50 duration-300 dark:bg-violet-500">Python</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card  ">
-                            <div class="card-body">
-                                <h5 class="mb-4 text-gray-700 text-15 ">Portfolio</h5>
-                                <ul class="mb-0 list-unstyled">
-                                    <li class="py-2">
-                                        <a href="#" class="text-gray-500 d-block  "><i
-                                                class="mdi mdi-web text-violet-500 ltr:mr-1 rtl:ml-1"></i> Website</a>
-                                    </li>
-                                    <li class="py-2">
-                                        <a href="#" class="text-gray-500 d-block "><i
-                                                class="mdi mdi-note-text-outline text-violet-500 ltr:mr-1 rtl:ml-1"></i>
-                                            Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card  ">
-                            <div class="card-body">
-                                <h5 class="mb-4 text-gray-700 text-15 ">Similar Profiles</h5>
-                                <div class="list-group">
-                                    <a href="#">
-                                        <div
-                                            class="flex items-center px-5 py-3 border-b border-gray-50  hover:bg-gray-50/50/30">
-                                            <div class=" avatar-sm ltr:mr-3 rtl:ml-3">
-                                                <img src="/admins/images/avatar-1.jpg" alt=""
-                                                    class="w-8 h-8 p-1 border border-gray-100 rounded-full ">
-                                            </div>
-                                            <div class="flex-grow">
-                                                <div>
-                                                    <h5
-                                                        class="mb-1 text-sm text-gray-700 leading-[16.5px]">
-                                                        James Nix</h5>
-                                                    <p
-                                                        class="mb-0 text-gray-500 text-13  leading-[19.5px]">
-                                                        Full Stack Developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div
-                                            class="flex items-center px-5 py-3 border-b border-gray-50  hover:bg-gray-50/50/30">
-                                            <div class=" avatar-sm ltr:mr-3 rtl:ml-3">
-                                                <img src="/admins/images/avatar-3.jpg" alt=""
-                                                    class="w-8 h-8 p-1 border border-gray-100 rounded-full ">
-                                            </div>
-                                            <div class="flex-grow">
-                                                <div>
-                                                    <h5
-                                                        class="mb-1 text-sm text-gray-700 leading-[16.5px]">
-                                                        Darlene Smith</h5>
-                                                    <p
-                                                        class="mb-0 text-gray-500 text-13  leading-[19.5px]">
-                                                        UI/UX Designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="flex items-center px-5 py-3 hover:bg-gray-50/50/30">
-                                            <div class="avatar-sm ltr:mr-3 rtl:ml-3">
-                                                <div
-                                                    class="flex items-center justify-center w-8 h-8 text-center text-gray-100 rounded-full bg-gray-50/50 text-22">
-                                                    <i class="bx bxs-user-circle"></i>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow">
-                                                <div>
-                                                    <h5
-                                                        class="mb-1 text-sm text-gray-700 leading-[16.5px]">
-                                                        William Swift</h5>
-                                                    <p
-                                                        class="mb-0 text-gray-500 text-13  leading-[19.5px]">
-                                                        Backend Developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>

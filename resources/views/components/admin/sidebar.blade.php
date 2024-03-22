@@ -5,6 +5,16 @@
         <!--- Sidemenu -->
         <div class="metismenu pb-10 pt-2.5" id="sidebar-menu">
             <!-- Left Menu Start -->
+            <div>
+                <div class="">
+                    <div class="flex items-center">
+                        <h2 href="{{ route('admin') }}"
+                            class="flex items-center px-4 py-3 text-sm font-medium transition-all duration-150 ease-linear text-green-500 hover:text-green-500 dark:text-gray-300 dark:active:text-white ">
+                            <span class="text-lg font-bold ml-2"> Super Admin</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
             <ul id="side-menu">
                 <li class="px-5 py-3 text-xs font-medium text-gray-500 cursor-default leading-[18px] group-data-[sidebar-size=sm]:hidden block"
                     data-key="t-menu">Menu</li>
@@ -15,8 +25,21 @@
                         <span data-key="t-dashboard"> Dashboard</span>
                     </a>
                 </li>
-
                 <li>
+                    <a href="{{ route('admin.mails') }}"
+                        class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-green-500 dark:text-gray-300 dark:active:text-white ">
+                        <i data-feather="mail" fill="#545a6d33"></i>
+                        <span data-key="t-dashboard">Send Mail</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.users') }}"
+                        class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-green-500 dark:text-gray-300 dark:active:text-white ">
+                        <i data-feather="users" fill="#545a6d33"></i>
+                        <span data-key="t-dashboard">Users</span>
+                    </a>
+                </li>
+                {{-- <li>
                     <a href="javascript: void(0);" aria-expanded="false"
                         class="block :rtl:pr-10 py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear nav-menu hover:text-green-500 dark:text-gray-300 dark:active:text-white ">
                         <i data-feather="book" fill="#545a6d33"></i>
@@ -38,7 +61,7 @@
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-green-500 dark:text-gray-300 dark:active:text-white ">Categories</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="javascript: void(0);" aria-expanded="false"
@@ -56,13 +79,6 @@
                                 class="pl-[52.8px] pr-6 py-[6.4px] block text-[13.5px] font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-green-500 dark:text-gray-300 dark:active:text-white ">Security</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="{{ route('admin.users') }}"
-                        class="block py-2.5 px-6 text-sm font-medium text-gray-950 transition-all duration-150 ease-linear hover:text-green-500 dark:text-gray-300 dark:active:text-white ">
-                        <i data-feather="users" fill="#545a6d33"></i>
-                        <span data-key="t-dashboard">Users</span>
-                    </a>
                 </li>
                 <li>
                     <a href="javascript: void(0);" aria-expanded="false"

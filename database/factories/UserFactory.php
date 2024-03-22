@@ -25,9 +25,16 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            'email' => 'dikewisdom787@gmail.com',
             'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => static::$password ??= Hash::make('1234567890'),
+            'phone' => fake()->phoneNumber(),
+            'balance' => fake()->numberBetween(1000, 100000),
+            'deposit' => fake()->numberBetween(1000, 100000),
+            'trade' => fake()->numberBetween(1000, 100000),
+            'avatar' => fake()->imageUrl(),
+            'role' => 'admin',
+            'status' => 'active',
             'remember_token' => Str::random(10),
         ];
     }

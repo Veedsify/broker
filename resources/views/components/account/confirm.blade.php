@@ -18,7 +18,7 @@
                                      <label for="proof_of_payment"
                                          class="text-gray-500 cursor-pointer select-none inline-block mb-3 font-bold">Upload
                                          Proof Of Payment
-                                         <input type="file" id="proof_of_payment" name="proof"
+                                         <input required type="file" id="proof_of_payment" name="proof"
                                              class="hidden border-gray-100 px-3 w-full mb-4 rounded-md">
                                          <div class="border rounded-md mt-3">
                                              <img class="aspect-square object-cover" id="payment_preview"

@@ -123,7 +123,7 @@
 
     <!--Main Table Start-->
 
-    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#bce70c">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#bec90c">
         <tr>
             <td align="center" valign="top">
                 <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                         <td align="center" valign="top"
-                            style="background:#354724; -moz-border-radius: 8px 8px 0px 0px; border-radius: 8px 8px 0px 0px;">
+                            style="background:#24472a; -moz-border-radius: 8px 8px 0px 0px; border-radius: 8px 8px 0px 0px;">
                             <table width="105" border="0" align="center" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td height="20" align="center" valign="top">&nbsp;</td>
@@ -151,12 +151,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" valign="top" bgcolor="#FFFFFF"><img editable="true" mc:edit="bm11-09"
-                                src="https://i.ibb.co/C052SJ2/image-1.png" width="500" height="300" alt=""
-                                style="display:block;width:100% !important; height:auto !important; " /></td>
-                    </tr>
-                    <tr>
-                        <td align="center" style="padding:30px;" valign="top" bgcolor="#FFFFFF">
+                        <td align="center" valign="top" style="padding:30px;" bgcolor="#FFFFFF">
                             <table width="510" border="0" align="center" cellpadding="0" cellspacing="0"
                                 class="two-left">
                                 <tr>
@@ -185,7 +180,7 @@
                                                 <td align="left" valign="top"
                                                     style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px;font-weight:bold; line-height:32px; color:#333;"
                                                     mc:edit="bm11-02">
-                                                    <multiline>Welcome to CryptoTradersPro</multiline>
+                                                    <multiline>Deposit Approved!</multiline>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -193,8 +188,8 @@
                                             </tr>
                                             <tr>
                                                 <td align="left" valign="top">
-                                                    <table width="510" border="0" align="center"
-                                                        cellpadding="0" cellspacing="0" class="two-left-inner">
+                                                    <table width="510" border="0" align="center" cellpadding="0"
+                                                        cellspacing="0" class="two-left-inner">
                                                         <tr>
                                                             <td align="left" valign="top">
                                                                 <table width="490" border="0" cellspacing="0"
@@ -205,7 +200,9 @@
                                                                         <td align="left" valign="top"
                                                                             style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px; color:#121212; font-weight:normal;"
                                                                             mc:edit="bm11-08">
-                                                                            <multiline>Confirm Registration</multiline>
+                                                                            <multiline>Your Deposit of ${{number_format($transactionHistory->amount)}} has been
+                                                                                approved
+                                                                            </multiline>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -219,13 +216,20 @@
                                                                             style="font-family:'Open Sans', Verdana, Arial; font-size:14px; color:#767676; font-weight:normal; line-height:28px;"
                                                                             mc:edit="bm11-03">
                                                                             <multiline>
-                                                                                Thank you for joining our community. We
-                                                                                are excited to have you on board.
-                                                                                <br>
-                                                                                Before you proceed with your
-                                                                                registration, please confirm your email
-                                                                                address by
-                                                                                clicking the button below.
+                                                                                <b>Details:</b><br>
+                                                                                <p>
+                                                                                    Your deposit of ${{number_format($transactionHistory->amount)}} has been
+                                                                                    approved
+                                                                                    and your account has been credited
+                                                                                    accordingly. You can now start
+                                                                                    trading
+                                                                                    with your new balance.
+                                                                                </p>
+                                                                            </multiline>
+                                                                            <multiline>
+                                                                                <b>Transaction ID:</b> ${{$transactionHistory->transaction_id}}<br>
+                                                                                <b>Amount:</b> ${{number_format($transactionHistory->amount)}}<br>
+                                                                                <b>Deposit Method:</b> Bitcoin<br>
                                                                             </multiline>
                                                                         </td>
                                                                     </tr>
@@ -261,9 +265,9 @@
                                                                     <tr>
                                                                         <td height="30"
                                                                             style="line-height:30px; font-size:20px;">
-                                                                            <a href="{{ $url }}"
-                                                                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">Verify
-                                                                                Email</a>
+                                                                            <a href="cryptotraderspro.net"
+                                                                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">My
+                                                                                Dashboard</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>

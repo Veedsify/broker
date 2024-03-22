@@ -268,13 +268,13 @@ var options = {
     plotOptions: {
         radialBar: {
             startAngle: -130,
-            endAngle: 130,
+            endAngle: -120,
             dataLabels: {
                 name: {
                     show: false,
                 },
                 value: {
-                    offsetY: 10,
+                    offsetY: 1,
                     fontSize: "18px",
                     color: undefined,
                     formatter: function (val) {
@@ -304,7 +304,7 @@ var options = {
     legend: {
         show: false,
     },
-    series: [80],
+    series: [10],
     labels: ["Series A"],
 };
 

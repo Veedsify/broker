@@ -14,6 +14,7 @@ use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StakingController;
 use App\Http\Controllers\Account\UpdateAccountController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,13 @@ use App\Http\Controllers\Account\UpdateAccountController;
 // Admin
 require __DIR__ . '/admin/admin.php';
 require __DIR__ . '/account/account.php';
+
+Route::get('/mail', function () {
+    return view('mails.admin', [
+        'user' => User::find(1),
+        'url' => 'https://google.com',
+    ]);
+});
 
 // Index
 Route::get('/', [IndexController::class, 'index'])->name('index');
@@ -86,4 +94,3 @@ Route::post("/logout", function () {
 
 //About
 Route::get("/about", [AboutController::class, 'aboutUS'])->name("about");
-

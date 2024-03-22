@@ -151,11 +151,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" valign="top" bgcolor="#FFFFFF"><img editable="true" mc:edit="bm11-09"
-                                src="https://i.ibb.co/C052SJ2/image-1.png" width="500" height="300" alt=""
-                                style="display:block;width:100% !important; height:auto !important; " /></td>
-                    </tr>
-                    <tr>
                         <td align="center" style="padding:30px;" valign="top" bgcolor="#FFFFFF">
                             <table width="510" border="0" align="center" cellpadding="0" cellspacing="0"
                                 class="two-left">
@@ -185,7 +180,7 @@
                                                 <td align="left" valign="top"
                                                     style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px;font-weight:bold; line-height:32px; color:#333;"
                                                     mc:edit="bm11-02">
-                                                    <multiline>Welcome to CryptoTradersPro</multiline>
+                                                    <multiline>Your Deposit of ${{number_format($transactionHistory->amount)}} is being processed</multiline>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -193,19 +188,17 @@
                                             </tr>
                                             <tr>
                                                 <td align="left" valign="top">
-                                                    <table width="510" border="0" align="center"
-                                                        cellpadding="0" cellspacing="0" class="two-left-inner">
+                                                    <table width="510" border="0" align="center" cellpadding="0"
+                                                        cellspacing="0" class="two-left-inner">
                                                         <tr>
                                                             <td align="left" valign="top">
                                                                 <table width="490" border="0" cellspacing="0"
                                                                     cellpadding="0" class="two-left-inner">
-
-
                                                                     <tr>
                                                                         <td align="left" valign="top"
                                                                             style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px; color:#121212; font-weight:normal;"
                                                                             mc:edit="bm11-08">
-                                                                            <multiline>Confirm Registration</multiline>
+                                                                            {{-- <multiline>Confirm Registration</multiline> --}}
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -219,51 +212,22 @@
                                                                             style="font-family:'Open Sans', Verdana, Arial; font-size:14px; color:#767676; font-weight:normal; line-height:28px;"
                                                                             mc:edit="bm11-03">
                                                                             <multiline>
-                                                                                Thank you for joining our community. We
-                                                                                are excited to have you on board.
+                                                                                We are currently processing your
+                                                                                deposit, and we will notify you once it
+                                                                                has been completed. <br>
                                                                                 <br>
-                                                                                Before you proceed with your
-                                                                                registration, please confirm your email
-                                                                                address by
-                                                                                clicking the button below.
+                                                                                <strong></strong>Amount:</strong> ${{number_format($transactionHistory->amount)}}
+                                                                                <br>
+                                                                                <strong>Deposit Method:</strong> Bitcoin
+                                                                                <br>
+                                                                                <strong>Deposit Address:</strong>
+                                                                                1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2 <br>
+                                                                                <strong>Deposit Date:</strong>
+                                                                                {{ $transactionHistory->created_at->format('d M, Y') }} <br>
+                                                                                <strong>Deposit Time:</strong>
+                                                                                {{ $transactionHistory->created_at->format('h:i A') }} <br>
+                                                                                <br>
                                                                             </multiline>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                        <td height="30" align="center"
-                                                                            valign="middle"
-                                                                            style="line-height:30px; font-size:30px;">
-                                                                            &nbsp;</td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                        <td align="left" valign="top"
-                                                                            style="font-family:'Open Sans', Verdana, Arial; font-size:16px; color:#121212; font-weight:normal;"
-                                                                            mc:edit="bm11-07">
-                                                                            <multiline></multiline>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td height="10" align="center"
-                                                                            valign="middle"
-                                                                            style="line-height:10px; font-size:10px;">
-                                                                            &nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="left" valign="top"
-                                                                            style="font-family:'Open Sans', Verdana, Arial; font-size:12px; color:#767676; font-weight:normal; line-height:24px;"
-                                                                            mc:edit="bm11-04">
-                                                                            <multiline>
-                                                                            </multiline>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td height="30"
-                                                                            style="line-height:30px; font-size:20px;">
-                                                                            <a href="{{ $url }}"
-                                                                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">Verify
-                                                                                Email</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -324,7 +288,7 @@
                                         style="font-size:25px; line-height:25px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" valign="top"
+                                    <td align="center" valign="top"
                                         style="font-family: 'Trebuchet MS'; font-size:14px; font-weight:normal; color:#FFF; line-height:28px;"
                                         mc:edit="bm11-06">
                                         <multiline>Copyright &copy;
