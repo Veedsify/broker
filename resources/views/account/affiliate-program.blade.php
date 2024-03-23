@@ -16,7 +16,7 @@
 
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">
+                        <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">
                             Affiliate Program Statistics</h4>
                     </div>
                 </div>
@@ -25,35 +25,35 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-600 text-15 ">Want to make money
+                                <h6 class="text-gray-50 text-15 ">Want to make money
                                     with Swift Tradings with your friends?</h6>
-                                <p class="text-gray-400 py-2">Get 20% of the profit on each order of your friends or
+                                <p class="text-gray-50 py-2">Get 20% of the profit on each order of your friends or
                                     partners. Copy the link or your referral ID and send it to your friends.</p>
                             </div>
                         </div>
 
-                        <div class="mx-auto bg-white mb-2 overflow-x-auto p-3">
+                        <div class="mx-auto bg-bgprimary mb-2 overflow-x-auto p-3">
 
-                            <h6 class="text-gray-600 text-15 whitespace-nowrap mb-2 p-1 "># Affiliate
+                            <h6 class="text-gray-50 text-15 whitespace-nowrap mb-2 p-1 "># Affiliate
                                 link</h6>
-                            <div class=" border border-gray-50 rounded flex ps-2 items-center justify-between">
-                                <input type="text" id="navigatorInfo1" class="border-0 w-full" readonly
-                                    value="https://swiftradings.com/register/emmanueliwok">
+                            <div class=" border border-bgborder rounded flex ps-2 items-center justify-between">
+                                <input type="text" id="navigatorInfo1" class="border-0 w-full bg-transparent text-white"
+                                    readonly value="https://swiftradings.com/register/emmanueliwok">
                                 {{-- <p  id="navigatorInfo1">Text to be copied to clipboard</p> --}}
-                                <button class=" p-4 text-white font-semibold bg-green-500 " id="copyButton1">Copy </button>
+                                <button class=" p-4 text-white bg-lime-500 " id="copyButton1">Copy </button>
                             </div>
 
 
                         </div>
-                        <div class="mx-auto bg-white  overflow-x-auto p-3">
+                        <div class="mx-auto bg-bgprimary  overflow-x-auto p-3">
 
-                            <h6 class="text-gray-600 text-15 whitespace-nowrap mb-2 p-1 "># Affiliate ID
+                            <h6 class="text-gray-50 text-15 whitespace-nowrap mb-2 p-1 "># Affiliate ID
                             </h6>
-                            <div class=" border border-gray-50 rounded flex ps-2 items-center justify-between">
-                                <input type="text" id="navigatorInfo2" class="border-0 w-full" readonly
-                                    value="emmanueliwok">
+                            <div class=" border border-bgborder rounded flex ps-2 items-center justify-between">
+                                <input type="text" id="navigatorInfo2" class="border-0 w-full bg-transparent text-white"
+                                    readonly value="emmanueliwok">
                                 {{-- <p   id="navigatorInfo2">Text to be copied to clipboard</p> --}}
-                                <button class=" p-4 text-white font-semibold bg-green-500 " id="copyButton2">Copy </button>
+                                <button class=" p-4 text-white bg-lime-500 " id="copyButton2">Copy </button>
                             </div>
 
 
@@ -64,49 +64,38 @@
                     <div class="  card ">
                         <div class=" px-4 card-body pb-1 ">
                             <div>
-                                <h6 class="text-gray-600 text-15 whitespace-nowrap ">Your Order</h6>
-                                <p class="text-gray-400 py-2">Your Order History displays details of cash deposits made to
+                                <h6 class="text-gray-50 text-15 whitespace-nowrap ">Your Order</h6>
+                                <p class="text-gray-50 py-2">Your Order History displays details of cash deposits made to
                                     your account..</p>
                             </div>
                         </div>
                         <div>
 
-                            <div class=" mx-auto bg-white  overflow-x-auto p-3  ">
+                            <div class=" mx-auto bg-bgprimary  overflow-x-auto p-3  ">
                                 <table class="min-w-full truncate divide-gray-200 border rounded-md">
-                                    <thead class="bg-gray-50">
-                                        <tr>
+                                    <thead class="bg-bgsecondary">
+                                        <tr class="border border-bgborder">
                                             <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                S/No.</th>
+                                                class="px-6 py-4 text-left text-xs font-medium text-gray-50 uppercase tracking-wider">
+                                                Date</th>
                                             <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                Name</th>
+                                                class="px-6 py-4 text-left text-xs font-medium text-gray-50 uppercase tracking-wider">
+                                                Amount</th>
                                             <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                User ID</th>
-                                            <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                Username</th>
-                                            <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                Created At</th>
-                                            <th scope="col"
-                                                class="px-6 py-4 font-semibold text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                class="px-6 py-4 text-left text-xs font-medium text-gray-50 uppercase tracking-wider">
                                                 Status</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y divide-gray-200">
-                                        <tr>
-                                            <td class="px-6 py-4 whitespace-nowrap">S/No.</td>
-                                            <td class="px-6 py-4 whitespace-nowrap">Name</td>
-                                            <td class="px-6 py-4 whitespace-nowrap">Status</td>
-                                            <td class="px-6 py-4 whitespace-nowrap">Status</td>
-                                        </tr>
-
-                                        <!-- Add more rows as needed -->
+                                    <tbody class="bg-bgsecondary divide-y divide-gray-200">
+                                        {{-- <tr class="text-gray-50">
+                                            <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">25</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Los Angeles</td>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>
+
 
 
                         </div>
@@ -140,7 +129,10 @@
             document.execCommand('copy');
 
             // Inform the user that the information has been copied
-            alert(inputValue + " " + "is copied to clipboard");
+            swal({
+                icon: "success",
+                text: inputValue + " " + "is copied to clipboard"
+            });
         }
     </script>
 @endsection

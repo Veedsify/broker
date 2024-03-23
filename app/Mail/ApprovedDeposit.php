@@ -2,14 +2,15 @@
 
 namespace App\Mail;
 
-use App\Models\TransactionHistory;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use App\Models\TransactionHistory;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ApprovedDeposit extends Mailable
 {
@@ -34,7 +35,7 @@ class ApprovedDeposit extends Mailable
     {
         return new Envelope(
             subject: 'Your Deposit Has Been Received ' . $this->user->name,
-            from: 'admin@' . config('app.url'),
+            from: new Address('admin' . '@' . config('app.name') . '.net', 'CryptoTradersPro'),
             to: $this->user->email,
         );
     }

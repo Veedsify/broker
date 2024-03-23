@@ -12,22 +12,22 @@
             <div class="container-fluid px-[0.625rem]">
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">
+                        <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">
                             Users</h4>
                         <nav class="flex" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
                                 <li class="inline-flex items-center">
                                     <a href="#"
-                                        class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900  ">
+                                        class="inline-flex items-center text-sm text-white hover:text-gray-900  ">
                                         Users
                                     </a>
                                 </li>
                                 <li>
                                     <div class="flex items-center rtl:mr-2">
                                         <i
-                                            class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 "></i>
+                                            class="font-semibold text-white align-middle far fa-angle-right text-13 rtl:rotate-180 "></i>
                                         <a href="#"
-                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 ">Table</a>
+                                            class="text-sm font-medium text-gray-50 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 ">Table</a>
                                     </div>
                                 </li>
                             </ol>
@@ -38,10 +38,10 @@
                     <div class="col-span-12">
                         <div class="card  ">
                             <div class="card-body border-b border-gray-100 ">
-                                <h6 class="mb-1 text-gray-700 text-15 ">Default Datatable</h6>
+                                <h6 class="mb-1 text-white text-15 ">Default Datatable</h6>
                             </div>
                             <div class="relative overflow-x-auto card-body">
-                                <table id="datatable" class="table w-full pt-4 mt-6 mb-6 text-gray-700 ">
+                                <table id="datatable" class="table w-full pt-4 mt-6 mb-6 text-white ">
                                     <thead>
                                         <tr>
                                             <th class="p-4 pr-8 border rtl:border-l-0  border-gray-50 ">
@@ -80,7 +80,7 @@
                                                     {{ $user->phone }}</td>
                                                 <td
                                                     class="p-4 pr-8 border border-t-0 border-l-0 border-gray-50 text-center">
-                                                   ${{$user->balance === NULL ? 0 : number_format($user->balance)}}</td>
+                                                    ${{ $user->balance === null ? 0 : number_format($user->balance) }}</td>
                                                 <td
                                                     class="p-4 pr-8 border border-t-0 border-l-0 rtl:border-l border-gray-50 text-center ">
                                                     <a class="text-blue-500 "

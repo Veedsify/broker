@@ -16,9 +16,9 @@
 
                 <div class="grid grid-cols-1 pb-2">
                     <div class=" px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">Change
+                        <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">Change
                             Password</h4>
-                        <h6 class="text-gray-400 py-2 text-15 whitespace-pre-wrap ">If you notice any
+                        <h6 class="text-gray-50 py-2 text-15 whitespace-pre-wrap ">If you notice any
                             suspicious activity, we recommend changing your password.</h6>
 
 

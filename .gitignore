@@ -1,11 +1,12 @@
+ForexBroker.zip
 /.phpunit.cache
 /node_modules
 /storage/*.key
 /vendor
-.env
-.env.backup
-.env.production
-.phpunit.result.cache
+# .env
+# .env.backup
+# .env.production
+# .phpunit.result.cache
 /.fleet
 /.idea
 /.vscode

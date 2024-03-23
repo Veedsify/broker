@@ -2,14 +2,15 @@
 
 namespace App\Mail;
 
-use App\Models\TransactionHistory;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use App\Models\TransactionHistory;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AlertAdminDeposit extends Mailable
 {
@@ -33,7 +34,7 @@ class AlertAdminDeposit extends Mailable
     {
         return new Envelope(
             subject: 'New Depost By ' . $this->user->name,
-            from: 'admin@' . config('app.url'),
+            from: new Address('admin' . '@' . config('app.name') . '.net', 'CryptoTradersPro'),
             to: "dikewisdom787@gmail.com"
             // to: 'admin@' . config('app.url') ,
         );

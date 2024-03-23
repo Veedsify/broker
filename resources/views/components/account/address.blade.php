@@ -1,11 +1,11 @@
-   <div class="grid grid-cols-12 overflow-hidden text-gray-500/60 text-15 border border-gray-200 rounded-md mt-2">
+   <div class="grid grid-cols-12 overflow-hidden text-white text-15 border border-bgborder rounded-md mt-2">
        <input class="col-span-10 w-[300px] truncate flex items-center px-2 border-none bg-transparent" readonly
            id="btc_address" value="1NidEPo6hjncKFCqHfFGoB8eXyx6n6grGc">
        <div id="copybtcaddress"
-           class="col-span-2 cursor-pointer flex items-center justify-center border-l bg-slate-100 py-2 rounded-tr-md rounded-br-md">
+           class="col-span-2 cursor-pointer flex items-center justify-center border-l bg-bgprimary py-2 rounded-tr-md rounded-br-md">
            <button>
                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="28"
-                   height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                   height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
                    stroke-linecap="round" stroke-linejoin="round">
                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                    <path

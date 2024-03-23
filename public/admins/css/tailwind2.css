@@ -47490,14 +47490,14 @@ select {
     text-transform: none;
 }
 
-button,
+/* button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
     background-color: transparent;
     background-image: none;
-}
+} */
 
 :-moz-focusring {
     outline: auto;
@@ -47655,8 +47655,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #fff;
-    border-color: #74788d;
+    /* background-color: #fff; */
     border-width: 1px;
     border-radius: 0;
     padding: 0.5rem 0.75rem;
@@ -48375,9 +48374,10 @@ span {
 
 .card {
     border-radius: 0.3rem;
+    background-color: #435821;
     border: 1px;
     border-style: solid;
-    border-color: #e9e9ef;
+    border-color: #627e19;
     margin-bottom: 1.5rem;
 }
 
@@ -54189,6 +54189,7 @@ span {
 body {
     overflow-x: hidden;
     font-family: "Lexend", sans-serif;
+    background-color: #2c3b1e;
     font-size: 0.875rem;
 }
 
@@ -54541,12 +54542,12 @@ body {
 
 .metismenu .mm-active .active {
     --tw-text-opacity: 1 !important;
-    color: rgb(42, 181, 125) !important;
+    color: #bce70c !important;
 }
 
 .metismenu .mm-active>a {
     --tw-text-opacity: 1 !important;
-    color: rgb(42, 181, 125) !important;
+    color: #bce70c !important;
 }
 
 [data-mode="dark"] .metismenu .mm-active .active {
@@ -54556,7 +54557,7 @@ body {
 
 .mm-active>a {
     --tw-text-opacity: 1;
-    color: rgb(42, 181, 125);
+    color: #bce70c;
 }
 
 #sidebar-menu ul li ul li ul li a {
@@ -54598,7 +54599,7 @@ body {
 
 .metismenu .mm-active a {
     --tw-text-opacity: 1;
-    color: rgb(42,181,125 / var(--tw-text-opacity));
+    color: rgb(42, 181, 125 / var(--tw-text-opacity));
 }
 
 [dir="rtl"] [data-sidebar-size="sm"] .main-content {
@@ -54828,9 +54829,9 @@ body[data-mode="dark"][data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul u
 .nav-tabs.border-b-tabs ul li .active {
     border-bottom-width: 1px;
     --tw-border-opacity: 1;
-    border-color: rgb(128 132 208 / var(--tw-border-opacity));
+    border-color: #aebf27;
     --tw-text-opacity: 1;
-    color: rgb(128 132 208 / var(--tw-text-opacity));
+    color: #aebf27;
 }
 
 .nav-tabs.tab-pill ul li .active {

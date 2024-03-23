@@ -26,6 +26,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => 'dikewisdom787@gmail.com',
+            'username' => 'dikewisdom787',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('1234567890'),
             'phone' => fake()->phoneNumber(),

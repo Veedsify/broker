@@ -30,18 +30,22 @@ class AuthController extends Controller
 
     public function registerNewUser(Request $request)
     {
+
+        $request->validate([
+            "name" => "required|string",
+            "email" => "required|email|unique:users,email",
+            "username" => "string|unique:users,username",
+            "phone" => "required|string",
+            "password" => "required|string|min:8",
+            "referral_code" => "string|nullable",
+            "confirm_password" => "required|same:password"
+        ]);
+
         try {
-
-            $request->validate([
-                "name" => "required|string",
-                "email" => "required|email|unique:users,email",
-                "phone" => "required|string",
-                "password" => "required|string|min:8",
-            ]);
-
             User::create([
                 "name" => $request->name,
                 "email" => $request->email,
+                "username" => $request->username,
                 "phone" => $request->phone,
                 "password" => Hash::make($request->password),
                 "email_verification_token" => Str::random(60),
@@ -50,7 +54,8 @@ class AuthController extends Controller
             ]);;
 
             $user = User::where("email", $request->email)->first();
-            Mail::to($user->email)->send(new RegisterMailer($user));
+            session(["verification_code" => rand(100000, 999999)]);
+            Mail::to($user->email)->send(new RegisterMailer($user, session()->has("verification_code") ? session("verification_code") : NULL));
             Auth::login($user, true);
             return redirect()->route("account.index");
         } catch (\Exception $e) {
@@ -81,16 +86,21 @@ class AuthController extends Controller
         }
     }
 
-    public function verifyToken($token)
+    public function verifyToken(Request $request)
     {
-        $user = User::where("email_verification_token", $token)->first();
-        if ($user) {
+        $request->validate([
+            "code" => "required|array",
+        ]);
+
+        $verification_code = implode("", $request->code);
+        if (intval($verification_code) == session("verification_code")) {
+            $user = User::where("email", auth()->user()->email)->first();
             $user->email_verified_at = now();
             $user->email_verification_token = NULL;
             $user->save();
             return redirect()->route("account.index")->with("success", "Email verified successfully");
         } else {
-            return redirect()->route("login")->with("error", "Invalid token");
+            return redirect()->back()->with("error", "Invalid verification code");
         }
     }
 

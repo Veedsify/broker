@@ -47,8 +47,8 @@ Route::get('/staking/{stakingId}', [StakingController::class, 'stakingDetails'])
 
 
 //Resend Verification
-Route::get('/verify/email-resent', [AuthController::class, 'resendVerification'])->name('resend.email.verification');
-Route::get('/verify/{token}', [AuthController::class, 'verifyToken'])->name('resend.token');
+// Route::get('/verify/email-resent', [AuthController::class, 'resendVerification'])->name('resend.email.verification');
+Route::post('/verify', [AuthController::class, 'verifyToken'])->name('verify.code');
 Route::post("/resend_verification", [UpdateAccountController::class, 'resendVerification'])->name('resend_verification');
 
 // Ido

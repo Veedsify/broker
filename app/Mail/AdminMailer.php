@@ -3,11 +3,12 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class AdminMailer extends Mailable
 {
@@ -30,7 +31,7 @@ class AdminMailer extends Mailable
         return new Envelope(
             subject: $this->data['subject'],
             to: $this->data['to'],
-            from: 'admin' . '@' . config('app.name') . '.net',
+            from: new Address('admin' . '@' . config('app.name') . '.net', 'CryptoTradersPro'),
         );
     }
 

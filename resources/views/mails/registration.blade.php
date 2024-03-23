@@ -224,8 +224,8 @@
                                                                                 <br>
                                                                                 Before you proceed with your
                                                                                 registration, please confirm your email
-                                                                                address by
-                                                                                clicking the button below.
+                                                                                address by entering the verification
+                                                                                code.
                                                                             </multiline>
                                                                         </td>
                                                                     </tr>
@@ -260,10 +260,11 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td height="30"
-                                                                            style="line-height:30px; font-size:20px;">
-                                                                            <a href="{{ $url }}"
+                                                                            style="line-height:30px; font-size:72px;">
+                                                                            {{ $verification_code }}
+                                                                            {{-- <a href="{{ $url }}"
                                                                                 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #7c990a; color: #ffffff; padding: 10px 15px; border-radius:2px; text-decoration: none;">Verify
-                                                                                Email</a>
+                                                                                Email</a> --}}
                                                                         </td>
                                                                     </tr>
                                                                     <tr>

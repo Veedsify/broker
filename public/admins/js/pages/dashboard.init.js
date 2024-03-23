@@ -218,13 +218,13 @@ if (document.querySelector("#wallet-balance")) {
     var piechartColors = getChartColorsArray("#wallet-balance");
 }
 var options = {
-    series: [35, 70, 15],
+    series: [99.9, 0.1],
     chart: {
         width: 227,
         height: 227,
         type: "pie",
     },
-    labels: ["Ethereum", "Bitcoin", "Litecoin"],
+    labels: ["Bitcoin"],
     colors: piechartColors,
     stroke: {
         width: 0,

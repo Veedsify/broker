@@ -22,9 +22,6 @@
     <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- preloader css -->
     <link rel="stylesheet" href="/assets/css/preloader.min.css" type="text/css" />
-
-    
-  
 </head>
 
 <body>
@@ -34,6 +31,38 @@
     </div>
     @yield('content')
     <x-footer />
+    <script>
+        const inputs = document.querySelectorAll('.box-input');
+        inputs.forEach((input, index) => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    e.preventDefault();
+                    if (e.shiftKey) {
+                        // Move to previous input on Shift + Tab
+                        if (index !== 0) {
+                            inputs[index - 1].focus();
+                        } else {
+                            inputs[inputs.length - 1].focus();
+                        }
+                    } else {
+                        // Move to next input on Tab
+                        if (index !== inputs.length - 1) {
+                            inputs[index + 1].focus();
+                        } else {
+                            inputs[0].focus();
+                        }
+                    }
+                } else if (e.keyCode === 8 && input.value === '') {
+                    // Move to previous input on Backspace (if current input is empty)
+                    if (index !== 0) {
+                        inputs[index - 1].focus();
+                    } else {
+                        inputs[inputs.length - 1].focus(); // Wrap around to last input
+                    }
+                }
+            });
+        });
+    </script>
     <!-- ==== js dependencies start ==== -->
     <script src="{{ asset('assets/js/plugins/plugins.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/plugin-custom.js') }}"></script>

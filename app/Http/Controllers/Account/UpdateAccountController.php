@@ -25,12 +25,13 @@ class UpdateAccountController extends Controller
 
     public function resendVerification()
     {
-       try{
+        try {
             $user = auth()->user();
-            Mail::to($user->email)->send(new RegisterMailer($user));
-            return redirect()->route("resend.email.verification")->with("success", "Verification email has been sent to your email address");
-       }catch(\Exception $e){
+            session(["verification_code" => rand(100000, 999999)]);
+            Mail::to($user->email)->send(new RegisterMailer($user, session()->has("verification_code") ? session("verification_code") : NULL));
+            return redirect()->back()->with("success", "Verification email has been sent to your email address");
+        } catch (\Exception $e) {
             return redirect()->back()->with("error", "Please try again, Something went wrong");
-       }
+        }
     }
 }

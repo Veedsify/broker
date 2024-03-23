@@ -56,6 +56,13 @@
                                                         @endif
                                                     </div>
                                                     <div>
+                                                        <input class="br2 mb-3 mb-md-4" name="username" type="text"
+                                                            placeholder="Username" required>
+                                                        @if ($errors->has('username'))
+                                                            <span class="text-danger">{{ $errors->first('username') }}</span>
+                                                        @endif
+                                                    </div>
+                                                    <div>
                                                         <input class="br2 mb-3 mb-md-4" name="email" type="email"
                                                             placeholder="Email" required>
                                                         @if ($errors->has('email'))
@@ -75,6 +82,14 @@
                                                         @if ($errors->has('password'))
                                                             <span
                                                                 class="text-danger">{{ $errors->first('password') }}</span>
+                                                        @endif
+                                                    </div>
+                                                    <div>
+                                                        <input class="br2 mb-3 mb-md-4" name="confirm_password" type="password"
+                                                            placeholder="Confirm Password" required>
+                                                        @if ($errors->has('confirm_password'))
+                                                            <span
+                                                                class="text-danger">{{ $errors->first('confirm_password') }}</span>
                                                         @endif
                                                     </div>
                                             </div>

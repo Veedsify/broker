@@ -13,22 +13,22 @@
             <div class="container-fluid px-[0.625rem]">
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
-                        <h4 class="text-[18px] font-medium text-gray-800 mb-sm-0 grow mb-2 md:mb-0">
+                        <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">
                             Send Mail</h4>
                         <nav class="flex" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
                                 <li class="inline-flex items-center">
                                     <a href="#"
-                                        class="inline-flex items-center text-sm text-gray-800 hover:text-gray-900  ">
+                                        class="inline-flex items-center text-sm text-white hover:text-gray-900  ">
                                         Mail
                                     </a>
                                 </li>
                                 <li>
                                     <div class="flex items-center rtl:mr-2">
                                         <i
-                                            class="font-semibold text-gray-600 align-middle far fa-angle-right text-13 rtl:rotate-180 "></i>
+                                            class="font-semibold text-white align-middle far fa-angle-right text-13 rtl:rotate-180 "></i>
                                         <a href="#"
-                                            class="text-sm font-medium text-gray-500 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 ">Send
+                                            class="text-sm font-medium text-gray-50 ltr:ml-2 rtl:mr-2 hover:text-gray-900 ltr:md:ml-2 rtl:md:mr-2 ">Send
                                             Email</a>
                                     </div>
                                 </li>
@@ -54,30 +54,30 @@
                         @endif
                     </div>
 
-                    <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="bg-bgprimary shadow-md rounded-lg p-6">
                         <form action="{{ route('admin.mail.send') }}" method="POST">
                             @csrf
                             <div class="mb-4">
-                                <label for="to" class="block text-gray-700 text-sm font-bold mb-2">To:</label>
+                                <label for="to" class="block text-white text-sm font-bold mb-2">To:</label>
                                 @if ($errors->has('to'))
                                     <span class="text-red-500">{{ $errors->first('to') }}</span>
                                 @endif
                                 <input type="email" name="to" id="to"
-                                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    class="w-full text-white bg-transparent border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     required>
                             </div>
                             <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject:</label>
+                                <label for="subject" class="block text-white text-sm font-bold mb-2">Subject:</label>
                                 @if ($errors->has('subject'))
                                     <span class="text-red-500">{{ $errors->first('subject') }}</span>
                                 @endif
                                 <input type="text" name="subject" id="subject"
-                                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    class="w-full border bg-transparent text-white border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     required>
                             </div>
                             <div class="mb-4">
-                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
-                                    <textarea name="message" id="editor" rows="5" class="text-left"></textarea>
+                                <label for="message" class="block text-white text-sm font-bold mb-2">Message:</label>
+                                <textarea name="message" id="editor" rows="5" class="text-left bg-transparent text-white"></textarea>
                                 <script>
                                     ClassicEditor
                                         .create(document.querySelector('#editor'))

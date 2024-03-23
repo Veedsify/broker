@@ -25,7 +25,7 @@
                            </span>
                            <div>
                                <span class="p7-color fw-bolder d-block">Contact Us:</span>
-                               <a href="tel:+9802344567" class="d-block p7-color">(207) 353-5060</a>
+                               {{-- <a href="tel:+9802344567" class="d-block p7-color">(207) 353-5060</a> --}}
                            </div>
                        </div>
                        <span class="v-line mb-9"></span>
