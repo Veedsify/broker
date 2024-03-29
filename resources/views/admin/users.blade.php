@@ -34,14 +34,14 @@
                         </nav>
                     </div>
                 </div>
-                <div class="grid grid-cols-12 gap-6">
+                <div class="grid grid-cols-12 gap-6 text-white bg-transparent">
                     <div class="col-span-12">
                         <div class="card  ">
                             <div class="card-body border-b border-gray-100 ">
-                                <h6 class="mb-1 text-white text-15 ">Default Datatable</h6>
+                                <h6 class="mb-1 text-white text-15 ">User Datatable</h6>
                             </div>
                             <div class="relative overflow-x-auto card-body">
-                                <table id="datatable" class="table w-full pt-4 mt-6 mb-6 text-white ">
+                                <table id="datatable" class="table w-full pt-4 mt-6 mb-6 text-white bg-transparent">
                                     <thead>
                                         <tr>
                                             <th class="p-4 pr-8 border rtl:border-l-0  border-gray-50 ">

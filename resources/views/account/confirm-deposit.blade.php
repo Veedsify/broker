@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-6"></div>
-                <div class="bg-white shadow-md rounded-lg p-6">
+                <div class="border-bgborder border text-white shadow-md rounded-lg p-6">
                     <h2 class="text-2xl font-semibold mb-4">Payment Confirmation</h2>
                     <p class="text-gray-50 mb-6">
                         Your payment has been received and is being processed. You will receive an email confirmation once
@@ -46,7 +46,7 @@
 
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center mr-4">
-                            <i class="text-gray-50 text-2xl fas fa-coins"></i>
+                            <i class="text-black text-2xl fas fa-coins"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold">Bitcoin Address</h3>
@@ -56,7 +56,7 @@
 
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mr-4">
-                            <i class="text-gray-50 text-2xl fas fa-dollar-sign"></i>
+                            <i class="text-black text-2xl fas fa-dollar-sign"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold">Amount</h3>
@@ -66,7 +66,7 @@
 
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-4">
-                            <i class="text-gray-50 text-2xl fas fa-calendar-check"></i>
+                            <i class="text-black text-2xl fas fa-calendar-check"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold">Payment Date</h3>
@@ -78,7 +78,7 @@
 
                     <div class="flex justify-start mt-8">
                         <a href="{{ route('account.orders') }}"
-                            class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">My Orders</a>
+                            class="px-4 py-2 bg-lime-800 text-white rounded-md hover:bg-lime-900">My Orders</a>
                     </div>
                 </div>
             </div>

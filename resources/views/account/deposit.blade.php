@@ -58,12 +58,12 @@
                                                                 class="text-base text-white /60 "></span>
                                                         </h1>
                                                         <p class="mt-3 text-white /60 text-15 ">For
-                                                            small teams trying out Minia for an unlimited
+                                                            small teams trying out Cryptotraderspro for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
                                                             <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>After
-                                                                0 Days</p>
+                                                                4 Days</p>
                                                             <p class="mb-4 text-white text-15 /60"><i
                                                                     class="align-middle mdi mdi-check-circle text-secondary text-18 ltr:mr-2 rtl:ml-2"></i>Minimum
                                                                 Amount: $1000</p>
@@ -95,7 +95,7 @@
                                                                 class="text-base text-white /60 "></span>
                                                         </h1>
                                                         <p class="mt-3 text-white /60 text-15 ">For
-                                                            small teams trying out Minia for an unlimited
+                                                            small teams trying out Cryptotraderspro for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
                                                             <p class="mb-4 text-white text-15 /60"><i
@@ -134,7 +134,7 @@
                                                         <h1 class="mt-3 text-white ">50% <span class="text-base "></span>
                                                         </h1>
                                                         <p class="mt-3 text-white text-15 ">For small teams trying out
-                                                            Minia for an unlimited
+                                                            Cryptotraderspro for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
                                                             <p class="mb-4 text-white text-15 /60"><i
@@ -171,7 +171,7 @@
                                                                 class="text-base text-white /60 "></span>
                                                         </h1>
                                                         <p class="mt-3 text-white /60 text-15 ">For
-                                                            small teams trying out Minia for an unlimited
+                                                            small teams trying out Cryptotraderspro for an unlimited
                                                             period of time</p>
                                                         <div class="pt-2 mt-4 text-muted">
                                                             <p class="mb-4 text-white text-15 /60"><i

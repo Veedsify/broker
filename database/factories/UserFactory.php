@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'email' => 'dikewisdom787@gmail.com',
             'username' => 'dikewisdom787',
             'email_verified_at' => now(),
+            'user_id' => Str::random(10),
             'password' => static::$password ??= Hash::make('1234567890'),
             'phone' => fake()->phoneNumber(),
             'balance' => fake()->numberBetween(1000, 100000),

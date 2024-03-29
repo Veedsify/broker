@@ -69,7 +69,7 @@
                                                         @endif
                                                     </div>
 
-                                                    <a class="d-block text-end p1-color" href="javascript:void(0)">Forgot
+                                                     <a class="d-block " href="{{route('forgot.password')}}">Forgot
                                                         password</a>
                                                     <button class="cmn-btn px-6 py-3 w-100 mt-5 mt-md-6">Login</button>
                                                 </form>
@@ -94,7 +94,7 @@
                                                                 class="text-danger">{{ $errors->first('password') }}</span>
                                                         @endif
                                                     </div>
-                                                    <a class="d-block " href="javascript:void(0)">Forgot
+                                                    <a class="d-block " href="{{route('forgot.password')}}">Forgot
                                                         password</a>
                                                     <button class="cmn-btn px-6 py-3 w-100 mt-5 mt-md-6">Login</button>
                                                 </form>
@@ -102,19 +102,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="d-flex align-items-center mb-3 mb-md-4">
-                                    <hr class="w-100 br2">
-                                    <span class="w-100">or log in with</span>
-                                    <hr class="w-100 br2">
-                                </div> --}}
-                                {{-- <div class="d-flex align-items-center gap-5 gap-md-6 mb-3">
-                                    <a class="cmn-btn w-100 py-3 px-5 px-md-6 d-center gap-2 fourth-alt"
-                                        href="javascript:void(0)">
-                                        <img src="/assets/images/icon/google-icon.png" alt="icons">Google</a>
-                                    <a class="cmn-btn w-100 py-3 px-5 px-md-6 d-center gap-2 fourth-alt"
-                                        href="javascript:void(0)">
-                                        <img src="/assets/images/icon/apple-icon.png" alt="icons">Apple</a>
-                                </div> --}}
                             </div>
                         </div>
                     </div>

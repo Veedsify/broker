@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use App\Mail\RegisterMailer;
 use Illuminate\Http\Request;
+use App\Mail\ResetPassword;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\View;
 
 class AuthController extends Controller
 {
+
+
+    public function forgotPassword()
+    {
+        return view('forgot');
+    }
 
     public function showLoginPage()
     {
@@ -25,6 +32,7 @@ class AuthController extends Controller
 
     public function showRegisterPage()
     {
+        $referal_code = request()->query("referral_code");
         return View::make("register");
     }
 
@@ -37,9 +45,14 @@ class AuthController extends Controller
             "username" => "string|unique:users,username",
             "phone" => "required|string",
             "password" => "required|string|min:8",
-            "referral_code" => "string|nullable",
             "confirm_password" => "required|same:password"
         ]);
+
+        if ($request->has("referral_code")) {
+            $request->validate([
+                "referral_code" => "exists:users,user_id"
+            ]);
+        }
 
         try {
             User::create([
@@ -49,6 +62,7 @@ class AuthController extends Controller
                 "phone" => $request->phone,
                 "password" => Hash::make($request->password),
                 "email_verification_token" => Str::random(60),
+                'user_id' => Str::random(10),
                 "referral_code" => isset($request->referral_code) ? $request->referral_code : NULL,
                 "avatar" => asset("custom/images/placeholder.jpg")
             ]);;
@@ -80,6 +94,9 @@ class AuthController extends Controller
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user, true);
+            if ($user->role == "admin") {
+                return redirect()->route("admin");
+            }
             return redirect()->route("account.index");
         } else {
             return redirect()->back()->with("error", "Invalid email or password");
@@ -110,5 +127,50 @@ class AuthController extends Controller
             return redirect()->route("account.index");
         }
         return View::make("resent");
+    }
+
+    public function sendResetLink(Request $request)
+    {
+        $request->validate([
+            "email" => "required|email"
+        ]);
+
+        $user = User::where("email", $request->email)->first();
+        if ($user) {
+            $user->remember_token = Str::random(60);
+            $user->save();
+            Mail::to($user->email)->send(new ResetPassword($user));
+            return redirect()->back()->with("success", "Password reset link sent to your email");
+        } else {
+            return redirect()->back()->with("error", "User" . $request->email . " not found");
+        }
+    }
+
+    public function resetPassword($token)
+    {
+        $user = User::where("remember_token", $token)->first();
+        if ($user) {
+            return View::make("reset", ["user" => $user, "token" => $token]);
+        } else {
+            return redirect()->route("login")->with("error", "Invalid reset link");
+        }
+    }
+
+    public function confirmReset(Request $request, $token)
+    {
+        $request->validate([
+            "password" => "required|string|min:8",
+            "confirm" => "required|same:password"
+        ]);
+
+        $user = User::where("remember_token", $token)->first();
+        if ($user) {
+            $user->password = Hash::make($request->password);
+            $user->remember_token = NULL;
+            $user->save();
+            return redirect()->route("login")->with("success", "Password reset successfully");
+        } else {
+            return redirect()->route("login")->with("error", "Invalid reset link");
+        }
     }
 }

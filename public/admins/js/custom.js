@@ -86,3 +86,36 @@ window.onload = async function () {
         element.innerHTML = (amount / price).toFixed(8) + " BTC"
     })
 }
+
+const profileImageSelect = document.querySelector("#fileavatar")
+
+profileImageSelect?.addEventListener("change", function (e) {
+    const file = this.files[0]
+    if (file) {
+        const reader = new FileReader()
+        reader.onload = function () {
+            const parent = e.target.closest("label")
+            parent.querySelector("img").src = reader.result
+        }
+        reader.readAsDataURL(file)
+    }
+})
+
+
+$("#openUpdateImage").on("click", function () {
+    console.log("first")
+    document.querySelector("#updateImageModal").classList.replace("opacity-0", "opacity-100")
+    document.querySelector("#updateImageModal").classList.replace("pointer-events-none", "pointer-events-all")
+})
+
+$("#closeUpdate").on("click", function () {
+    document.querySelector("#updateImageModal").classList.replace("opacity-100", "opacity-0")
+    document.querySelector("#updateImageModal").classList.replace("pointer-events-all", "pointer-events-none")
+})
+
+$("#updateImageModal").on("click", function (e) {
+    if (e.target.id == "updateImageModal") {
+        document.querySelector("#updateImageModal").classList.replace("opacity-100", "opacity-0")
+        document.querySelector("#updateImageModal").classList.replace("pointer-events-all", "pointer-events-none")
+    }
+})

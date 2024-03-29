@@ -38,11 +38,10 @@
                                 link</h6>
                             <div class=" border border-bgborder rounded flex ps-2 items-center justify-between">
                                 <input type="text" id="navigatorInfo1" class="border-0 w-full bg-transparent text-white"
-                                    readonly value="https://swiftradings.com/register/emmanueliwok">
+                                    readonly value="https://{{config("app.name")}}/register?referral_code={{auth()->user()->user_id}}">
                                 {{-- <p  id="navigatorInfo1">Text to be copied to clipboard</p> --}}
                                 <button class=" p-4 text-white bg-lime-500 " id="copyButton1">Copy </button>
                             </div>
-
 
                         </div>
                         <div class="mx-auto bg-bgprimary  overflow-x-auto p-3">
@@ -51,7 +50,7 @@
                             </h6>
                             <div class=" border border-bgborder rounded flex ps-2 items-center justify-between">
                                 <input type="text" id="navigatorInfo2" class="border-0 w-full bg-transparent text-white"
-                                    readonly value="emmanueliwok">
+                                    readonly value="{{auth()->user()->user_id}}">
                                 {{-- <p   id="navigatorInfo2">Text to be copied to clipboard</p> --}}
                                 <button class=" p-4 text-white bg-lime-500 " id="copyButton2">Copy </button>
                             </div>

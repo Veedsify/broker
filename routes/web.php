@@ -47,7 +47,6 @@ Route::get('/staking/{stakingId}', [StakingController::class, 'stakingDetails'])
 
 
 //Resend Verification
-// Route::get('/verify/email-resent', [AuthController::class, 'resendVerification'])->name('resend.email.verification');
 Route::post('/verify', [AuthController::class, 'verifyToken'])->name('verify.code');
 Route::post("/resend_verification", [UpdateAccountController::class, 'resendVerification'])->name('resend_verification');
 
@@ -85,6 +84,15 @@ Route::get("/login", [AuthController::class, 'showLoginPage'])->name("login");
 Route::get("/register", [AuthController::class, 'showRegisterPage'])->name("register");
 Route::put("/register", [AuthController::class, 'registerNewUser'])->name("register.new");
 Route::post("/login", [AuthController::class, 'loginUser'])->name("login.user");
+Route::get("/forgot-password", [AuthController::class, 'forgotPassword'])->name("forgot.password");
+Route::post('/reset/link', [AuthController::class, 'sendResetLink'])->name('reset.link');
+Route::get('/reset-password/{token}', [AuthController::class, 'resetPassword'])->name('reset.password');
+Route::post('/confirm-reset/{token}', [AuthController::class, 'confirmReset'])->name('confirm.reset');
+
+//Update Profile Settings
+Route::post("/profile/image", [UpdateAccountController::class, 'profileImage'])->name("profile.image");
+Route::post("/profile/data", [UpdateAccountController::class, 'profileData'])->name("profile.data");
+Route::post("/profile/password", [UpdateAccountController::class, 'profilePassword'])->name("update.password");
 
 //Logout
 Route::post("/logout", function () {

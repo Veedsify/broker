@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'Joeligben4@gmail.com',
             'username' => 'Joeligben4',
             'email_verified_at' => now(),
+            'user_id' => Str::random(10),
             'password' => Hash::make('1234567890'),
             'phone' => fake()->phoneNumber(),
             'balance' => fake()->numberBetween(1000, 100000),

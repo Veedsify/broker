@@ -29,7 +29,7 @@
                                     Update account details
                                 </h6>
                                 <ul class="py-2">
-                                    <li><a href="{{ route('account.change.password') }}"
+                                    <li><a href="{{ route('account.profile') }}"
                                             class="font-semibold text-green-500">Update Details</a></li>
                                 </ul>
                             </div>

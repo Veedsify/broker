@@ -78,12 +78,28 @@
                             <div class="mb-4">
                                 <label for="message" class="block text-white text-sm font-bold mb-2">Message:</label>
                                 <textarea name="message" id="editor" rows="5" class="text-left bg-transparent text-white"></textarea>
+                                <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/classic/ckeditor.js"></script>
                                 <script>
-                                    ClassicEditor
-                                        .create(document.querySelector('#editor'))
-                                        .catch(error => {
-                                            console.error(error);
-                                        });
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        ClassicEditor
+                                            .create(document.querySelector('#editor'), {
+                                                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                                                    'blockQuote'
+                                                ],
+                                                language: 'en',
+                                                licenseKey: '',
+                                                ckfinder: {
+                                                    uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+                                                }
+                                            })
+                                            .then(editor => {
+                                                // Set Background color 
+                                                editor.ui.view.editable.setStyle('background-color', '#1f2937');
+                                            })
+                                            .catch(error => {
+                                                console.error(error);
+                                            });
+                                    });
                                 </script>
                             </div>
                             <div class="flex justify-end">

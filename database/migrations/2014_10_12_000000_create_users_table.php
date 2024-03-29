@@ -18,7 +18,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
+            $table->string('user_id')->nullable();
             $table->string('role')->default('user');
+            $table->string('phoneprefix')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('zip')->nullable();
             $table->bigInteger('balance')->default(0);
             $table->bigInteger('deposit')->default(0);
             $table->bigInteger('trade')->default(0);

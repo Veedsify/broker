@@ -59,7 +59,8 @@
                                                         <input class="br2 mb-3 mb-md-4" name="username" type="text"
                                                             placeholder="Username" required>
                                                         @if ($errors->has('username'))
-                                                            <span class="text-danger">{{ $errors->first('username') }}</span>
+                                                            <span
+                                                                class="text-danger">{{ $errors->first('username') }}</span>
                                                         @endif
                                                     </div>
                                                     <div>
@@ -85,8 +86,8 @@
                                                         @endif
                                                     </div>
                                                     <div>
-                                                        <input class="br2 mb-3 mb-md-4" name="confirm_password" type="password"
-                                                            placeholder="Confirm Password" required>
+                                                        <input class="br2 mb-3 mb-md-4" name="confirm_password"
+                                                            type="password" placeholder="Confirm Password" required>
                                                         @if ($errors->has('confirm_password'))
                                                             <span
                                                                 class="text-danger">{{ $errors->first('confirm_password') }}</span>
@@ -95,10 +96,14 @@
                                             </div>
                                             <span class="mb-3 mb-md-4 text-start">Referral Code
                                                 (Optional)</span>
-                                            <input class="br2 mb-3 mb-md-4" type="text">
+                                            @if ($errors->has('referral_code'))
+                                                <span class="text-danger">{{ $errors->first('referral_code') }}</span>
+                                            @endif
+                                            <input class="br2 mb-3 mb-md-4" type="text" name="referral_code"
+                                                value="{{ request()->referral_code }}">
                                             <div class="d-flex align-items-center gap-3">
-                                                <input type="checkbox" required id="rcode" name="vehicle1"
-                                                    name="referral_code" value="rcode">
+                                                <input type="checkbox" required id="rcode" required name="vehicle1"
+                                                    name="" value="rcode">
                                                 <label class="i-aggres text-start" for="rcode">Agree to
                                                     Terms of Service and
                                                     Privacy Policy</label>

@@ -14,7 +14,7 @@
             <div class="container-fluid px-[0.625rem]">
 
                 <div class="grid grid-cols-1 pb-6">
-                    <div class="md:flex items-center justify-between px-[2px]">
+                    <div class="md:flex items-center justify-between px-[2px] mb-5">
                         <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">
                             Profile</h4>
                         <nav class="flex" aria-label="Breadcrumb">
@@ -36,32 +36,86 @@
                             </ol>
                         </nav>
                     </div>
+
+                    @if ($errors->any())
+                        <div class="bg-red-500 bg-opacity-10 text-red-500 px-3 py-4">
+                            <ul class="list-disc list-inside">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    @if (session('success'))
+                        <div class="bg-lime-500 bg-opacity-10 text-lime-500 px-3 py-4">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if (session('error'))
+                        <div class="bg-red-500 bg-opacity-10 text-red-500 px-3 py-4">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                 </div>
                 <div class="grid grid-cols-12 gap-6">
                     <div class="col-span-12 ">
-                        <div class="card  ">
+                        <div class="card  text-white">
                             <div class="card-body ">
                                 <div class="grid grid-cols-12 ">
                                     <div class="col-span-12  justify-between">
                                         <div class="md:flex  items-center gap-3">
                                             <div class="w-20 h-20 ltr:mr-1 rtl:ml-1">
-                                                <img src="{{ auth()->user()->avatar }}" alt=""
+                                                <img src="{{ asset(auth()->user()->avatar) }}" alt=""
                                                     class="rounded-full object-cover aspect-square">
                                             </div>
                                             <div>
                                                 <div class="block">
-
                                                     <h6>{{ auth()->user()->name }}</h6>
                                                     <small class="text-gray-50">{{ auth()->user()->role }}</small>
                                                 </div>
                                                 <div class=" flex  mt-3   gap-4">
-
-                                                    <button class="  flex items-start   gap-2  rounded ">
+                                                    <button id="openUpdateImage"
+                                                        class="  flex items-start   gap-2  rounded ">
                                                         Edit <i data-feather="edit" fill="#545a6d33" class="w-3"></i>
                                                     </button>
                                                     <button class="flex   gap-2  rounded ">
                                                         Remove <i data-feather="trash" fill="#545a6d33" class="w-3"></i>
                                                     </button>
+                                                    <div id="updateImageModal"
+                                                        class="fixed top-0 duration-300 left-0 w-full opacity-0 pointer-events-none h-screen bg-opacity-50 bg-bgborder z-50">
+                                                        <div
+                                                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-bgprimary p-5 rounded-md">
+                                                            <div class="flex justify-between items-center w-[300px] mb-6">
+                                                                <h5
+                                                                    class="text-white text-sm
+                                                                ">
+                                                                    Edit Profile Image</h5>
+                                                                <button class="text-white" id="closeUpdate">X</button>
+                                                            </div>
+                                                            <form action="{{ route('profile.image') }}"
+                                                                enctype="multipart/form-data" method="post">
+                                                                @csrf
+                                                                <label for="fileavatar" class="block mx-auto mb-4">
+                                                                    <input type="file" class="hidden" name="image"
+                                                                        id="fileavatar">
+                                                                    <div
+                                                                        class="w-28 h-28 rounded-full relative cursor-pointer bg-gray-950 bg-opacity-30 flex items-center justify-center">
+                                                                        <i data-feather="camera" class="w-8 h-8"></i>
+                                                                        <img src="{{ asset(auth()->user()->avatar) }}"
+                                                                            alt=""
+                                                                            class="w-28 h-28 absolute rounded-full inset-0 object-cover -z-10">
+                                                                    </div>
+                                                                </label>
+                                                                <div>
+                                                                    <button
+                                                                        class="block text-white font-semibold bg-bgborder hover:bg-lime-900 w-full px-4 py-3 rounded-md ">
+                                                                        Save
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -90,21 +144,24 @@
                             <div class="card-body">
                                 <div>
                                     <div class="py-3">
-                                        <form action="">
+                                        <form method="post" action="{{ route('profile.data') }}" class="text-white">
+                                            @csrf
                                             <div class="grid  gap-4 mb-5">
                                                 <div class="mb-4">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Firstname
                                                     </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                    <input type="text" name="firstname"
+                                                        value="{{ explode(' ', auth()->user()->name)[0] }}"
+                                                        class="block border-bgborder focus:bg-lime-600 bg-transparent w-full px-4 py-3 rounded-md ">
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Lastname
                                                     </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                    <input type="text" name="lastname"
+                                                        value="{{ explode(' ', auth()->user()->name)[1] }}"
+                                                        class="block border-bgborder focus:bg-lime-600 bg-transparent w-full px-4 py-3 rounded-md ">
                                                 </div>
                                             </div>
                                             <div class="grid gap-4 mb-5">
@@ -113,8 +170,9 @@
                                                         Country/Phone number:
                                                     </label>
                                                     <div
-                                                        class="grid grid-cols-8 outline-1 lg:w-3/5  outline outline-gray-100 rounded-md">
-                                                        <select name="" class="col-span-1 bg-gray-100 border-none"
+                                                        class="grid grid-cols-8 outline-1 lg:w-full  outline outline-bgborder rounded-md">
+                                                        <select name="numberprefix"
+                                                            class="col-span-2 border-bgborder bg-bgprimary border-none"
                                                             id="">
                                                             <option value="+1">+1</option>
                                                             <option value="+44">+44</option>
@@ -218,55 +276,47 @@
                                                             <option value="+965">+965</option>
                                                             <option value="+996">+996</option>
                                                         </select>
-                                                        <input type="text"
-                                                            class="block w-full border-none col-span-5 px-4 py-3">
+                                                        <input type="text" name="phone"
+                                                            value="{{ auth()->user()->phone }}"
+                                                            class="block w-full border-none bg-transparent col-span-5 px-4 py-3">
                                                     </div>
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Zip Code:
                                                     </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                    <input type="text" name="zip" required
+                                                        value="{{ auth()->user()->zip }}"
+                                                        class="block border-bgborder bg-transparent w-full px-4 py-3 rounded-md ">
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Email:
                                                     </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
+                                                    <input type="text" disabled value="{{ auth()->user()->email }}"
+                                                        class="block border-bgborder text-opacity-20 bg-transparent w-full px-4 py-3 rounded-md ">
                                                 </div>
 
                                                 <div class="mb-4 ">
                                                     <label for="firstname" class="font-bold mb-2 inline-block">
                                                         Gender:
                                                     </label>
-                                                    <select name="" id=""
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                        <option value="" selected disabled>(-- SELECT GENDER --)
+                                                    <select name="gender" id=""
+                                                        class="block border-bgborder bg-bgprimary w-full px-4 py-3 rounded-md ">
+                                                        <option value="" disabled>(-- SELECT GENDER --)
                                                         </option>
-                                                        <option value="">Male</option>
-                                                        <option value="">Female</option>
-                                                        <option value="">BiSexual</option>
+                                                        <option value="male"
+                                                            {{ auth()->user()->gender == 'male' ? 'selected' : '' }}>Male
+                                                        </option>
+                                                        <option value="female"
+                                                            {{ auth()->user()->gender == 'female' ? 'selected' : '' }}>
+                                                            Female
+                                                        </option>
                                                     </select>
                                                 </div>
-                                                {{-- <div class="mb-4 col-span-2">
-                                                    <label for="firstname" class="font-bold mb-2 inline-block">
-                                                        Eth Address:
-                                                    </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                </div>
-                                                <div class="mb-4 col-span-3">
-                                                    <label for="firstname" class="font-bold mb-2 inline-block">
-                                                        External Wallet Addres:
-                                                    </label>
-                                                    <input type="text"
-                                                        class="block border-gray-100 w-full px-4 py-3 rounded-md ">
-                                                </div> --}}
                                                 <div class="mb-4">
                                                     <button type="submit" value="Save"
-                                                        class="block text-white font-semibold border bg-green-500 w-full px-4 py-3 rounded-md ">
+                                                        class="block text-white font-semibold bg-bgborder hover:bg-bgprimary w-full px-4 py-3 rounded-md ">
                                                         Save
                                                     </button>
                                                 </div>

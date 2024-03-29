@@ -12,9 +12,9 @@
         <div class="page-content ">
             <div class="container-fluid px-[0.625rem]">
                 <div class="grid grid-cols-1 pb-6">
-                    <div class="md:flex items-center justify-between px-[2px]">
+                    <div class="md:flex items-center justify-between px-[2px] text-white">
                         <h4 class="text-[18px] font-medium mb-sm-0 grow mb-2 md:mb-0">
-                            <span class="text-green-900">{{ $user->name }}</span>: Balance
+                            <span class="">{{ $user->name }}</span>: Balance
                         </h4>
                         <nav class="flex" aria-label="Breadcrumb">
                             <ol class="inline-flex items-center space-x-1 ltr:md:space-x-3 rtl:md:space-x-0">
@@ -54,13 +54,13 @@
                     action="{{ route('admin.user.update', $user->id) }}">
                     @csrf
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body text-white">
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
                                         <span class="text-white inline-block mb-5">Total Balance</span> $
-                                        <input class="text-4xl font-semibold w-full d-block text-white  mb-5" name="balance"
-                                            value="{{ $user->balance }}">
+                                        <input class="text-4xl font-semibold w-full d-block text-white bg-bgprimary  mb-5"
+                                            name="balance" value="{{ $user->balance }}">
                                         <div>
                                             <a href="{{ route('admin.users') }}"
                                                 class="text-sm text-green-500 underline hover:text-green-700">Edit</a>
@@ -71,13 +71,13 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body text-white">
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
                                         <span class="text-white inline-block mb-5">Total Deposit </span> $
-                                        <input class="text-4xl font-semibold w-full d-block text-white  mb-5" name="deposit"
-                                            value="{{ $user->deposit }}">
+                                        <input class="text-4xl font-semibold w-full d-block text-white bg-bgprimary  mb-5"
+                                            name="deposit" value="{{ $user->deposit }}">
                                         <div>
                                             <a href="{{ route('admin.users') }}"
                                                 class="text-sm text-green-500 underline hover:text-green-700">Edit</a>
@@ -88,13 +88,13 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body text-white">
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
                                         <span class="text-white inline-block mb-5">Total Trade </span>$
-                                        <input class="text-4xl font-semibold w-full d-block text-white  mb-5" name="trade"
-                                            value="{{ $user->trade }}">
+                                        <input class="text-4xl font-semibold w-full d-block text-white bg-bgprimary  mb-5"
+                                            name="trade" value="{{ $user->trade }}">
                                         <div>
                                             <a href="{{ route('admin.users') }}"
                                                 class="text-sm text-green-500 underline hover:text-green-700">Edit</a>
@@ -105,13 +105,13 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body text-white">
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
                                         <span class="text-white inline-block mb-5">Profits $</span>
-                                        <input class="text-4xl font-semibold w-full d-block text-white  mb-5" name="profits"
-                                            value="{{ $user->profits }}">
+                                        <input class="text-4xl font-semibold w-full d-block text-white bg-bgprimary  mb-5"
+                                            name="profits" value="{{ $user->profits }}">
                                         <div>
                                             <a href="{{ route('admin.users') }}"
                                                 class="text-sm text-green-500 underline hover:text-green-700">Edit
@@ -123,12 +123,12 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body"text-white>
                             <div>
                                 <div class="grid items-center grid-cols-12 gap-6">
                                     <div class="col-span-6">
                                         <span class="text-white inline-block mb-5">Order's $</span>
-                                        <input class="text-4xl font-semibold w-full d-block text-white  mb-5"
+                                        <input class="text-4xl font-semibold w-full d-block text-white bg-bgprimary  mb-5"
                                             value="{{ number_format($orders) }}">
                                     </div>
                                 </div>

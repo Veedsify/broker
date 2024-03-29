@@ -11,7 +11,16 @@
     <div class="main-content group-data-[sidebar-size=sm]:ml-[70px]">
         <div class="page-content">
             <div class="container-fluid px-[0.625rem]">
-
+                @if (session('success'))
+                    <div class="bg-lime-500 bg-opacity-10 text-lime-500 px-3 py-4">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="bg-red-500 bg-opacity-10 text-red-500 px-3 py-4">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="grid grid-cols-1 pb-6">
                     <div class="md:flex items-center justify-between px-[2px]">
                         <h4 class="text-[18px] font-medium text-white mb-sm-0 grow mb-2 md:mb-0">
@@ -53,16 +62,17 @@
                                                 {{ number_format($user->balance) }}
                                         </h4>
                                     </div>
-                                    <div class="col-span-6">
-                                        <div id="mini-chart1" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
+                                    <div class="col-span-6 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet"
+                                            width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="#b7f059" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
+                                            <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
+                                        </svg>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="flex items-center mt-1">
-                                <span
-                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">0</span>
-                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-50 text-13">Since last
-                                    week</span>
                             </div>
                         </div>
                     </div>
@@ -77,8 +87,19 @@
                                                 {{ number_format($user->deposit) }}</span>
                                         </h4>
                                     </div>
-                                    <div class="col-span-6">
-                                        <div id="mini-chart2" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
+                                    <div class="col-span-6 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-businessplan" width="80" height="80"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#b7f059" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M16 6m-5 0a5 3 0 1 0 10 0a5 3 0 1 0 -10 0" />
+                                            <path d="M11 6v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                            <path d="M11 10v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                            <path d="M11 14v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                            <path d="M7 9h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
+                                            <path d="M5 15v1m0 -8v1" />
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -101,8 +122,18 @@
                                             </span>
                                         </h4>
                                     </div>
-                                    <div class="col-span-6">
-                                        <div id="mini-chart3" data-colors='["#2AB57D"]' class="mb-2 apex-charts"></div>
+                                    <div class="col-span-6 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-premium-rights" width="80"
+                                            height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#b7f059"
+                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                            <path
+                                                d="M13.867 9.75c-.246 -.48 -.708 -.769 -1.2 -.75h-1.334c-.736 0 -1.333 .67 -1.333 1.5c0 .827 .597 1.499 1.333 1.499h1.334c.736 0 1.333 .671 1.333 1.5c0 .828 -.597 1.499 -1.333 1.499h-1.334c-.492 .019 -.954 -.27 -1.2 -.75" />
+                                            <path d="M12 7v2" />
+                                            <path d="M12 15v2" />
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -125,14 +156,22 @@
                                             </span>
                                         </h4>
                                     </div>
+                                    <div class="col-span-6 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-currency-bitcoin" width="80"
+                                            height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#b7f059"
+                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M6 6h8a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-8" />
+                                            <path d="M8 6l0 12" />
+                                            <path d="M8 12l6 0" />
+                                            <path d="M9 3l0 3" />
+                                            <path d="M13 3l0 3" />
+                                            <path d="M9 18l0 3" />
+                                            <path d="M13 18l0 3" />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-center">
-                                <span
-                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">+
-                                    2.95%</span>
-                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-50 text-13">Since
-                                    yesterday</span>
                             </div>
                         </div>
                     </div>
@@ -148,14 +187,21 @@
                                             </span>
                                         </h4>
                                     </div>
+
+                                    <div class="col-span-6 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-timeline" width="80" height="80"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#b7f059" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4 16l6 -7l5 5l5 -6" />
+                                            <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                            <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                            <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                            <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-center">
-                                <span
-                                    class="text-[10px] py-[1px] px-1 bg-green-500/40 text-green-500 rounded font-medium ">+
-                                    2.95%</span>
-                                <span class="ltr:ml-1.5 rtl:mr-1.5 text-gray-50 text-13">Since
-                                    yesterday</span>
                             </div>
                         </div>
                     </div>

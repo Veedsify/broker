@@ -1,5 +1,5 @@
 @extends('layouts/home', [
-    'title' => 'pricinig Plan - Cryptotraderspro',
+    'title' => 'Pricinig Plan - Cryptotraderspro',
 ])
 
 @section('content')
@@ -35,14 +35,15 @@
             <div class="row gy-6">
                 <div class="pricing_plan__title mb-md-4">
                     <h2 class="mb-4 wow fadeInUp">Pricing Plan</h2>
-                    <p class="roboto wow fadeInUp">Explainability features and deep model. Specialized consectetur
-                        adipiscing sed do
-                        eiusmod.Explainability features and deep model.</p>
+                    <p class="roboto wow fadeInUp">
+                        Discover our unbeatable pricing plan, offering the perfect balance of value and features, tailored
+                        to meet your unique needs in Cryptotraderspro Website.
+                    </p>
                 </div>
                <div class="col-12 col-md-6 col-xl-4">
                     <div class="p-6 p-md-8 rounded-20 br2 position-relative wow fadeInUp">
                         <div class="pricing_plan__cards-icon mb-3">
-                            <img src="/assets/images/icon/pricing_plan3.png" alt="Icons">
+                            <img src="{{asset('/assets/images/icon/pricing_plan3.png')}}" alt="Icons">
                         </div>
                         <h4 class="mb-5 mb-md-6">Amateur plan</h4>
                         <div class="pricing_plan__cards-price d-flex align-items-center gap-3 mb-5 mb-md-6">
@@ -54,7 +55,7 @@
                                     <span class="bg1-color px-1 rounded-item">
                                         <i class="ti ti-check p1-color"></i>
                                     </span>
-                                    <p>After 0 Days</p>
+                                    <p>After 4 Days</p>
                                 </li>
                                 <li class="d-flex align-items-center gap-3">
                                     <span class="bg1-color px-1 rounded-item">

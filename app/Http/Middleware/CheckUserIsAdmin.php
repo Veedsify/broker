@@ -16,7 +16,7 @@ class CheckUserIsAdmin
     public function handle(Request $request, Closure $next): Response
     {
         if (auth()->user()->role !== 'admin') {
-            return redirect()->route('accont.index');
+            return redirect()->route('account.index');
         }
         return $next($request);
     }
